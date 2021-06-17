@@ -1,0 +1,1775 @@
+---
+title: "Teaching Responsibility: motivation, direct instruction and practice"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+The data science definition that we embrace in the master of data science
+program at UBC and in the undergrad data science courses that we're
+developing there is the study and development of
+reproducible and audible processes to obtain insight from data. 
+
+When you go into the data science classroom
+students are usually very excited about
+learning data science but what they're
+most excited about is the second part of
+the definition, the insight from data part.
+
+Often they are not even aware about the reproducible
+and audible processes part and they see that more as a pain/inconvenience.
+So you have this barrier when you're teaching 
+the reproducibility aspects of data science. 
+This probably arises because they likely 
+do not even know what reproducibility is, 
+and even if they do know about it, 
+it is not the thing that is obviously/directly providing insight
+and so they're not excited about it.
+
+Then we have this third challenge, which is that the
+tools that we use for reproducibility are not necessarily
+smooth and easy to learn. 
+They usually have a pretty steep learning curve.
+Over our five years of teaching these
+03:24
+things at ubc
+03:26
+we've found some key things that we've
+03:28
+experienced at least for teaching
+03:30
+reproducibility
+03:31
+so the first is that we try and we've
+03:33
+realized we have to place this extra
+03:35
+emphasis on motivation
+03:37
+uh we found that direct instruction is
+03:39
+really important
+03:40
+and that lots of practice is really
+03:41
+important so i'm going to talk about
+03:43
+each of these
+03:44
+why we believe they exist or they are so
+03:46
+um and then i'm going to give some
+03:47
+high-level
+03:48
+examples of how we do these and then
+03:50
+give one specific example for each of
+03:51
+them
+03:53
+so why do we need extra motivation i
+03:55
+think i already said that but i'll say
+03:57
+it again
+03:57
+i don't have this intrinsic excitement
+04:00
+or motivation about the topic
+04:02
+and it's a challenging topic and just
+04:04
+you know to use a little bit of humor to
+04:06
+illustrate
+04:07
+uh this this extra challenge for those
+04:09
+of you who are familiar with some of
+04:10
+these tools these
+04:12
+uh cartoons and gifts might be joyful
+04:15
+and even if you're not familiar
+04:17
+um so this cartoon is about a version
+04:19
+control software that's the most
+04:21
+commonly used one
+04:22
+uh for reproducibility git and uh it's
+04:25
+essentially
+04:26
+um it's a very it's it's well known so
+04:28
+well known there are cartoons about how
+04:30
+hard it is to to learn this stuff and
+04:32
+uh that most people actually don't
+04:34
+really learn it deeply and they just
+04:35
+um try what works and get themselves
+04:37
+into a lot of trouble
+04:39
+um and sometimes end up in a place which
+04:43
+jenny bryan
+04:44
+from ubc and now at our studio would
+04:45
+recommend that you just burn it all down
+04:47
+and start again
+04:48
+um our markdown is a lovely tool but
+04:51
+anytime you involve lottic anything
+04:53
+into anything um you can get some very
+04:56
+challenging error messages
+04:58
+that aren't really clear about where
+04:59
+they come from and what you should do
+05:01
+next so this is
+05:03
+another place that students find
+05:05
+problems
+05:07
+and then some another tool that we use
+05:09
+in reproducibility has containerization
+05:11
+with docker
+05:12
+and this is a really challenging one to
+05:14
+teach and motivate students to learn
+05:16
+because
+05:17
+it's so different from writing code to
+05:18
+do analysis because it takes a long time
+05:21
+to install things
+05:22
+and it takes a long time to automate the
+05:24
+process of installing things and making
+05:26
+a compute environment
+05:27
+accessible and it's not that exciting
+05:29
+because things already work on their own
+05:31
+computer
+05:32
+so hopefully these cartoons have
+05:34
+illustrated um
+05:36
+basically a lot of the motivation
+05:38
+challenges we have with these tools
+05:40
+so what do we do to motivate um in our
+05:43
+classrooms
+05:44
+so uh one thing that we've used is
+05:47
+telling stories from the trenches
+05:49
+so um those of us who teach these
+05:51
+courses
+05:52
+uh usually have had some experience with
+05:54
+doing research and their phds or postdoc
+05:56
+or are still currently doing research
+05:58
+um and through these are lived
+06:01
+experiences of learning reproducibility
+06:04
+tools and applying it to our research we
+06:06
+have made mistakes
+06:07
+our collaborators have made mistakes and
+06:08
+we can share these with our students
+06:11
+in the master of data science program a
+06:13
+lot of the
+06:14
+students have work experience that may
+06:16
+have touched on to data before
+06:18
+and so they also have stories from the
+06:20
+trenches and so uh in the
+06:22
+you know in person classroom you can do
+06:24
+some think pair share exercises around
+06:25
+this
+06:26
+and get the students to talk about their
+06:28
+stories as well as hear your stories
+06:30
+um and then in the zoom classroom you
+06:32
+can always do breakout rooms for this
+06:34
+sort of thing
+06:35
+another example that was something that
+06:39
+i learned from jenny bryan
+06:40
+is let them fail but let them do this in
+06:43
+a controlled manner
+06:44
+so um at least myself i experienced a
+06:47
+lot of failure in graduate school in my
+06:48
+postdoctoral research in reproducibility
+06:50
+and uh it took a long time and it really
+06:53
+slowed me down
+06:54
+and i'll argue in a few slides later
+06:57
+that we shouldn't do this
+06:58
+um so if we can set up these scenarios
+07:00
+where they feel a little bit of this
+07:02
+pain
+07:02
+but it's for a short period of time that
+07:04
+can be very useful
+07:05
+this can be especially useful when
+07:07
+you're teaching undergraduates data
+07:09
+science because they haven't had
+07:11
+these real life experiences
+07:14
+and then third is something that i'm
+07:16
+going to try and bring into the new
+07:18
+course that i'm developing
+07:19
+which are case studies of failures uh
+07:22
+that have had real world consequences
+07:24
+um and again these are you know the
+07:26
+master students
+07:27
+this hasn't been as is important for i
+07:29
+don't think because
+07:30
+they've had some of these real life
+07:31
+experiences themselves at work
+07:33
+um but for undergraduate students again
+07:35
+that haven't had the opportunity to do
+07:37
+research
+07:37
+um don't really understand what the real
+07:39
+world consequences are so i think
+07:41
+real case studies um that have real
+07:43
+world consequences
+07:44
+are a good way to to motivate for that
+07:48
+so here's an example of uh in the
+07:52
+classroom i let it fail in a controlled
+07:54
+manner so
+07:55
+i've done this exercise in the course
+07:57
+that i teach that's called workflows for
+07:58
+data science
+07:59
+in this course um it's a project-based
+08:01
+course but we have to teach them all the
+08:02
+skills so they can do a reproducible
+08:04
+data analysis
+08:05
+and at the end of the course one of the
+08:08
+things that we get them to do
+08:10
+is to make their compute environments
+08:12
+for their analysis reproducible using a
+08:14
+tool called docker
+08:16
+docker has this is not an easy thing to
+08:18
+teach or learn
+08:19
+it's a lot of overhead you're teaching
+08:21
+that we need to teach them to
+08:24
+write docker files you know writing how
+08:25
+you install things in linux and half of
+08:27
+the students are windows users so like
+08:28
+there is a lot of you know
+08:30
+barrier and stickiness to teaching this
+08:32
+subject so you really need to motivate
+08:34
+it
+08:34
+so one way that i do this in a
+08:36
+demonstration is that we give students a
+08:38
+data analysis
+08:39
+project pipeline on github and we asked
+08:42
+them
+08:42
+go to go to that github repository read
+08:45
+the instructions
+08:46
+and try and replicate the analysis our
+08:49
+students already have some git skills at
+08:50
+this point in the course
+08:51
+so they're able to do the git clone
+08:53
+they're reading the readme trying to
+08:55
+follow along
+08:55
+uh with the instructions to run it um in
+08:58
+in the first instance
+08:59
+uh we've given them an analysis and
+09:01
+we've like intentionally put in a lot of
+09:03
+packages that we know they don't have
+09:05
+installed
+09:06
+like we've got off into
+09:09
+into crayon or into pipey eye and like
+09:11
+found some very bizarre packages we
+09:13
+don't even necessarily use them but you
+09:14
+just tuck them in there
+09:16
+um and if you want to be really you know
+09:18
+uh
+09:19
+sneaky you tuck them in there like in
+09:20
+the middle of the script so they're not
+09:22
+even at the top of the scripts
+09:23
+and you ask them to to work on getting
+09:25
+that analysis to run
+09:27
+and it takes some time and eventually
+09:29
+they figure it out but it's
+09:30
+it's frustrating and then you give them
+09:32
+the same analysis
+09:34
+in a different github repository um but
+09:36
+you give that it has a
+09:38
+it has a docker solution so there's a
+09:40
+docker image that exists on docker hub
+09:42
+um the readme gives clear instructions
+09:43
+on how to run it and replicate the
+09:45
+analysis
+09:46
+and they're able to do this and they're
+09:47
+able to replicate the analysis in a
+09:48
+couple minutes
+09:50
+so this is an example of how you can a
+09:52
+let them fail in a controlled manner
+09:54
+and then at the same time within the
+09:55
+same learning
+09:57
+time period give them a solution and
+09:59
+motivate them to that solution and then
+10:00
+they're in a good mind frame that
+10:02
+even when learning soccer beca is hard
+10:05
+and challenging
+10:06
+they have the motivation to learn it
+10:08
+because that they know that their
+10:09
+analysis is going to be more useful for
+10:10
+other people
+10:11
+afterwards
+10:14
+okay so the second thing that i said was
+10:16
+important is direct instruction
+10:18
+so why is direct instruction important
+10:22
+well from um
+10:25
+i think for those of us who've been
+10:26
+using reproducibility
+10:28
+tools in our research what i'm going to
+10:30
+say here is probably
+10:32
+not new to you but reproducibility
+10:35
+is not something that most people or
+10:37
+students figure out through exploration
+10:39
+and
+10:39
+inquiry um based learning or if you do
+10:43
+it's not an efficient
+10:44
+way of doing it um there's a lot of
+10:47
+you know we're using a lot of borrowed
+10:49
+tools from software engineering that are
+10:51
+being repurposed
+10:52
+for um for for science and
+10:54
+reproducibility
+10:56
+and so a lot of the uh you know getting
+10:59
+up and getting started has a lot of
+11:00
+assumed knowledge behind it
+11:02
+and um there's not a lot of like clear
+11:05
+and easy on roads to
+11:06
+these things and because um
+11:10
+yeah i think and there's also
+11:13
+how would i say this uh just because
+11:15
+it's still fairly new i would say
+11:17
+that there's there's not um
+11:21
+a lot of culture around it that's like
+11:22
+that's very common uh to like show
+11:24
+people where these obvious armor apps
+11:26
+are
+11:27
+so i and then there's the challenge of
+11:29
+the tools that i talked about in the
+11:30
+previous example so i think again
+11:32
+having some direct instruction is is
+11:34
+important and i really love this excerpt
+11:36
+from roger peng's blog post
+11:38
+from a couple of years ago that he wrote
+11:40
+on the theory of data analysis
+11:42
+and he writes here that there is no need
+11:45
+for a new data analyst to learn
+11:47
+about reproducibility from experience we
+11:49
+don't need to lead a junior data
+11:51
+analysis
+11:52
+down a months long winding path of
+11:54
+non-reproducible analysis
+11:56
+until they are finally bitten by the
+11:57
+non-reproducibility
+11:59
+bug and therefore learn their lesson we
+12:01
+can just tell them
+12:02
+hey in the past we found it useful to
+12:04
+make our data analysis reproducible
+12:06
+here's a workflow guide for you to use
+12:08
+in your own analysis
+12:10
+within that one statement we can
+12:11
+compress with over 20 years of
+12:13
+experience
+12:14
+we i think owe it to our students to
+12:16
+directly instruct them with like
+12:18
+the best practices that you know that
+12:21
+the reproducibility community has
+12:23
+arrived on
+12:24
+to date and then show them how to use
+12:26
+these tools explicitly
+12:29
+so how do we use direct exam instruction
+12:31
+in the classroom
+12:32
+um so we do a lot of live demos so in
+12:34
+the programming classes we do
+12:36
+you know live coding to show how to use
+12:38
+r and python um but then when we're
+12:40
+talking about other tools like docker
+12:42
+uh our markdown or jupyter for doing
+12:44
+reproducible reports
+12:46
+using version control with git and
+12:47
+github we do a lot of live demos with
+12:49
+those two
+12:50
+tools as well and in doing that it makes
+12:53
+it i think
+12:54
+uh obvious to this
+12:57
+more obvious to the students of like how
+12:59
+to use these things number one
+13:01
+and number two um you make mistakes
+13:05
+and that humanizes the experience of
+13:08
+of working with these tools that are
+13:09
+somewhat challenging because students
+13:11
+make mistakes too and they see that the
+13:12
+experts are also making mistakes
+13:14
+and then you're able to usually make
+13:15
+those mistakes usually make your
+13:16
+mistakes where things are a little bit
+13:18
+more difficult or are a little bit more
+13:19
+sticky
+13:20
+and it gives you more time to spend on
+13:22
+that area of the topic
+13:23
+and explain why you made the mistake and
+13:25
+where the misconceptions come in and
+13:27
+and fix them the other thing that we use
+13:30
+are guided worksheets and tutorials so
+13:33
+there's a lot us giving the live demos
+13:35
+which is useful but you can't you know
+13:36
+for
+13:37
+uh all the time be up in front of people
+13:39
+and it's good for
+13:40
+people to um work through and
+13:46
+actively engage with material out
+13:47
+themselves and get a little bit of uh
+13:48
+practice but not you know enough totally
+13:50
+like free-for-all do your own thing
+13:52
+whatever you think is best but in a
+13:53
+guided way so um we have a lot of those
+13:55
+in the program
+13:56
+um but one thing i want to say is be
+13:58
+careful when you uh
+14:00
+just there are some dragons when you
+14:02
+when you teach this stuff
+14:04
+so um because we're teaching things that
+14:07
+involve graphical user interfaces
+14:08
+because we teach things that are coming
+14:10
+from
+14:10
+software engineering it's a very
+14:12
+fast-moving field and which means that
+14:14
+every time i teach this stuff
+14:16
+i need to go through it before i send it
+14:18
+out to the students because something
+14:19
+has changed and something or something
+14:21
+has broken
+14:22
+and i have to come up with a work around
+14:23
+so a story from this past term
+14:26
+is that github which is
+14:30
+you know the largest code hosting
+14:31
+repository in the world
+14:33
+uh decided to i think very rightfully so
+14:36
+changed the name of their default branch
+14:37
+they switched it from master to main
+14:39
+but that caused lots of things to break
+14:41
+that caused all of our notes to have to
+14:44
+um be rewritten um and it's still like
+14:47
+a half solved problem because we have a
+14:49
+whole bunch of resources that are still
+14:51
+sitting on master branch that we haven't
+14:53
+been able to or will not be able to
+14:54
+uh quickly change over so
+14:58
+um it is really important to have this
+15:00
+direct instruction
+15:01
+but these are things that you're going
+15:02
+to have to kind of do new in the
+15:03
+classroom every year make a new demo
+15:04
+every year
+15:05
+curate your gut worksheets and your
+15:07
+tutorials every year because otherwise
+15:09
+they're going to quickly
+15:10
+fall out of usefulness an example of
+15:14
+direct instruction
+15:15
+um for teaching version control so we
+15:17
+teach version control in our very first
+15:18
+year introduction to data science
+15:20
+uh course um and so we do this in
+15:23
+uh kind of like a three-pronged approach
+15:25
+for directed instruction
+15:26
+so we give them a textbook reading that
+15:29
+they're
+15:30
+able to to use this is something we have
+15:32
+to update every year because the
+15:33
+graphical user interface that we choose
+15:35
+to use
+15:36
+changes we don't teach the command line
+15:38
+for this in the first year because it's
+15:39
+a bit too
+15:40
+overwhelming i think for the students um
+15:43
+then we do a live demonstration where
+15:45
+they
+15:46
+they watch us use the github website
+15:48
+they watch us use the get gui they watch
+15:50
+us move files and
+15:52
+add and commit and push and pull and
+15:54
+then finally they work through a guided
+15:56
+worksheet
+15:57
+that asks them to do the same thing that
+15:58
+we just did
+16:00
+and then ask them questions along the
+16:02
+way uh to test that they
+16:04
+like really understand like what is
+16:05
+committing what is adding what is
+16:07
+pulling what is pushing where is the
+16:08
+work going
+16:09
+and if folks are interested i have uh
+16:12
+some links embedded in this talk
+16:14
+that will take you to some of the
+16:15
+examples or resources that i'm talking
+16:17
+about here
+16:19
+okay and so the final thing that i said
+16:22
+um
+16:23
+is lots of practice so why do we need
+16:26
+lots of practice
+16:27
+for reproducibility for learning
+16:29
+reproducibility workflows and
+16:31
+tools well there are really two
+16:34
+fundamental ways that we commit things
+16:36
+to long-term memory
+16:37
+one is one trial learning and that
+16:39
+usually requires some sort of emotional
+16:41
+impact so that's like sometimes it's
+16:43
+traumatic events and sometimes it's
+16:44
+really good positive emotional events
+16:46
+that you had like a really
+16:47
+great birthday or your wedding or
+16:49
+something like that you don't need those
+16:50
+things to be repeated multiple times so
+16:52
+that you remember them
+16:54
+but that's not most of the things in
+16:55
+school most of the things in school
+16:58
+we learn about are through this
+17:00
+repetitive space training
+17:02
+um and so uh the the you know the best
+17:05
+way to commit
+17:07
+uh something to long-term memory that's
+17:08
+not really emotional
+17:10
+is to revisit it and repeat it multiple
+17:12
+times and have breaks between
+17:14
+those things and so that lets you commit
+17:16
+it to memory
+17:17
+however i think you want to go even a
+17:19
+step further with reproducibility
+17:22
+because when we teach reproducibility
+17:24
+workflows and skills as instructors
+17:26
+we actually want students to do more
+17:28
+than just learn about these
+17:29
+things we actually want them to use them
+17:32
+and put them into practice
+17:33
+um in the classroom outside of the
+17:36
+classroom in their work after the
+17:37
+classroom
+17:38
+and so we actually want to change their
+17:41
+habits or behaviors and it's it's quite
+17:43
+i think
+17:43
+important to realize that okay it's not
+17:45
+just understanding an algorithm
+17:48
+it's it's understanding the concepts
+17:51
+behind something like version control
+17:53
+understanding the concepts behind
+17:55
+something like a shippable and shareable
+17:57
+compute environment
+17:59
+and then knowing how to use those things
+18:02
+and then
+18:02
+once you leave the classroom wanting and
+18:05
+being able to use those things without
+18:07
+like
+18:08
+saying no that's too hard or too tricky
+18:10
+you want them to just
+18:11
+do it out of habit because that's what
+18:13
+they usually do
+18:14
+um so an aside uh just a little
+18:18
+if people are interested a book that's
+18:20
+really recently made me think about more
+18:22
+how we can tangibly do this is called
+18:24
+atomic habits by james clear
+18:26
+he's done a really good job of like
+18:27
+bringing the science of
+18:29
+habit building and behavior change uh
+18:31
+into an accessible book
+18:33
+and um i think that when we think about
+18:37
+getting students practice and changing
+18:38
+their behavior with
+18:40
+reproducible skills and workflows
+18:42
+there's a lot of really
+18:43
+interesting insight from behavior change
+18:46
+and psychology and habit building that
+18:47
+we can that we can borrow
+18:50
+so um now i'll talk more practically
+18:52
+about so
+18:53
+at least right now what are we doing in
+18:54
+the classroom to embed
+18:56
+lots of practice so
+18:59
+what we do is when we do our live demos
+19:02
+we don't just have
+19:03
+us do it then we pause and say okay
+19:05
+students your turn
+19:06
+do what i just did and so they saw
+19:10
+it and then they actually have to type
+19:11
+it into the keyboard or click it their
+19:13
+mouse around
+19:14
+the graphical user interface so they
+19:16
+they practice it that
+19:17
+way then we have lots of low stakes
+19:20
+assessments
+19:20
+with small or short problems so um
+19:24
+we've moved into a lot of flipped
+19:26
+classroom
+19:27
+um in in at ubc or at least in the data
+19:30
+science so our introduction to data
+19:32
+science course is a primarily flipped
+19:34
+classroom so um we have uh
+19:38
+literate code documents that have uh
+19:40
+automated tests in them
+19:41
+that the students are answering all
+19:43
+kinds of questions about the data
+19:44
+science content
+19:45
+and then they're very short little
+19:48
+pieces that are well guided but they get
+19:50
+immediate feedback um and these things
+19:52
+aren't worth very much and they do a lot
+19:54
+of them so they do two of them a week in
+19:55
+the data science course
+19:57
+in the master of data science um program
+20:00
+we've also started implementing this in
+20:01
+some of our classrooms
+20:03
+and the students really like this
+20:05
+practice and it helps them really
+20:06
+prepare for things like larger
+20:08
+assessments like quizzes and
+20:10
+and their their lab homework but it
+20:12
+gives them lots of practice
+20:15
+and then the other thing that we do is
+20:17
+the learning technologies and platforms
+20:18
+that we use
+20:19
+are built and use authentic data science
+20:22
+reproducibility tools and so i'll give
+20:24
+an example of that now
+20:26
+so in almost all of the master beta
+20:29
+science courses so i'm talking about 20
+20:30
+courses here
+20:31
+21 credit courses
+20:34
+so 21 month long courses we use
+20:38
+version control particularly github as
+20:40
+our course management system
+20:42
+so the homework instructions and
+20:44
+assignments are distributed to the
+20:45
+students as github repositories
+20:48
+and the only way that they can submit
+20:49
+their homework is by putting their
+20:51
+homework in that github repository
+20:53
+so they have to go through the cloning
+20:56
+procedure or at least be able to somehow
+20:59
+download this from the
+21:00
+github uh website and then they have to
+21:03
+be able to hopefully through
+21:04
+things like pushing and committing send
+21:06
+their work back to github but they would
+21:08
+at least have to interface with the
+21:09
+github
+21:10
+uh website to do this um
+21:13
+to try and uh incentivize
+21:16
+um the actual actually using the get
+21:19
+machinery to interact with github
+21:21
+we also put part of the marks of each
+21:24
+of these assignments as to mechanics and
+21:26
+so um
+21:27
+we need to see for example like three
+21:29
+commits associated with every single
+21:31
+assignment because
+21:32
+um we think you know we're trying to
+21:35
+build these good habits and practices
+21:37
+around like there's reasons why you use
+21:39
+version control not just to submit your
+21:40
+homework but
+21:41
+to active as a backup or in case you
+21:43
+want to go back in time and change
+21:45
+things
+21:45
+so by the end of this program um the
+21:48
+students have version controlled their
+21:49
+work in over 80 different repositories
+21:52
+um so they have a lot of so they're very
+21:54
+practiced and very used to it
+21:56
+and they're basically you know you want
+21:58
+them to be able to do it in their sleep
+22:00
+um almost and so that when they leave
+22:03
+the program and they go to work
+22:04
+somewhere else it's just
+22:05
+natural it's just one of their habits at
+22:07
+this point that if they're going to work
+22:08
+on a project it's going to go under
+22:10
+version control
+22:12
+so we do this using tools and here i've
+22:14
+listened there's many tools now which is
+22:16
+pretty cool we're not the only program
+22:18
+doing this
+22:18
+at all there's many tools now for using
+22:21
+github
+22:22
+as a classroom learning management
+22:25
+system um and so i've listed a couple of
+22:27
+them here
+22:28
+folks are interested so
+22:31
+with that i'm gonna wrap up so that i
+22:33
+have some time to answer some questions
+22:35
+if folks have them
+22:36
+so we think over the past five years
+22:39
+from teaching in the master of data
+22:40
+science and our introduction to data
+22:42
+science course that
+22:43
+key things for teaching reproducibility
+22:45
+in the data science classroom
+22:46
+are providing extra emphasis on
+22:48
+motivation
+22:49
+providing direct instruction so it's not
+22:51
+a mystery of how you get started and
+22:53
+what you need to do
+22:54
+and lots and lots of practice so that we
+22:56
+can
+22:57
+not only teach them the material and the
+22:59
+concepts but so that this actually
+23:01
+changes
+23:02
+their practices and their workflows and
+23:03
+they will use it after your classroom
+23:06
+so i'm happy to take questions now here
+23:09
+um
+23:10
+or uh you can tweet to me on twitter and
+23:13
+i'm happy to answer there and again i've
+23:15
+posted the link for the slides
+23:19
+thanks very much tiffany amy did you
+23:20
+want to share the question period or
+23:22
+shall i um i
+23:25
+can i'm just gonna check the thread
+23:34
+i don't see anything right now
+23:39
+anyone have anything to start off with
+23:43
+i have some if there's none um otherwise
+23:45
+maybe mina has
+23:46
+comments i'd be i'd love just to have
+23:48
+mina and tiffany just like
+23:54
+tell us everything you know between the
+23:57
+two of you
+24:02
+was there something that you started
+24:03
+doing that you i mean obviously
+24:06
+it's a evolution right the these these
+24:08
+all of these
+24:09
+programs are just in the evolution stage
+24:11
+uh was this uh
+24:12
+something that you started doing that
+24:13
+you've really moved away from
+24:18
+yeah i would say the pandemics even
+24:20
+placed a greater emphasis on this
+24:21
+so when we started teaching the master
+24:23
+of data science program
+24:24
+um we had a small cohort and we were in
+24:27
+person which allowed us to provide a lot
+24:29
+of support
+24:30
+but as you scale these things um
+24:33
+having that intimate close support is
+24:34
+more difficult and so in the very first
+24:36
+year of the program
+24:37
+um in the mbs program we have like very
+24:40
+we we have this philosophy that they
+24:41
+should be able to
+24:42
+be somewhat experts of running stuff on
+24:44
+their laptop we do teach them some cloud
+24:46
+tools but
+24:47
+you should be able to install your
+24:48
+software stack and and be able to set up
+24:50
+your path and these sorts of things
+24:52
+and so um we have a pretty i'd say like
+24:55
+intensive list of like 20 things that
+24:57
+they need to install in the first week
+24:59
+they need to use git to submit their
+25:00
+homework in the first week
+25:02
+and it's a bit overwhelming and it's a
+25:03
+lot and so
+25:05
+um what we've kind of moved we've kind
+25:07
+of like eased off on that
+25:08
+and and moved um to we get them there
+25:11
+but we take long
+25:12
+we take longer now to doing that so uh
+25:15
+we've set up this year a jupiter hub to
+25:18
+have them work in a cloud-based setting
+25:19
+for the first week or two
+25:20
+and then after the first week or two is
+25:22
+when we transition them to their own
+25:23
+laptop
+25:24
+so that we give time for the no like the
+25:27
+the
+25:28
+expectation that setting up everybody's
+25:31
+system
+25:31
+um is going to encounter some bugs and
+25:33
+take some time and that's going to be
+25:34
+tricky
+25:35
+we've also for the first assignment we
+25:38
+no longer ask them in the first
+25:39
+assignment to
+25:40
+submit to github um that's assignment
+25:42
+two so that we have to give ourselves
+25:44
+like a week or two
+25:45
+to to get them up to speed for getting
+25:48
+github
+25:48
+um and so i think that uh that sort of
+25:52
+thing
+25:52
+has um has definitely changed and been
+25:54
+inspired with
+25:56
+so first i started working in the master
+25:58
+data science program and then i started
+25:59
+teaching undergraduates
+26:01
+and teaching undergrad graduates has
+26:03
+made me have to reframe things and think
+26:05
+about things differently
+26:06
+um and think about like how do i remove
+26:08
+barriers so that
+26:10
+people you know maybe people who who are
+26:13
+for whatever reason more sensitive to
+26:15
+not feeling like data sciences for
+26:18
+them i don't want them to drop my class
+26:20
+because they couldn't install something
+26:22
+um so i think yeah that's something
+26:24
+that's changed a lot
+26:26
+let's quickly get to meena's question
+26:28
+where she needs to go um
+26:30
+a question about have you seen any
+26:32
+changes in computing experiences of
+26:34
+students applying to your
+26:35
+ms program um are more students coming
+26:39
+in with familiarity with these tools or
+26:41
+not yet
+26:42
+yeah yeah that's a great question i do a
+26:44
+little survey
+26:45
+every year about like in in the first
+26:48
+class
+26:50
+i'm like what tools have you used before
+26:53
+and usually about half of the students
+26:54
+have used r
+26:55
+maybe three quarters of the students
+26:56
+have used python almost all of them have
+26:58
+seen jupiter
+27:00
+almost none of them still have seen get
+27:02
+in github um so it's really quite
+27:04
+amazing
+27:05
+that um
+27:08
+computer science programming
+27:09
+prerequisite uh so they have
+27:11
+it's they don't have to have had our pro
+27:13
+or python before
+27:14
+um but yeah it's still interesting that
+27:17
+even
+27:18
+though i'll comment in a second that we
+27:19
+are seeing people with more
+27:22
+technical or data science skills coming
+27:24
+to our program
+27:26
+it's still the reproducibility
+27:27
+experience with reproducibility related
+27:29
+tools are
+27:30
+are aside from jupiter like um not
+27:33
+as present as one might expect i am
+27:35
+seeing more and more
+27:39
+uh people having like in data science
+27:41
+applying to our program which is
+27:43
+something kind of new and interesting
+27:44
+for us to think about because our
+27:45
+program was really designed
+27:47
+not for somebody who is like a data
+27:49
+science undergraduate like somebody who
+27:51
+had
+27:51
+an undergraduate in a different
+27:52
+discipline and wants to then apply
+27:54
+you know data science to their
+27:55
+discipline so we're still thinking about
+27:57
+like how
+27:58
+how we're going to handle the change of
+28:01
+like there's going to be more and more
+28:02
+undergraduates coming in with this
+28:04
+expertise
+28:05
+yeah it's a super interesting problem um
+28:08
+john's asking
+28:09
+um what to do with docker and windows
+28:13
+um is there something special about
+28:15
+documents yeah
+28:16
+so it uh it can work
+28:20
+um but everything with windows is a
+28:21
+little bit more challenging
+28:23
+uh so what my strategy is is i have
+28:26
+um i i'm a mac person uh but i have a
+28:30
+i also have a separate pc laptop where i
+28:32
+have linux and windows installed
+28:34
+so that before i teach every course i go
+28:37
+through and make sure that
+28:38
+i know how to install things on windows
+28:41
+and
+28:42
+what instructions to provide to students
+28:43
+there's still always surprises
+28:45
+um one thing we do this on quite a large
+28:47
+scale largest scale with the master
+28:49
+students but i'd say like
+28:50
+we're dealing with 50 or 60 windows
+28:52
+different windows laptops every
+28:54
+every year and so to make our lives
+28:57
+easier
+28:58
+um we've been really tightly restricting
+29:01
+which version of windows
+29:02
+that they have because uh then it's
+29:05
+easier to know so we say you have to
+29:07
+have windows 10
+29:08
+you have to have this build um and it
+29:10
+can't be windows home um basically it
+29:12
+has to be enterprise pro
+29:15
+or or education and by doing that that
+29:18
+has reduced some problems but every year
+29:20
+something new comes up like
+29:21
+i can just tell you this week i'm
+29:23
+teaching uh python packaging with poetry
+29:25
+and git bash doesn't work with poetry
+29:27
+anymore this year it worked last year
+29:28
+but it doesn't work anymore there's a
+29:30
+game
+29:31
+that have issue open it's not resolved
+29:33
+so now we're using anaconda prompt on
+29:35
+the windows machines
+29:36
+we have a solution um but it's
+29:39
+it's just it's it's one of those there
+29:41
+there will be dragons in this field
+29:44
+yeah it's yeah keeping changing things
+29:46
+it's just so much work right
+29:48
+you think you're done and at least 20
+29:51
+years ago right the folks they write out
+29:53
+their theory equations and that was it
+29:54
+they were done for the next 20 years
+29:56
+we've got to update ourselves every six
+29:58
+months
+30:01
+oh did you have any other closing
+30:03
+comments or thoughts that you wanted to
+30:05
+say
+30:06
+[Music]
+30:07
+um i don't yeah not not so much just
+30:09
+really thank you very much for inviting
+30:11
+uh me to speak here it's a lot of fun
+30:13
+and i'm looking forward to the remaining
+30:14
+talks
+30:15
+yeah no thank you so much for speaking
+30:16
+tiffany really appreciate it and it's
+30:18
+just fascinating to hear what you're
+30:19
+doing
+30:19
+um as i think we're you're largely
+30:23
+forging the path that i think where
+30:25
+we're traveling
+30:27
+at toronto as well thanks very much
+30:30
+thanks
+30:34
+uh our next tyler are you around
+30:39
+yeah amy did you did you want to
+30:40
+introduce tyler
+30:42
+yeah okay um so i'm happy to introduce
+30:46
+our next speaker
+30:47
+tyler gerrard is a phd candidate in
+30:51
+political science at the university of
+30:53
+west
