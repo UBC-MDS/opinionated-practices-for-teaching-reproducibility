@@ -65,7 +65,7 @@ or motivation on the topic of reproducibility,
 they have little prior knowledge on this topic, 
 and reproducibility concepts and in particular tools are challenging to learn. 
 
-For a specific example, the version control software that's the most
+One example, the version control software that's the most
 commonly used one for reproducibility, Git,
 is notorious for being difficult to learn (Figure \@ref(fig:git-is-hard-xkcd)). 
 Furthermore, there are many anecdotes that that most people 
@@ -81,236 +81,122 @@ which really defeats many of the purposes of version control.
 include_graphics("img/git_2x.png")
 ```
 
+Another example is R Markdown, 
+which is an implemenation of literate code documents (cite Knuth here) 
+that are useful for generating reproducible reports.
+Many aspects of R Markdown are quite user friendly, 
+however rendering the source R Markdown document to PDF depends on LaTeX, 
+and when users make formatting errors that impact LaTeX's job in the rendering
+you can get some very cryptic error messages that 
+are not very clear to learners about where the error is coming from
+and what should be done next to fix the problem. 
 
-um our markdown is a lovely tool but
+```
+# Add a figure here that illustrates an example of an R Markdown doc being  
+# rendered to PDF that has an error, and then the cryptic error message. 
+# This could simply be a screen shot from RStudio with the R Markdown doc
+# open in the editor and the R Markdown tab showing the error
+```
 
-anytime you involve lottic anything
-
-into anything um you can get some very
-
-challenging error messages
-
-that aren't really clear about where
-
-they come from and what you should do
-
-next so this is
-
-another place that students find
-
-problems
-
-and then some another tool that we use
-
-in reproducibility has containerization
-
-with docker
-
-and this is a really challenging one to
-
+Yet another example of a reproducibility tool that is challenging to learn is
+Docker. Docker is a containerization tool useful for creating and sharing
+computational environments. 
+ADD SENTENCE HERE WHY COMPUTATIONAL ENV's ARE IMPT FOR REPRODUCIBILITY.
+This tool is an especially challenging one to
 teach and motivate students to learn
-
-because
-
-it's so different from writing code to
-
-do analysis because it takes a long time
-
-to install things
-
+because it's so different from writing code to for analysis.
+This is because it takes a long time to install things
 and it takes a long time to automate the
-
 process of installing things and making
-
-a compute environment
-
-accessible and it's not that exciting
-
-because things already work on their own
-
-computer
-
-so hopefully these cartoons have
-
-illustrated um
-
-basically a lot of the motivation
-
-challenges we have with these tools
-
-so what do we do to motivate um in our
-
-classrooms
-
-so uh one thing that we've used is
-
-telling stories from the trenches
-
-so um those of us who teach these
-
-courses
-
-uh usually have had some experience with
-
-doing research and their phds or postdoc
-
-or are still currently doing research
-
-um and through these are lived
-
-experiences of learning reproducibility
-
-tools and applying it to our research we
-
-have made mistakes
-
-our collaborators have made mistakes and
-
-we can share these with our students
-
-in the master of data science program a
-
-lot of the
-
-students have work experience that may
-
-have touched on to data before
-
-and so they also have stories from the
-
-trenches and so uh in the
-
-you know in person classroom you can do
-
-some think pair share exercises around
-
-this
-
-and get the students to talk about their
-
-stories as well as hear your stories
-
-um and then in the zoom classroom you
-
-can always do breakout rooms for this
-
-sort of thing
-
-another example that was something that
-
-i learned from jenny bryan
-
-is let them fail but let them do this in
-
-a controlled manner
-
-so um at least myself i experienced a
-
-lot of failure in graduate school in my
-
-postdoctoral research in reproducibility
-
-and uh it took a long time and it really
-
-slowed me down
-
-and i'll argue in a few slides later
-
-that we shouldn't do this
-
-um so if we can set up these scenarios
-
-where they feel a little bit of this
-
-pain
-
-but it's for a short period of time that
-
-can be very useful
-
-this can be especially useful when
-
-you're teaching undergraduates data
-
-science because they haven't had
-
-these real life experiences
-
-and then third is something that i'm
-
-going to try and bring into the new
-
-course that i'm developing
-
-which are case studies of failures uh
-
-that have had real world consequences
-
-um and again these are you know the
-
-master students
-
-this hasn't been as is important for i
-
-don't think because
-
-they've had some of these real life
-
-experiences themselves at work
-
-um but for undergraduate students again
-
-that haven't had the opportunity to do
-
-research
-
-um don't really understand what the real
-
-world consequences are so i think
-
-real case studies um that have real
-
-world consequences
-
-are a good way to to motivate for that
-
-so here's an example of uh in the
-
-classroom i let it fail in a controlled
-
-manner so
-
-i've done this exercise in the course
-
-that i teach that's called workflows for
-
-data science
-
-in this course um it's a project-based
-
-course but we have to teach them all the
-
-skills so they can do a reproducible
-
-data analysis
-
-and at the end of the course one of the
-
-things that we get them to do
-
-is to make their compute environments
-
-for their analysis reproducible using a
-
-tool called docker
-
-docker has this is not an easy thing to
-
-teach or learn
-
-it's a lot of overhead you're teaching
-
-that we need to teach them to
+a shareable compute environment. 
+It is also not an exciting part of a data analysis, 
+things already work on the students own computer. 
+So it is difficult to convince students why they should put effort into learning 
+and using this.
+
+```
+# Need to figure out a way to illustrate this...
+```
+
+So what do we do to motivate learning reproducibility concepts and tools in our
+classrooms? We have found the following three strategies helpful:
+
+1. Telling stories from the trenches
+2. Letting them fail (in a controlled manner)
+3. Study cases of failures with real world consequences
+
+### Telling stories from the trenches
+One thing that we've used is telling stories from the trenches.
+Those of us who teach these courses usually have had some experience with
+doing research in their Ph.D.'s or Postdoctoral studies, 
+or are still currently doing research,
+and through these are lived experiences 
+of learning reproducibility tools 
+and applying it to our research we have made mistakes,
+our collaborators have made mistakes 
+and we can share these with our students.
+In the Master of Data Science program, 
+a lot of the students have work experience that may
+have touched on data before
+and so they also have stories from the trenches. 
+In a classroom with such students, 
+you can carryout think pair share exercises around these stories 
+and get the students to talk about their stories as well as hear your stories.
+
+## Letting them fail (in a controlled manner)
+
+Another example that I learned from Jenny Bryan's teaching of STAT 545 at UBC
+is to ask them to run someone else's analysis and let them fail. 
+We have taken this approach, but tweaked it so that they experience this in a
+more limited, or controlled manner. 
+Below we present this example in more detail,
+but in short though, we provide students an analysis that is not 
+reproducible, and thus will likely fail on someone else's machine, 
+and then ask them to run it, 
+and if they cannot run it, fix it so they can run it.
+Then we provide them the same analysis that has been made reproducible. 
+Activities like this, 
+in a relatively short time with minimally painful experiences 
+clearly illustrate to students the benefit of reproducibility,
+which helps provide motivation to endure the steep learning curves of 
+reproducibility concepts and tools. 
+
+The authors of this work have experienced a lot of failure in graduate school
+and during their postdoctoral research in regards to reproducibility. 
+They admit these failures slowed down down their research. 
+This has provided them much motivation to teach and use 
+reproducibility concepts and tools.
+However, most undergraduates, 
+and new graduate students have not experienced this
+(and we question whether they should to its full extent in the next section). 
+So if we can set up these scenarios where they feel a little bit of this
+pain but only for a short period of time that can be very useful for creating
+motivation.
+
+### Study cases of failures with real world consequences
+
+The third way to create motivation is something that the authors are currently
+trying to build into their courses and yet have limited experience test driving 
+it, but think the idea has strong merit and so wish to present it here. 
+This is the pedagogy of using case studies of failures
+that have had real world consequences.
+
+WE SHOULD FLESH THIS OUT HERE AND FIND 3-5 CASE STUDIES TO CITE THAT WE PLAN TO USE NEXT YEAR.
+
+### Example lesson of letting them fail (in a controlled manner)
+
+An example we have used in the classroom is letting students fail
+in a controlled manner. 
+The classroom that this has been used in is DSCI 522 - Data Science Workflows
+that is 2/3 of the way into a professional Master's of Data Science program. 
+This course is a project-based course where we teach them all the
+concepts and skills needed to do a reproducible data analysis.
+Near the end of the course one of the things that we get them to do
+is to make their compute environments for their analysis reproducible 
+via containerization of the compute environment using a tool called Docker.
+
+Docker is not an easy thing to teach or learn. 
+There is a lot of overhead you're teaching that we need to teach them to
 
 write docker files you know writing how
 
