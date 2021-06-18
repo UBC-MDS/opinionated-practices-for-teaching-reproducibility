@@ -212,7 +212,7 @@ subject. It really needs motivation.
 
 The exercise that we use to provide this motivation in the classroom is to 
 give students a data analysis project pipeline that is available on github 
-(ADD LINK HERE) and in class, ask them to go to that GitHub repository,
+(https://github.com/ttimbers/data_analysis_pipeline_eg/tree/v3.0) and in class, ask them to go to that GitHub repository,
 read the instructions and try to replicate the analysis on their own computers.
 In this course, our students already have enough Git skills to clone the 
 repositories. 
@@ -229,7 +229,7 @@ but eventually they figure it.
 However, we make it tricky enough that it's frustrating.
 
 After this, we give them the same analysis in a different GitHub repository 
-(ADD LINK HERE) that uses Docker as the compute environment reproducibility tool.
+(https://github.com/ttimbers/data_analysis_pipeline_eg) that uses Docker as the compute environment reproducibility tool.
 There is a Docker image that lives on DockerHub (a container repository), 
 and project `README` gives clear instructions on how to run 
 and replicate the analysis using Docker. 
@@ -258,7 +258,10 @@ and statistics, this it is not yet as obvious where the on-ramps are.
 Furthermore, similar to why we need extra motivation, 
 the challenge of learning to use the tools due to their steep learning curves
 suggests that having some direct instruction is beneficial to learners. 
-These points are well stated in a blog post and essay on *The Role of Theory in Data Analysis* by Roger Peng:
+These points are well stated in a 
+[blog post](https://simplystatistics.org/2018/12/11/the-role-of-theory-in-data-analysis/) 
+and [essay](https://leanpub.com/dataanalysisessays) 
+on *The Role of Theory in Data Analysis* by Roger Peng:
 
 > *There is no need for a new data analyst to learn about reproducibility* 
 > *"from experience".* 
@@ -334,12 +337,16 @@ Here we provide an example of how we use direct instruction to teach version
 control in our first year introduction to data science course. 
 In this course, we take a three-pronged approach for directed instruction.
 
-We provide them a textbook reading for them to review before class,
-then we do a live demonstration in class, 
+We provide them a 
+[textbook reading](https://ubc-dsci.github.io/introduction-to-datascience/version-control.html) 
+for them to review before class,
+then we do a [live demonstration](https://youtu.be/attPo4zEElU) in class, 
 where they watch us use the GitHub website, 
 and the Jupyter Git graphical user interface to add, commit,
 push and pull changes.
-Then finally they work through a guided worksheet that asks them to do 
+Then finally they work through a 
+[guided worksheet](https://github.com/UBC-DSCI/dsci-100/blob/master/materials/worksheet_05/worksheet_05.ipynb) 
+that asks them to do 
 the same thing that we just demonstrated.
 The guided worksheets also asks them questions along the way 
 to test that they really understand what is adding, what is committing,
@@ -412,139 +419,42 @@ provides many opportunities for authentic practice.
 
 ### Example lesson(s) of lots of practice
 
-An example of how we use lots of practice in the classroom
+An example of how we use lots of practice in the classroom is used in almost
+all of the UBC Master of Data Science courses (20 one-credit courses taken
+over an eight-month period). In these courses we use version control,
+particularly Git and GitHub as our course management system. 
+In these courses, the homework instructions and assignments are distributed 
+to the students as GitHub repositories and the only way that they can submit
+their homework is by putting their homework in that GitHub repository.
+So they have to go through the cloning procedure,
+or at least be able to somehow download their assignments from the
+GitHub website, as well as be able to 
+(hopefully through using Git) upload their work back to that GitHub 
+repository. 
+
+To incentivize doing this using Git 
+(as opposed to the GitHub web user interface)
+we also assign some marks of each assignment to a mechanics grade. 
+For this we assess whether they have at least three
+commits associated with every single assignment.
+We do this because we're trying to build these good habits and practices.
+There are good reasons why you use version control, not just to submit your
+homework but to active as a backup, for collaboration, or in case you
+want to go back in time and change things.
+By the end of this program the students have version controlled their
+work in over 80 different GitHub repositories. 
+They become very practiced and very used to using version control.
+We hope this results in using version control becoming a habit, 
+to the point that if they're going to work on a project it's going to go under
+version control - 
+even when they leave the program and are no longer receiving grades for doing this.
+
+In the UBC Master of Data Science program, we use a homegrown tool 
+([rhomboid](https://github.com/mgelbart/rhomboid)),
+to do this, but there are many tools that one could use to do this, 
+including [GitHub Classroom](https://classroom.github.com/) and 
+[Classy](https://github.com/ubccpsc/classy).
 
-and so i'll give
-
-an example of that now
-
-so in almost all of the master beta
-
-science courses so i'm talking about 20
-
-courses here
-
-21 credit courses
-
-so 21 month long courses we use
-
-version control particularly github as
-
-our course management system
-
-so the homework instructions and
-
-assignments are distributed to the
-
-students as github repositories
-
-and the only way that they can submit
-
-their homework is by putting their
-
-homework in that github repository
-
-so they have to go through the cloning
-
-procedure or at least be able to somehow
-
-download this from the
-
-github uh website and then they have to
-
-be able to hopefully through
-
-things like pushing and committing send
-
-their work back to github but they would
-
-at least have to interface with the
-
-github
-
-uh website to do this um
-
-to try and uh incentivize
-
-um the actual actually using the get
-
-machinery to interact with github
-
-we also put part of the marks of each
-
-of these assignments as to mechanics and
-
-so um
-
-we need to see for example like three
-
-commits associated with every single
-
-assignment because
-
-um we think you know we're trying to
-
-build these good habits and practices
-
-around like there's reasons why you use
-
-version control not just to submit your
-
-homework but
-
-to active as a backup or in case you
-
-want to go back in time and change
-
-things
-
-so by the end of this program um the
-
-students have version controlled their
-
-work in over 80 different repositories
-
-um so they have a lot of so they're very
-
-practiced and very used to it
-
-and they're basically you know you want
-
-them to be able to do it in their sleep
-
-um almost and so that when they leave
-
-the program and they go to work
-
-somewhere else it's just
-
-natural it's just one of their habits at
-
-this point that if they're going to work
-
-on a project it's going to go under
-
-version control
-
-so we do this using tools and here i've
-
-listened there's many tools now which is
-
-pretty cool we're not the only program
-
-doing this
-
-at all there's many tools now for using
-
-github
-
-as a classroom learning management
-
-system um and so i've listed a couple of
-
-them here
-
-folks are interested so
 
 ## Conclusions
 
@@ -561,428 +471,4 @@ concepts but so that this actually
 changes their practices and their workflows and
 they will use it after leaving your classroom.
 
-## Q & A's from talk
-
-(leaving here for now in case there is anything inspirational to add to the paper)
-
-so i'm happy to take questions now here
-
-um
-
-or uh you can tweet to me on twitter and
-
-i'm happy to answer there and again i've
-
-posted the link for the slides
-
-thanks very much tiffany amy did you
-
-want to share the question period or
-
-shall i um i
-
-can i'm just gonna check the thread
-
-i don't see anything right now
-
-anyone have anything to start off with
-
-i have some if there's none um otherwise
-
-maybe mina has
-
-comments i'd be i'd love just to have
-
-mina and tiffany just like
-
-tell us everything you know between the
-
-two of you
-
-was there something that you started
-
-doing that you i mean obviously
-
-it's a evolution right the these these
-
-all of these
-
-programs are just in the evolution stage
-
-uh was this uh
-
-something that you started doing that
-
-you've really moved away from
-
-yeah i would say the pandemics even
-
-placed a greater emphasis on this
-
-so when we started teaching the master
-
-of data science program
-
-um we had a small cohort and we were in
-
-person which allowed us to provide a lot
-
-of support
-
-but as you scale these things um
-
-having that intimate close support is
-
-more difficult and so in the very first
-
-year of the program
-
-um in the mbs program we have like very
-
-we we have this philosophy that they
-
-should be able to
-
-be somewhat experts of running stuff on
-
-their laptop we do teach them some cloud
-
-tools but
-
-you should be able to install your
-
-software stack and and be able to set up
-
-your path and these sorts of things
-
-and so um we have a pretty i'd say like
-
-intensive list of like 20 things that
-
-they need to install in the first week
-
-they need to use git to submit their
-
-homework in the first week
-
-and it's a bit overwhelming and it's a
-
-lot and so
-
-um what we've kind of moved we've kind
-
-of like eased off on that
-
-and and moved um to we get them there
-
-but we take long
-
-we take longer now to doing that so uh
-
-we've set up this year a jupiter hub to
-
-have them work in a cloud-based setting
-
-for the first week or two
-
-and then after the first week or two is
-
-when we transition them to their own
-
-laptop
-
-so that we give time for the no like the
-
-the
-
-expectation that setting up everybody's
-
-system
-
-um is going to encounter some bugs and
-
-take some time and that's going to be
-
-tricky
-
-we've also for the first assignment we
-
-no longer ask them in the first
-
-assignment to
-
-submit to github um that's assignment
-
-two so that we have to give ourselves
-
-like a week or two
-
-to to get them up to speed for getting
-
-github
-
-um and so i think that uh that sort of
-
-thing
-
-has um has definitely changed and been
-
-inspired with
-
-so first i started working in the master
-
-data science program and then i started
-
-teaching undergraduates
-
-and teaching undergrad graduates has
-
-made me have to reframe things and think
-
-about things differently
-
-um and think about like how do i remove
-
-barriers so that
-
-people you know maybe people who who are
-
-for whatever reason more sensitive to
-
-not feeling like data sciences for
-
-them i don't want them to drop my class
-
-because they couldn't install something
-
-um so i think yeah that's something
-
-that's changed a lot
-
-let's quickly get to meena's question
-
-where she needs to go um
-
-a question about have you seen any
-
-changes in computing experiences of
-
-students applying to your
-
-ms program um are more students coming
-
-in with familiarity with these tools or
-
-not yet
-
-yeah yeah that's a great question i do a
-
-little survey
-
-every year about like in in the first
-
-class
-
-i'm like what tools have you used before
-
-and usually about half of the students
-
-have used r
-
-maybe three quarters of the students
-
-have used python almost all of them have
-
-seen jupiter
-
-almost none of them still have seen get
-
-in github um so it's really quite
-
-amazing
-
-that um
-
-computer science programming
-
-prerequisite uh so they have
-
-it's they don't have to have had our pro
-
-or python before
-
-um but yeah it's still interesting that
-
-even
-
-though i'll comment in a second that we
-
-are seeing people with more
-
-technical or data science skills coming
-
-to our program
-
-it's still the reproducibility
-
-experience with reproducibility related
-
-tools are
-
-are aside from jupiter like um not
-
-as present as one might expect i am
-
-seeing more and more
-
-uh people having like in data science
-
-applying to our program which is
-
-something kind of new and interesting
-
-for us to think about because our
-
-program was really designed
-
-not for somebody who is like a data
-
-science undergraduate like somebody who
-
-had
-
-an undergraduate in a different
-
-discipline and wants to then apply
-
-you know data science to their
-
-discipline so we're still thinking about
-
-like how
-
-how we're going to handle the change of
-
-like there's going to be more and more
-
-undergraduates coming in with this
-
-expertise
-
-yeah it's a super interesting problem um
-
-john's asking
-
-um what to do with docker and windows
-
-um is there something special about
-
-documents yeah
-
-so it uh it can work
-
-um but everything with windows is a
-
-little bit more challenging
-
-uh so what my strategy is is i have
-
-um i i'm a mac person uh but i have a
-
-i also have a separate pc laptop where i
-
-have linux and windows installed
-
-so that before i teach every course i go
-
-through and make sure that
-
-i know how to install things on windows
-
-and
-
-what instructions to provide to students
-
-there's still always surprises
-
-um one thing we do this on quite a large
-
-scale largest scale with the master
-
-students but i'd say like
-
-we're dealing with 50 or 60 windows
-
-different windows laptops every
-
-every year and so to make our lives
-
-easier
-
-um we've been really tightly restricting
-
-which version of windows
-
-that they have because uh then it's
-
-easier to know so we say you have to
-
-have windows 10
-
-you have to have this build um and it
-
-can't be windows home um basically it
-
-has to be enterprise pro
-
-or or education and by doing that that
-
-has reduced some problems but every year
-
-something new comes up like
-
-i can just tell you this week i'm
-
-teaching uh python packaging with poetry
-
-and git bash doesn't work with poetry
-
-anymore this year it worked last year
-
-but it doesn't work anymore there's a
-
-game
-
-that have issue open it's not resolved
-
-so now we're using anaconda prompt on
-
-the windows machines
-
-we have a solution um but it's
-
-it's just it's it's one of those there
-
-there will be dragons in this field
-
-yeah it's yeah keeping changing things
-
-it's just so much work right
-
-you think you're done and at least 20
-
-years ago right the folks they write out
-
-their theory equations and that was it
-
-they were done for the next 20 years
-
-we've got to update ourselves every six
-
-months
-
-oh did you have any other closing
-
-comments or thoughts that you wanted to
-
-say
+## References
