@@ -196,451 +196,141 @@ is to make their compute environments for their analysis reproducible
 via containerization of the compute environment using a tool called Docker.
 
 Docker is not an easy thing to teach or learn. 
-There is a lot of overhead you're teaching that we need to teach them to
-
-write docker files you know writing how
-
-you install things in linux and half of
-
-the students are windows users so like
-
-there is a lot of you know
-
-barrier and stickiness to teaching this
-
-subject so you really need to motivate
-
-it
-
-so one way that i do this in a
-
-demonstration is that we give students a
-
-data analysis
-
-project pipeline on github and we asked
-
-them
-
-go to go to that github repository read
-
-the instructions
-
-and try and replicate the analysis our
-
-students already have some git skills at
-
-this point in the course
-
-so they're able to do the git clone
-
-they're reading the readme trying to
-
-follow along
-
-uh with the instructions to run it um in
-
-in the first instance
-
-uh we've given them an analysis and
-
-we've like intentionally put in a lot of
-
-packages that we know they don't have
-
-installed
-
-like we've got off into
-
-into crayon or into pipey eye and like
-
-found some very bizarre packages we
-
-don't even necessarily use them but you
-
-just tuck them in there
-
-um and if you want to be really you know
-
-uh
-
-sneaky you tuck them in there like in
-
-the middle of the script so they're not
-
-even at the top of the scripts
-
-and you ask them to to work on getting
-
-that analysis to run
-
-and it takes some time and eventually
-
-they figure it out but it's
-
-it's frustrating and then you give them
-
-the same analysis
-
-in a different github repository um but
-
-you give that it has a
-
-it has a docker solution so there's a
-
-docker image that exists on docker hub
-
-um the readme gives clear instructions
-
-on how to run it and replicate the
-
-analysis
-
-and they're able to do this and they're
-
-able to replicate the analysis in a
-
-couple minutes
-
-so this is an example of how you can a
-
-let them fail in a controlled manner
-
-and then at the same time within the
-
-same learning
-
-time period give them a solution and
-
-motivate them to that solution and then
-
-they're in a good mind frame that
-
-even when learning soccer beca is hard
-
-and challenging
-
-they have the motivation to learn it
-
-because that they know that their
-
-analysis is going to be more useful for
-
-other people
-
-afterwards
+There is a lot of layers of prequisite knowledge related to unix/linux 
+that students need to know. 
+To be able to run Docker containers students need to be able to run commands
+in the terminal/command line. 
+And to be able to build their own Docker images, 
+they need to know how to install software using Linux operating systems at the 
+command line 
+(as its these kinds of commands that need to be written in a Dockerfile 
+that specifies how to build a Docker image). 
+Most data science students do not come to the reproducibility classroom with 
+this prequisite knowledge, 
+and so there is a lot of barrier and stickiness to teaching this
+subject. It really needs motivation.
+
+The exercise that we use to provide this motivation in the classroom is to 
+give students a data analysis project pipeline that is available on github 
+(ADD LINK HERE) and in class, ask them to go to that GitHub repository,
+read the instructions and try to replicate the analysis on their own computers.
+In this course, our students already have enough Git skills to clone the 
+repositories. 
+In the GitHub repository that we provide them, 
+we have not used any compute environment reproducibility tools 
+and we have intentionally included in a lot of obscure software packages 
+that we know they don't have installed. 
+In some cases, we add them cryptically in the middle of a script 
+so they have to do a little bit more work 
+than just look at the top of the script 
+to find out what packages they need to install.
+It takes students some time to accomplish this task that you set before them,
+but eventually they figure it. 
+However, we make it tricky enough that it's frustrating.
+
+After this, we give them the same analysis in a different GitHub repository 
+(ADD LINK HERE) that uses Docker as the compute environment reproducibility tool.
+There is a Docker image that lives on DockerHub (a container repository), 
+and project `README` gives clear instructions on how to run 
+and replicate the analysis using Docker. 
+Students experience that they are able to this in a few minutes 
+and with very little effort.
 
 ## Direct instruction
 
-okay so the second thing that i said was
-
-important is direct instruction
-
-so why is direct instruction important
-
-well from um
-
-i think for those of us who've been
-
-using reproducibility
-
-tools in our research what i'm going to
-
-say here is probably
-
-not new to you but reproducibility
-
-is not something that most people or
-
-students figure out through exploration
-
-and
-
-inquiry um based learning or if you do
-
-it's not an efficient
-
-way of doing it um there's a lot of
-
-you know we're using a lot of borrowed
-
-tools from software engineering that are
-
-being repurposed
-
-for um for for science and
-
-reproducibility
-
-and so a lot of the uh you know getting
-
-up and getting started has a lot of
-
-assumed knowledge behind it
-
-and um there's not a lot of like clear
-
-and easy on roads to
-
-these things and because um
-
-yeah i think and there's also
-
-how would i say this uh just because
-
-it's still fairly new i would say
-
-that there's there's not um
-
-a lot of culture around it that's like
-
-that's very common uh to like show
-
-people where these obvious armor apps
-
-are
-
-so i and then there's the challenge of
-
-the tools that i talked about in the
-
-previous example so i think again
-
-having some direct instruction is is
-
-important and i really love this excerpt
-
-from roger peng's blog post
-
-from a couple of years ago that he wrote
-
-on the theory of data analysis
-
-and he writes here that there is no need
-
-for a new data analyst to learn
-
-about reproducibility from experience we
-
-don't need to lead a junior data
-
-analysis
-
-down a months long winding path of
-
-non-reproducible analysis
-
-until they are finally bitten by the
-
-non-reproducibility
-
-bug and therefore learn their lesson we
-
-can just tell them
-
-hey in the past we found it useful to
-
-make our data analysis reproducible
-
-here's a workflow guide for you to use
-
-in your own analysis
-
-within that one statement we can
-
-compress with over 20 years of
-
-experience
-
-we i think owe it to our students to
-
-directly instruct them with like
-
-the best practices that you know that
-
-the reproducibility community has
-
-arrived on
-
-to date and then show them how to use
-
-these tools explicitly
-
-so how do we use direct exam instruction
-
-in the classroom
-
-um so we do a lot of live demos so in
-
-the programming classes we do
-
-you know live coding to show how to use
-
-r and python um but then when we're
-
-talking about other tools like docker
-
-uh our markdown or jupyter for doing
-
-reproducible reports
-
-using version control with git and
-
-github we do a lot of live demos with
-
-those two
-
-tools as well and in doing that it makes
-
-it i think
-
-uh obvious to this
-
-more obvious to the students of like how
-
-to use these things number one
-
-and number two um you make mistakes
-
-and that humanizes the experience of
-
-of working with these tools that are
-
-somewhat challenging because students
-
-make mistakes too and they see that the
-
-experts are also making mistakes
-
-and then you're able to usually make
-
-those mistakes usually make your
-
-mistakes where things are a little bit
-
-more difficult or are a little bit more
-
-sticky
-
-and it gives you more time to spend on
-
-that area of the topic
-
-and explain why you made the mistake and
-
-where the misconceptions come in and
-
-and fix them the other thing that we use
-
-are guided worksheets and tutorials so
-
-there's a lot us giving the live demos
-
-which is useful but you can't you know
-
-for
-
-uh all the time be up in front of people
-
-and it's good for
-
-people to um work through and
-
-actively engage with material out
-
-themselves and get a little bit of uh
-
-practice but not you know enough totally
-
-like free-for-all do your own thing
-
-whatever you think is best but in a
-
-guided way so um we have a lot of those
-
-in the program
-
-um but one thing i want to say is be
-
-careful when you uh
-
-just there are some dragons when you
-
-when you teach this stuff
-
-so um because we're teaching things that
-
-involve graphical user interfaces
-
-because we teach things that are coming
-
-from
-
-software engineering it's a very
-
-fast-moving field and which means that
-
-every time i teach this stuff
-
-i need to go through it before i send it
-
-out to the students because something
-
-has changed and something or something
-
-has broken
-
-and i have to come up with a work around
-
-so a story from this past term
-
-is that github which is
-
-you know the largest code hosting
-
-repository in the world
-
-uh decided to i think very rightfully so
-
-changed the name of their default branch
-
-they switched it from master to main
-
-but that caused lots of things to break
-
-that caused all of our notes to have to
-
-um be rewritten um and it's still like
-
-a half solved problem because we have a
-
-whole bunch of resources that are still
-
-sitting on master branch that we haven't
-
-been able to or will not be able to
-
-uh quickly change over so
-
-um it is really important to have this
-
-direct instruction
-
-but these are things that you're going
-
-to have to kind of do new in the
-
-classroom every year make a new demo
-
-every year
-
-curate your gut worksheets and your
-
-tutorials every year because otherwise
-
-they're going to quickly
-
-fall out of usefulness an example of
+We also claim that direct instruction is important when teaching reproducibility,
+why is that so? 
+From our experience, reproducibility is not something that most people or
+students figure out through exploration- and inquiry-based learning, 
+or if they do it is not an efficient process. 
+We hypothesize the reason for this is that reproducibility 
+uses a lot of borrowed tools from software engineering that are
+being repurposed for science and reproducibility.
+Thus, a lot of the getting up and getting started with reproducibility 
+has a lot of assumed knowledge behind it, 
+and there are not a lot of like clear and easy on roads for learners who
+do not have a software engineering background. 
+Part of this may stem from the field being still fairly new 
+and not-yet as widely embraced as we might hope.
+This means that there is not a lot of culture around using these in data science
+and statistics, this it is not yet as obvious where the on-ramps are.
+
+Furthermore, similar to why we need extra motivation, 
+the challenge of learning to use the tools due to their steep learning curves
+suggests that having some direct instruction is beneficial to learners. 
+These points are well stated in a blog post and essay on *The Role of Theory in Data Analysis* by Roger Peng:
+
+> *There is no need for a new data analyst to learn about reproducibility* 
+> *"from experience".* 
+> *We don't need to lead a junior data analysis down a months-long*
+> *winding path of non-reproducible analysis until they are finally bitten* 
+> *by the non-reproducibility bug (and "therefore learn their lesson").* 
+> *We can just tell them*
+>
+> *"In the past, we've found it useful to make our data analysis reproducible*
+> *Here's a workflow to guide you in your own analysis."*
+> 
+> *Within that one statement, we can "compress" over 20 years of experience.*
+
+The authors of this article agree with the statement above 
+and think we owe it to our students to directly instruct them 
+on the best practices that the reproducibility community has
+arrived on to date and then show them how to use these tools explicitly.
+
+So how do we use direct instruction in the reproducibility classroom? 
+We do a lot of live demos. 
+In the data science programming classes it is becoming common to use live coding 
+to show how to use R and Python. 
+A similar pedagogy of live demonstration works well for reproducibility tools, 
+including R Markdown or Jupyter notebooks for reproducible reports, 
+using version control with Git and GitHub, 
+and using Docker to create reproducible and shareable computational environments.
+We believe that live demos with makes it more obvious to the students 
+of how to use these things, 
+and when you make mistakes as an instructor in these live demos,
+it humanizes the reality that working with these tools that are
+somewhat challenging, even for experts.
+These mistakes also can provide opportunities to spend more time on
+that area of the topic and explain why you made the mistake,
+and how to fix them.
+
+The other direct instruction pedagogy that we use
+are guided worksheets and tutorials. 
+As argued above, live demos are very useful,
+but you cannot demonstrate everything. 
+Furthermore, it's good for people to work through 
+and actively engage with material themselves. 
+Guided worksheets strike a nice balance or providing practice 
+in a very structured way.
+
+A word of caution with direct instruction when teaching reproducibility;
+because we are teaching things that involve graphical user interfaces
+and/or that come from software engineering, the tech stack moves very fast. 
+This means that each semester we teach these tools,
+we need to test drive the materials before we share them with the students
+to see if something has changed and something or something has broken.
+
+A relatively recent example of this is from fall 2020, 
+when GitHub, which is the largest code hosting repository in the world,
+decided to (rightfully so) change the name of their default branch 
+from master to main. 
+This change caused a lot of things to break in our teaching demos,
+guided worksheets, and lab homework.
+It also caused all of our notes to have to be rewritten. 
+Eight months later, this problem is still not completly solved as we still have
+several resources that are still using master branch 
+that we have not been able to quickly change over.
+For the reasons argued above, we do believe that it is really important 
+to use direct instruction when teaching reproducibility, 
+however, this should be done with the awareness and the acceptance 
+that these kinds of changes are going to happen relatively frequently.
+Which means reproducibility instructors are going to have to 
+update or make a new live demos and guided worksheets each year.
+Without this, the course resources will quickly fall out of usefulness.
+
+### Example lesson using direct instruction
+
+an example of
 
 direct instruction
 
