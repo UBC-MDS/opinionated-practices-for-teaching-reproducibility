@@ -330,339 +330,91 @@ Without this, the course resources will quickly fall out of usefulness.
 
 ### Example lesson using direct instruction
 
-an example of
-
-direct instruction
-
-um for teaching version control so we
-
-teach version control in our very first
-
-year introduction to data science
-
-uh course um and so we do this in
-
-uh kind of like a three-pronged approach
-
-for directed instruction
-
-so we give them a textbook reading that
-
-they're
-
-able to to use this is something we have
-
-to update every year because the
-
-graphical user interface that we choose
-
-to use
-
-changes we don't teach the command line
-
-for this in the first year because it's
-
-a bit too
-
-overwhelming i think for the students um
-
-then we do a live demonstration where
-
-they
-
-they watch us use the github website
-
-they watch us use the get gui they watch
-
-us move files and
-
-add and commit and push and pull and
-
-then finally they work through a guided
-
-worksheet
-
-that asks them to do the same thing that
-
-we just did
-
-and then ask them questions along the
-
-way uh to test that they
-
-like really understand like what is
-
-committing what is adding what is
-
-pulling what is pushing where is the
-
-work going
-
-and if folks are interested i have uh
-
-some links embedded in this talk
-
-that will take you to some of the
-
-examples or resources that i'm talking
-
-about here
-
-okay and so the final thing that i said
-
-um
-
-## Lot's of practice
-
-is lots of practice so why do we need
-
-lots of practice
-
-for reproducibility for learning
-
-reproducibility workflows and
-
-tools well there are really two
-
-fundamental ways that we commit things
-
-to long-term memory
-
-one is one trial learning and that
-
-usually requires some sort of emotional
-
-impact so that's like sometimes it's
-
-traumatic events and sometimes it's
-
-really good positive emotional events
-
-that you had like a really
-
-great birthday or your wedding or
-
-something like that you don't need those
-
-things to be repeated multiple times so
-
-that you remember them
-
-but that's not most of the things in
-
-school most of the things in school
-
-we learn about are through this
-
-repetitive space training
-
-um and so uh the the you know the best
-
-way to commit
-
-uh something to long-term memory that's
-
-not really emotional
-
-is to revisit it and repeat it multiple
-
-times and have breaks between
-
-those things and so that lets you commit
-
-it to memory
-
-however i think you want to go even a
-
-step further with reproducibility
-
-because when we teach reproducibility
-
-workflows and skills as instructors
-
-we actually want students to do more
-
-than just learn about these
-
-things we actually want them to use them
-
-and put them into practice
-
-um in the classroom outside of the
-
-classroom in their work after the
-
-classroom
-
-and so we actually want to change their
-
-habits or behaviors and it's it's quite
-
-i think
-
-important to realize that okay it's not
-
-just understanding an algorithm
-
-it's it's understanding the concepts
-
-behind something like version control
-
-understanding the concepts behind
-
-something like a shippable and shareable
-
-compute environment
-
-and then knowing how to use those things
-
-and then
-
-once you leave the classroom wanting and
-
-being able to use those things without
-
-like
-
-saying no that's too hard or too tricky
-
-you want them to just
-
-do it out of habit because that's what
-
-they usually do
-
-um so an aside uh just a little
-
-if people are interested a book that's
-
-really recently made me think about more
-
-how we can tangibly do this is called
-
-atomic habits by james clear
-
-he's done a really good job of like
-
-bringing the science of
-
-habit building and behavior change uh
-
-into an accessible book
-
-and um i think that when we think about
-
-getting students practice and changing
-
-their behavior with
-
-reproducible skills and workflows
-
-there's a lot of really
-
-interesting insight from behavior change
-
-and psychology and habit building that
-
-we can that we can borrow
-
-so um now i'll talk more practically
-
-about so
-
-at least right now what are we doing in
-
-the classroom to embed
-
-lots of practice so
-
-what we do is when we do our live demos
-
-we don't just have
-
-us do it then we pause and say okay
-
-students your turn
-
-do what i just did and so they saw
-
-it and then they actually have to type
-
-it into the keyboard or click it their
-
-mouse around
-
-the graphical user interface so they
-
-they practice it that
-
-way then we have lots of low stakes
-
-assessments
-
-with small or short problems so um
-
-we've moved into a lot of flipped
-
-classroom
-
-um in in at ubc or at least in the data
-
-science so our introduction to data
-
-science course is a primarily flipped
-
-classroom so um we have uh
-
-literate code documents that have uh
-
-automated tests in them
-
-that the students are answering all
-
-kinds of questions about the data
-
-science content
-
-and then they're very short little
-
-pieces that are well guided but they get
-
-immediate feedback um and these things
-
-aren't worth very much and they do a lot
-
-of them so they do two of them a week in
-
-the data science course
-
-in the master of data science um program
-
-we've also started implementing this in
-
-some of our classrooms
-
-and the students really like this
-
-practice and it helps them really
-
-prepare for things like larger
-
-assessments like quizzes and
-
-and their their lab homework but it
-
-gives them lots of practice
-
-and then the other thing that we do is
-
-the learning technologies and platforms
-
-that we use
-
-are built and use authentic data science
-
-reproducibility tools and so i'll give
+Here we provide an example of how we use direct instruction to teach version
+control in our first year introduction to data science course. 
+In this course, we take a three-pronged approach for directed instruction.
+
+We provide them a textbook reading for them to review before class,
+then we do a live demonstration in class, 
+where they watch us use the GitHub website, 
+and the Jupyter Git graphical user interface to add, commit,
+push and pull changes.
+Then finally they work through a guided worksheet that asks them to do 
+the same thing that we just demonstrated.
+The guided worksheets also asks them questions along the way 
+to test that they really understand what is adding, what is committing,
+what is pulling, what is pushing and where is the work going.
+
+The challenge or limitation with this lesson in particular, 
+is that we have chosen to teach using a Git graphical user interface,
+as opposed to the Git command line tool,
+due to the very novice level of the learners. 
+Using a graphical user interface, and a newer one,
+means that we need to more frequently update
+and fix our lesson as the tool changes. 
+The Git command line tool is more stable, and command line tools have less
+room to change generally, compared to graphical user interfaces, 
+and thus would be a more stable tool to build a lesson around. 
+However, the trade-off would be that this is a bit less intuitive for new learners,
+especially those who are also new to the command line in general.
+
+## Lots of practice
+
+The third best practice we argue for teaching reproducibility is lots of practice.
+Why do we need lots of practice to effectively teach reproducibility workflows 
+and tools. This is likely due to the biological ways that humans are able to 
+commit things to long-term memory, or build lasting changes in behaviours. 
+There are really two fundamental ways that we commit things to long-term memory;
+one is one trial learning and repetitive spaced training.
+One trial learning usually requires some sort of emotional impact, 
+such as a traumatic event, or a really positive emotional event (a great
+birthday or a wedding). 
+Forming lasting memories from these emotional experiences, 
+don't need those things to be repeated multiple times so
+that you remember them.
+However, that is not how you learn most of the things that you learn at school.
+The things we typically learn about at school are not so emotionally salient, 
+and are instead learned through repetitive space. 
+
+So the best way to commit something to long-term memory that's
+not really emotional is to revisit it and repeat it multiple times 
+and have breaks between those things and so that lets you commit
+it to memory. 
+However, we think you want to go even a step further with reproducibility
+because when we teach reproducibility workflows and skills as instructors,
+we actually want students to do more than just learn about these
+things.
+We actually want them to use them and put them into practice in the classroom,
+and outside of the classroom in their own work. 
+And so we actually want to change their habits or behaviors. 
+We think it's quite important to realize that it's not
+just understanding an algorithm, with reproducibility,
+it's it's understanding the concepts behind something like version control, 
+knowing how to use those things and then
+once you leave the classroom wanting to and being able to use these things.
+Essentially, we want to get students to the point where they do these things
+out of habit, and they don't really have to think to hard about how to do it,
+nor think about other ways to do it. 
+
+One thing thing that can be done in the classroom to embed lots of practice 
+in a complementary ways with live demos is to intentionally pause during the
+demos and say "okay students your turn, do what i just did", and then give 
+them time for the practice of typing it into the keyboard or clicking their
+mouse around the graphical user interface. 
+Another way this can be done is through lots of low stakes assessments
+comprised of small or short problems. In data science, this works well in 
+literate code documents that have automated tests in them to 
+provide automated feedback. Another way lots practice can be provided is 
+through the choice of learning technologies and platforms that are used in the 
+course. Using authentic data science reproducibility tools as part of the 
+course learning technology mechanics (homework submission, grading, etc)
+provides many opportunities for authentic practice.
+
+### Example lesson(s) of lots of practice
+
+An example of how we use lots of practice in the classroom
+
+and so i'll give
 
 an example of that now
 
