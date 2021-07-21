@@ -111,7 +111,6 @@ We think this is because students do not have intrinsic excitement
 or motivation on the topic of reproducibility,
 they have little prior knowledge on this topic, 
 and reproducibility concepts and in particular tools are challenging to learn. 
-<!--TODO add habits psychology -->
 
 One example, the version control software that's the most
 commonly used one for reproducibility, Git,
@@ -295,8 +294,6 @@ that have had real world consequences.
 
 ## Live demonstration
 
-<!--TODO I replaced "direct instruction" with "live demonstration" based on your dossier, but we could also consider something like "guided instructions" if we want to talk in broader terms (I think we mostly talk about live demoes here so should be fine). -->
-
 We suggest that live demonstration is important in the classroom,
 specifically when teaching reproducibility.
 From our experience, reproducibility is not something that most people or
@@ -333,8 +330,6 @@ on *The Role of Theory in Data Analysis* by Roger Peng:
 > *Here's a workflow to guide you in your own analysis."*
 > 
 > *Within that one statement, we can "compress" over 20 years of experience.*
-
-<!--TODO Does this quote go a bit against our previous section? -->
 
 The authors of this article agree with the statement above 
 and think we owe it to our students to directly instruct them 
@@ -456,11 +451,10 @@ Therefore,
 teaching reproducibility ought to go one step beyond promoting effective retention of information
 and focus on habitual and behavioral changes,
 which introduces additional challenges and opportunities.
-<!--TODO develop on this more? -->
 
 Habit formation can be defined as the triggering of behavior from contextual cues.
-In this specific ... these contextual cues
-are manifested as the tasks that students desire to execute,
+In the context of reproducible workflows these cues
+are the tasks that students desire to execute,
 such as saving a file after adding new content
 or wanting to share a document with a colleague.
 When teaching reproducible workflows
@@ -587,7 +581,6 @@ After this simple setup,
 the students can spend the rest of the exercise
 exploring how to perform code reviews on GitHub.
 
-<!--<!-1-TODO I don't really know where this fits in and how we use rhmoboid? -1-> -->
 <!--In the UBC Master of Data Science program, we use a homegrown tool --> 
 <!--([rhomboid](https://github.com/mgelbart/rhomboid)), -->
 <!--to do this, but there are many tools that one could use to do this, --> 
