@@ -93,7 +93,7 @@ we've found three pedagogical strategies
 that are particularly effective for teaching reproducibility successfully:
 
 1. placing extra emphasis on motivation
-2. live demonstration
+2. guided instruction
 3. lots of practice
 
 In this paper, we will discuss why we believe each of these are important,
@@ -195,6 +195,16 @@ In a classroom with such students,
 you can carryout think pair share exercises around these stories 
 and get the students to talk about their stories as well as hear your stories.
 
+### Study cases of failures with real world consequences
+
+The third way to create motivation is something that the authors are currently
+trying to build into their courses and yet have limited experience test driving 
+it, but think the idea has strong merit and so wish to present it here. 
+This is the pedagogy of using case studies of failures
+that have had real world consequences.
+
+<!--TODO WE SHOULD FLESH THIS OUT HERE AND FIND 3-5 CASE STUDIES TO CITE THAT WE PLAN TO USE NEXT YEAR.-->
+
 ### Letting them fail (in a controlled manner)
 
 Another example that we learned from Jenny Bryan's teaching of STAT 545 at UBC
@@ -282,19 +292,9 @@ and replicate the analysis using Docker.
 Students experience that they are able to this in a few minutes 
 and with very little effort.
 
-### Study cases of failures with real world consequences
+## Guided instruction
 
-The third way to create motivation is something that the authors are currently
-trying to build into their courses and yet have limited experience test driving 
-it, but think the idea has strong merit and so wish to present it here. 
-This is the pedagogy of using case studies of failures
-that have had real world consequences.
-
-<!--TODO WE SHOULD FLESH THIS OUT HERE AND FIND 3-5 CASE STUDIES TO CITE THAT WE PLAN TO USE NEXT YEAR.-->
-
-## Live demonstration
-
-We suggest that live demonstration is important in the classroom,
+We suggest that guided instruction is important in the classroom,
 specifically when teaching reproducibility.
 From our experience, reproducibility is not something that most people or
 students figure out through exploration- and inquiry-based learning, 
@@ -313,7 +313,7 @@ and statistics, this it is not yet as obvious where the on-ramps are.
 
 Furthermore, similar to why we need extra motivation, 
 the challenge of learning to use the tools due to their steep learning curves
-suggests that having some live demonstration is beneficial to learners. 
+suggests that having some guided instruction is beneficial to learners. 
 These points are well stated in a 
 [blog post](https://simplystatistics.org/2018/12/11/the-role-of-theory-in-data-analysis/) 
 and [essay](https://leanpub.com/dataanalysisessays) 
@@ -332,13 +332,22 @@ on *The Role of Theory in Data Analysis* by Roger Peng:
 > *Within that one statement, we can "compress" over 20 years of experience.*
 
 The authors of this article agree with the statement above 
-and think we owe it to our students to directly instruct them 
-on the best practices that the reproducibility community has
+and think we owe it to our students to guide them
+to the best practices that the reproducibility community has
 arrived on to date and then show them how to use these tools explicitly.
 
-So how do we use live demonstration in the reproducibility classroom? 
-In data science programming classes it is common to use live coding 
-to show how to use R and Python. 
+At MDS,
+we primarily employ guided instructions through three pedagogical strategies:
+
+1. Live demonstration
+2. Pre-readings
+3. Worksheets
+
+### Live demonstration
+
+So how do we use guided instruction in the reproducibility classroom? 
+In data science programming classes it is common to use live demonstration 
+to show how to code in R and Python. 
 A similar pedagogy of live demonstration works well for reproducibility tools, 
 including R Markdown or Jupyter notebooks for reproducible reports, 
 using version control with Git and GitHub, 
@@ -346,9 +355,10 @@ and using Docker to create reproducible and shareable computational environments
 We believe that live demonstration makes it more obvious to the students 
 how to use these tools in practice,
 and facilitates lateral knowledge transfer
-where learners absorb additional material by observing *how* we work.
-Additionally, when you make mistakes as an instructor in these live demos,
-it humanizes the reality that working with these tools that are
+where learners absorb additional material by observing *how* we work,
+which would not have been possible from seeing a slide deck.
+Additionally, when you make mistakes as an instructor in these live demonstrations,
+it humanizes the reality of working with these tools that are
 somewhat challenging, even for experts.
 Intentional mistakes also can provide opportunities to spend more time on
 that area of the topic and explain the gotchas of a common mistake,
@@ -372,23 +382,60 @@ Eight months later, this problem is still not completely solved as we have
 several resources that are still using the master branch 
 that we have not been able to quickly change over.
 For the reasons argued above, we do believe that it is really important 
-to use live demonstration when teaching reproducibility, 
+to use guided instruction when teaching reproducibility, 
 however, this should be done with the awareness and the acceptance 
 that these kinds of changes are going to happen relatively frequently.
 Which means reproducibility instructors are going to have to 
 update or make a new live demos and guided worksheets each year.
 Without this, the course resources will quickly fall out of usefulness.
 
-### Example lesson using live demonstration
+### Pre-lecture activities
 
-Here we provide an example of how we use live demonstration to teach version
+Although live demonstration is important for the reasons outlined above,
+it is critical that it does not dominate the time spent in the classroom,
+so that student have ample time to engage in active learning activities.
+To ensure that students have sufficient background knowledge
+to start we complement our live demonstration with assigned pre-lecture activities.
+These can consist of material that we have created ourselves or external resources
+and is usually in the form of reading material or videos.
+Encouraging students to learn the basics before class
+allows us to have more meaningful live demonstrations
+and sets students up for a more effective learning experience
+by spacing out their exposure to the course material.
+
+### Worksheets
+
+After guiding students to foundational knowledge
+through live demonstration and pre-lecture activities,
+we challenge them to take a more active learning role
+by solving worksheet problems on their own in the classroom.
+This activity occupies most of the in-class time,
+so that students can engaging actively with the material
+in an environment where they can easily be supported,
+before working on the homework assignments on their own.
+Worksheets provide students with many low stakes assessments
+comprised of short problems that are graded for completion only.
+In data science,
+this works well in literate code documents
+that have automated tests in them to provide feedback.
+Compared to in-class exercises,
+worksheets give learners additional change to actively engage with the material
+while still providing a structured way of providing exercises 
+focused on key learning outcomes.
+Worksheets are also key for providing students with lots of practice,
+a topic we discuss in the last section of this article.
+<!--TODO diff between working on a worksheet in class and an in class exercise? also in habits section-->
+
+### Example lesson using guided instruction
+
+Here we provide an example of how we use guided instruction to teach version
 control in our first year introduction to data science course. 
 In this course, we take a three-pronged approach for directed instruction.
 
 We provide them a 
 [textbook reading](https://ubc-dsci.github.io/introduction-to-datascience/version-control.html) 
 for them to review before class,
-then we do a [live demonstration](https://youtu.be/attPo4zEElU) in class, 
+then we do a [guided instruction](https://youtu.be/attPo4zEElU) in class, 
 where they watch us use the GitHub website, 
 and the Jupyter Git graphical user interface to add, commit,
 push and pull changes.
@@ -477,24 +524,16 @@ and employ in a familiar, but irreproducible fashion workflow strategy.
 
 Habits are best learned through frequent, regular, and sustained cue exposure.
 To support the formation of reproducible workflow habits,
-we therefore complement live demonstration
+we therefore complement guided instruction
 with plenty of embed practice in the classroom,
 where we intentionally pause during the demos
 and say "okay students your turn, do what i just did".
 This is a more controlled form of practice,
 which sets students up for practicing these habits on their own.
-Another pedagogy that we use to complement live demonstration
-is guided worksheets.
-With these,
-we can provide students with many low stakes assessments
-comprised of short problems that are graded for completion only.
-In data science,
-this works well in literate code documents
-that have automated tests in them to provide feedback.
-Compared to in-class exercises,
-worksheets give learners additional change to actively engage with the material
-while still providing a structured way of providing exercises 
-focused on key learning outcomes.
+As mentioned above,
+we also provide students with worksheets
+that can be used both in the class room and at home,
+as students receive feedback through autograding.
 
 Importantly,
 habit formation is not a linear process.
@@ -594,7 +633,7 @@ from teaching in the Master of Data
 Science and our Introduction to Data
 Science course that key things for teaching reproducibility
 in the data science classroom are providing extra emphasis on
-motivation, providing live demonstration so it's not
+motivation, providing guided instruction so it's not
 a mystery of how you get started and what you need to do,
 as well as lots and lots of practice so that we
 can not only teach them the material and the
