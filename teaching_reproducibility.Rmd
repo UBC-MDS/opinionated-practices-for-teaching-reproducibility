@@ -197,13 +197,117 @@ and get the students to talk about their stories as well as hear your stories.
 
 ### Study cases of failures with real world consequences
 
-The third way to create motivation is something that the authors are currently
-trying to build into their courses and yet have limited experience test driving 
-it, but think the idea has strong merit and so wish to present it here. 
-This is the pedagogy of using case studies of failures
-that have had real world consequences.
+The third way to create motivation
+is the pedagogy of using case studies of failures
+that have had real world consequences
+in order to illustrate the importance and impact of this reproducibility.
+This is something that the authors
+are currently trying to build into their courses
+and yet have limited experience with,
+but think the idea has strong merit and wish to present it here.
 
-<!--TODO WE SHOULD FLESH THIS OUT HERE AND FIND 3-5 CASE STUDIES TO CITE THAT WE PLAN TO USE NEXT YEAR.-->
+We believe that this strategy
+is particularly important for teaching reproducibility,
+since the benefit of adhering to reproducible practices
+is not always tangible in the moment
+compared to e.g. tweaking your model configuration
+which could directly impact you model performance;
+a very tangible and directly understandable improvement.
+Data science practitioners can also arrive at outcomes
+that are correct without using reproducible practices,
+and more importantly
+they will often *seem* to be correct.
+Although these outputs might later be shown to be due to an error that could have been avoided
+this realization is often separated from the creation of the analysis outcome
+by a significant period of time
+and potentially also discovered by another individual.
+There is often no immediate feedback that indicates
+to the person performing the analysis
+that there is something to gain from adhering to reproducible practices
+for a particular task.
+
+By presenting case studies
+where failure to adhering to reproducible practices
+have led to costly mistakes,
+we aim to give learners a chance to directly appreciate
+the connection between the lack of reproducible workflows
+and the downstream consequences.
+While there are many articles outlining recommendations
+on which reproducible practices to adhere to,
+case studies of failures are not as frequent in the literature.
+We think this partly stems from the fact
+that such errors are often only discovered internally and never reported,
+and that there are few incentives for people
+to spend their time performing proper forensic informatics analysis on others work.
+Even so,
+there are several such examples are reported in the literature,
+one of the most striking leading to putting patients at risk
+in incorrectly administered clinical trials
+which we will outline in the next paragraph.
+
+These clinical trials took place at Duke in 2006
+and involved 110 cancer patients
+hoping that using personalized gene signatures
+would identify which treatments were more effective for them.
+The series of scientific papers that formed the basis of these trials
+were all published in highly regarded "high-impact" journals,
+but they had also raised some concerns among researchers in the field.
+When put under a thorough independent review,
+these papers were found to contain multiple errors,
+many stemming from data mismanagement,
+poor documentation,
+and failure to adhere to reproducible analysis practices [ref baggerly/coombes].
+In the review analysis it was highlighted that most common problems are simple
+and include mistakes such as "off-by-one" errors
+where a cell might have been inadvertently deleted in Excel
+leading to a shift of all remaining values,
+labelling mix-ups where the treated and not treated groups
+are assigned labels 0 and 1 instead of meaningful names
+which can lead to confusion as to which is the treated and control group,
+and poor documentation practices leading to lack of transparency
+which makes it harder and more time-consuming to identify errors
+(both for the original authors and the reviewers).
+These clinical trials were eventually terminated over 4 years after they started,
+around 25 papers papers related to these trials were retracted,
+and the lead investigators were put under investigation for malpractice.
+This example highlights the enormous cost
+associated with not adhering to reproducible practices
+and having workflows that are opaque and hard to review.
+
+Although our unwillingness to admit and investigate errors in our own work
+likely leads to an enormous number of undiscovered such errors,
+there are still many more case studies with similar malpractices as the one mentioned above.
+These include
+how limitations in Excel data formats lead to the loss of 16,000 COVID case records in the UK,
+how Excel's automatic formatting caused important gene names to be disregarded in scientific studies [ref Zeeberg/Weinstein]
+(which has been estimated to affect around 20% of all scientific publications in these areas [el-osta/ziemann]),
+how deletion of a cell caused rows to shift and treatment groups to be mixed up [ref Wallensteen/Lajic]
+how using binary instead of explanatory labels lead to a mix up of the intervention with the control group [ref aboumatar/wise]
+how mixing up missing data and zero values lead to a paper retraction [turcing and whitehouse],
+and how incorrectly copying data in a spreadsheet lead to the delay in the opening a hospital
+(demonstrating how notoriously hard such errors are to identify
+even after multiple independent reviews) [ref Picken].
+In addition to services such as Retraction Watch that report on some of these mistakes,
+there are also websites dedicated to tracking only data management errors such as http://www.eusprig.org/horror-stories.htm.
+
+While few researchers and analyst willingly manipulate their data,
+there are currently few direct incentives
+connected to the additional work of making a workflow reproducible after the fact,
+and it is easier to keep the analysis in an inaccessible format
+so that others can't easily find errors in it.
+This inclination is dangerous
+and we should in fact try to make our work as accessible as possible
+so that any potential errors can be found early on by our colleagues,
+when they have the lowest possible downstream consequences.
+We believe the most effective way of making reproducible practices the norm
+is to teach it early
+so that students to the right things by default rather than an after thought
+before archiving important work.
+Practicing these skills will also normalize the discovery and discussion
+of mistakes in our own and others' work
+and increase the empathy we show ourself and others when such errors are revealed
+so that we can rejoice in that their early discovery
+presented large-scale downstream consequences.
 
 ### Letting them fail (in a controlled manner)
 
