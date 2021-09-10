@@ -138,8 +138,8 @@ you can get some very cryptic error messages that
 are not very clear to learners about where the error is coming from
 and what should be done next to fix the problem. 
 
-```{r git-is-hard-xkcd, out.width="30%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2}
-include_graphics("img/r-latex.png")
+```{r latex-errors, out.width="30%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2}
+include_graphics("img/r-latex-error.png")
 ```
 
 Yet another example of a reproducibility tool that is challenging to learn is
