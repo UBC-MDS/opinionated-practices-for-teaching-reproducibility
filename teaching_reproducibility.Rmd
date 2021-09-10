@@ -178,29 +178,29 @@ classrooms? We have found the following three strategies helpful:
 
 ### Telling stories from the trenches
 
-One thing that we've used is telling stories from the trenches.
-Those of us who teach these courses usually have had some experience with
-doing research in their Ph.D.'s or Postdoctoral studies, 
-or are still currently doing research,
-and through these are lived experiences 
+One successful strategy that we have used is telling stories from the trenches.
+The instructors who teach these courses at UBC usually have had some experience 
+performing data analyses in their Ph.D.'s or Postdoctoral studies, 
+or are still currently engaged in research where they do this.
+Through these lived experiences 
 of learning reproducibility tools 
-and applying it to our research we have made mistakes,
-our collaborators have made mistakes 
-and we can share these with our students.
+and applying it to own analyses, we have made mistakes,
+our collaborators have made mistakes, 
+and thus we can share these experiences with our students.
 In the Master of Data Science program, 
-a lot of the students have work experience that may
-have touched on data before
+many of the students have work experience involving data in the past,
 and so they also have stories from the trenches. 
 In a classroom with such students, 
 you can carryout think pair share exercises around these stories 
-and get the students to talk about their stories as well as hear your stories.
+and get the students to talk about their stories as well as hear yours.
 
 ### Study cases of failures with real world consequences
 
 The third way to create motivation
 is the pedagogy of using case studies of failures
-that have had real world consequences
-in order to illustrate the importance and impact of this reproducibility.
+that have had real world consequences.
+Such case studies can be used to illustrate the importance 
+and impact of reproducible data analyses.
 This is something that the authors
 are currently trying to build into their courses
 and yet have limited experience with,
