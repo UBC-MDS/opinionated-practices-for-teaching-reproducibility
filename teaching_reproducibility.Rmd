@@ -19,16 +19,16 @@ library(knitr)
 
 ## Introduction
 
-The data science definition that we embrace in the master of data science
-program at the University of British Columbia (UBC)
-and in the undergrad data science courses that we're
-developing is the study and development of
+In the graduate and undergraduate data science courses that we teach
+at the University of British Columbia (UBC), 
+we define data science as the study, development and practice of
 reproducible and auditable processes to extract insight from data.
 Using this definition requires that we also define
 what is meant by a reproducible and auditable analysis.
 To define reproducible analysis,
 we embrace the National Academy of Sciences definition,
-which is reaching the same result given the same input, computational methods,and conditions (2019).
+which is reaching the same result given the same input, computational methods,
+and conditions (2019).
 For auditable or transparent analysis,
 we follow how it has been defined by Hilary Parker (2017) and Karthik Ram (2013),
 which is that there should be a readable record of the steps used to carryout the analysis
@@ -49,11 +49,11 @@ without reproducible and auditable methods,
 however,
 when they are built this way there is less confidence
 in how the results or products were created.
-This is mainly because of three reasons:
+We believe this stems from non-reproducible and non-auditable analyses:
 
-1. They lack evidence that the results or product could be regenerated given the same input computational methods, and conditions.
-2. There is insufficient evidence of the steps taken during creation.
-3. There is an incomplete record of how and why analysis decisions were made.
+1. lacking evidence that the results or product could be regenerated given the same input computational methods, and conditions
+2. lacking evidence of the steps taken during creation
+3. having an incomplete record of how and why analysis decisions were made
 
 In addition to contributing to the trustworthiness of data science work,
 employing reproducible and auditable methods and workflows
@@ -64,7 +64,7 @@ and the emphasis of reproducible and auditable methods in data science
 greatly facilitates the act of collaborating in many context,
 further emphasizing the importance of learning this skill well.
 
-Although the many benefits of reproducible workflows
+Although the many benefits of reproducible and auditable analyses discussed above
 may make them seem like an exciting topic for incoming students,
 the experience when enter a classroom of curious data scientists in training
 is quite the opposite.
@@ -73,11 +73,11 @@ but what they're most excited about is the second part of
 its definition: extracting insights from the data.
 
 Students are often not even aware of the reproducible
-and auditable processes of data science
+and auditable processes of data science,
 and when they first hear about them,
 they tend to regard them as an inconvenient means to an end
 rather than an important skill to master.
-This outlook is likely at least partly motivated by that these processes
+This outlook is likely at least in part motivated by fact that these processes
 do not directly lead to novel insights
 in the same way as a predictive model might,
 which is what many students have in mind when they envision the work of a data scientist.
@@ -116,10 +116,12 @@ One example, the version control software that's the most
 commonly used one for reproducibility, Git,
 is notorious for being difficult to learn (Figure \@ref(fig:git-is-hard-xkcd)). 
 Furthermore, there are many anecdotes that that most people 
-don't actually learn it deeply 
-and they just get by trying a variety of commands until they find some things
-that work. This can lead to learners getting themselves into a lot of trouble.
-Sometimes this trouble is so difficult to get out of, that even professional 
+don not learn it deeply 
+and instead work by trying a variety of commands until they find some things
+that work. This can lead to learners getting themselves into challenging or 
+perplexing version control situations, with difficult to interpret outputs
+(e.g., "You are in 'detached HEAD' state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout").
+Sometimes these situations are so difficult to get out of, that even professional 
 data scientists and data science educators, for example Jenny Bryan,
 recommend the practice of "burning it all down" and starting from scratch - 
 which really defeats many of the purposes of version control.
@@ -129,42 +131,43 @@ include_graphics("img/git_2x.png")
 ```
 
 Another example is R Markdown, 
-which is an implementation of literate code documents (TODO cite Knuth here) 
+which is an implementation of literate code documents [@knuth1984literate], 
 that are useful for generating reproducible reports.
 Many aspects of R Markdown are quite user friendly, 
-however rendering the source R Markdown document to PDF depends on LaTeX, 
-and when users make formatting errors that impact LaTeX's job in the rendering
-you can get some very cryptic error messages that 
-are not very clear to learners about where the error is coming from
+however rendering the source R Markdown document to PDF depends on LaTeX. 
+If users make formatting errors that impact LaTeX's job in the rendering
+the resulting error messages can be very cryptic
+and are often not very clear to learners about where the error is coming from
 and what should be done next to fix the problem. 
+An example of an error from including a `\` character with a reserved 
+LaTeX word outside of a mathematical equation,
+and the resultant error message is shown in Figure \@ref(fig:latex-errors).
+The error message here is interpretable by intermediate and experienced 
+RMarkdown users, but not by novice learners.
 
-```{r latex-errors, out.width="30%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2}
+```{r latex-errors, out.width="100%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2}
 include_graphics("img/r-latex-error.png")
 ```
 
-Yet another example of a reproducibility tool that is challenging to learn is
+Yet another example of a popular reproducibility tool that is challenging to learn is
 Docker.
 Docker is a containerization tool that extends beyond
 just including the package dependencies of your analysis workflow,
 and instead creates an versioned copy of your entire computational environment
-including your operating system and any of its installed software.
-This means that you can share an exact copy of your environment with your colleagues even is you work on different operating systems,
-and you can test drive a server environment on your laptop.
+including the programming language and any operating system dependencies.
+This means that you can share an exact copy of your computational environment 
+with your collaborators, even if you work on different operating systems.
 Docker is an especially challenging one to
 teach and motivate students to learn
-because it's so different from writing code to for analysis.
-This is because it takes a long time to install things
-and it takes a long time to automate the
-process of installing things and making
-a shareable compute environment. 
+because it is so different from writing code to for analysis.
+This is because software installation is time consuming,
+which leads to writing and debugging code to automate installation
+being a slow and painstaking process. 
+This is especially true if certain workflows are not followed.
 It is also not an exciting part of a data analysis, 
-things already work on the students own computer. 
-So it is difficult to convince students why they should put effort into learning 
+as things already work on the student's own computer. 
+This makes it difficult to convince students why they should put effort into learning 
 and using this.
-
-```
-# TODO Need to figure out a way to illustrate this...
-```
 
 So what do we do to motivate learning reproducibility concepts and tools in our
 classrooms? We have found the following three strategies helpful:
