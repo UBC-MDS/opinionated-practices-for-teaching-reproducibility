@@ -197,8 +197,8 @@ and get the students to talk about their stories as well as hear yours.
 ### Study cases of failures with real world consequences
 
 The third way to create motivation
-is the pedagogy of using case studies of failures
-that have had real world consequences.
+is through using case studies of irreproducible data analyses
+that have had real world negative consequences.
 Such case studies can be used to illustrate the importance 
 and impact of reproducible data analyses.
 This is something that the authors
@@ -209,10 +209,11 @@ but think the idea has strong merit and wish to present it here.
 We believe that this strategy
 is particularly important for teaching reproducibility,
 since the benefit of adhering to reproducible practices
-is not always tangible in the moment
-compared to e.g. tweaking your model configuration
-which could directly impact you model performance;
-a very tangible and directly understandable improvement.
+is not usually obvious to novices.
+This contrasts with the benefits of data science topics related to gaining insight from data, 
+for example tuning a model to improve predictive performance.
+The benefits of this sort of data science practice is more easily seen and 
+understood by novices.
 Data science practitioners can also arrive at outcomes
 that are correct without using reproducible practices,
 and more importantly
