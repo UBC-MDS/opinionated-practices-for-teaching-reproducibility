@@ -172,9 +172,9 @@ and using this.
 So what do we do to motivate learning reproducibility concepts and tools in our
 classrooms? We have found the following three strategies helpful:
 
-1. Telling stories from the trenches
-2. Letting them fail (in a controlled manner)
-3. Study cases of failures with real world consequences
+1. Tell stories from the trenches
+2. Study cases of failures with real world consequences
+3. Let them fail (in a controlled manner)
 
 ### Telling stories from the trenches
 
@@ -196,7 +196,7 @@ and get the students to talk about their stories as well as hear yours.
 
 ### Study cases of failures with real world consequences
 
-The third way to create motivation
+A second way to create motivation
 is through using case studies of irreproducible data analyses
 that have had real world negative consequences.
 Such case studies can be used to illustrate the importance 
@@ -205,27 +205,14 @@ This is something that the authors
 are currently trying to build into their courses
 and yet have limited experience with,
 but think the idea has strong merit and wish to present it here.
-
 We believe that this strategy
-is particularly important for teaching reproducibility,
-since the benefit of adhering to reproducible practices
-is not usually obvious to novices.
-This contrasts with the benefits of data science topics related to gaining insight from data, 
-for example tuning a model to improve predictive performance.
-The benefits of this sort of data science practice is more easily seen and 
-understood by novices.
-Data science practitioners can also arrive at outcomes
-that are correct without using reproducible practices,
-and more importantly
-they will often *seem* to be correct.
-Although these outputs might later be shown to be due to an error that could have been avoided
-this realization is often separated from the creation of the analysis outcome
-by a significant period of time
-and potentially also discovered by another individual.
-There is often no immediate feedback that indicates
-to the person performing the analysis
-that there is something to gain from adhering to reproducible practices
-for a particular task.
+may be particularly important for teaching reproducibility,
+since the benefits of adhering to reproducible practices
+are not usually obvious to novices.
+This contrasts with the benefits of data science topics 
+related to gaining insight from data, 
+for example tuning a model to improve predictive performance, 
+which are more easily seen and understood by novices.
 
 By presenting case studies
 where failure to adhering to reproducible practices
