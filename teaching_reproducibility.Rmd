@@ -323,7 +323,7 @@ In her version of this task, she pairs students up and asks them to
 run eachother's code projects that they have been working on in her course. 
 Most usually fail to be able to do this on the first try 
 for the same reasons discussed above.
-We adapted her teaching method so so that students experience this 
+We adapted her teaching method so that students experience this 
 in a more limited, controlled manner - 
 which has allowed us to scale this exercise to larger classes 
 with more homoegenous experiences.
