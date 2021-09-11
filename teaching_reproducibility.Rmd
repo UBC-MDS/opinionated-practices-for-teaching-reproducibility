@@ -270,40 +270,20 @@ This example highlights the enormous cost
 associated with not adhering to reproducible practices
 and having workflows that are opaque and hard to review.
 
-Although our unwillingness to admit and investigate errors in our own work
-likely leads to an enormous number of undiscovered such errors,
-there are still many more case studies with similar malpractices as the one mentioned above.
-These include
-how limitations in Excel data formats lead to the loss of 16,000 COVID case records in the UK [NEED TO CITE SOMETHING HERE],
-how Excel's automatic formatting caused important gene names to be disregarded in scientific studies [@zeeberg2004mistaken]
-(which has been estimated to affect around 20% of all scientific publications in these areas [@ziemann2016gene]),
-how deletion of a cell caused rows to shift and treatment groups to be mixed up [@wallensteen2018retraction]
-how using binary instead of explanatory labels lead to a mix up of the intervention with the control group [ref aboumatar/wise]
-how mixing up missing data and zero values lead to a paper retraction [turcing and whitehouse],
-and how incorrectly copying data in a spreadsheet lead to the delay in the opening a hospital
-(demonstrating how notoriously hard such errors are to identify
-even after multiple independent reviews) [ref Picken].
-In addition to services such as Retraction Watch that report on some of these mistakes,
-there are also websites dedicated to tracking only data management errors such as http://www.eusprig.org/horror-stories.htm.
+Other examples of case studies that could be used to illustrate the significant
+real world consequences of reproducibility failures in data analyses 
+are listed in table 1. 
 
-While few researchers and analyst willingly manipulate their data,
-there are currently few direct incentives
-connected to the additional work of making a workflow reproducible after the fact,
-and it is easier to keep the analysis in an inaccessible format
-so that others can't easily find errors in it.
-This inclination is dangerous
-and we should in fact try to make our work as accessible as possible
-so that any potential errors can be found early on by our colleagues,
-when they have the lowest possible downstream consequences.
-We believe the most effective way of making reproducible practices the norm
-is to teach it early
-so that students to the right things by default rather than an after thought
-before archiving important work.
-Practicing these skills will also normalize the discovery and discussion
-of mistakes in our own and others' work
-and increase the empathy we show ourself and others when such errors are revealed
-so that we can rejoice in that their early discovery
-presented large-scale downstream consequences.
+Table. 1: Case studies that illustrate the significant real world consequences of reproducibility failures in data analyses.
+
+| Reproducibility error | Consequence | Source(s) |
+|-------------|-------|--------|
+| Limitations in Excel data formats lead to the loss of 16,000 COVID case records in the Unied Kingdom. | ADD | CITE |
+| Excel's automatic formatting caused important gene names to be disregarded in scientific studies. | ADD | @zeeberg2004mistaken; @ziemann2016gene |
+| Deletion of a cell caused rows to shift and treatment groups to be mixed up | ADD | @wallensteen2018retraction |
+| using binary instead of explanatory labels lead to a mix up of the intervention with the control group | ADD | CITE aboumatar/wise |
+| Mixing up missing data and zero values  | Paper retraction  | CITE turcing and whitehouse |
+| Incorrectly copying data in a spreadsheet | Delay in the opening a hospital | CITE Picken |
 
 ### Letting them fail (in a controlled manner)
 
