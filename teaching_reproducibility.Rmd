@@ -1,5 +1,5 @@
 ---
-title: "Best practices for teaching reproducibility: motivation, direct instruction and practice"
+title: "Best practices for teaching reproducibility: motivation, guided instruction and practice"
 author:
 - Joel Ostblom
 - Tiffany A. Timbers
@@ -28,9 +28,10 @@ what is meant by a reproducible and auditable analysis.
 To define reproducible analysis,
 we embrace the National Academy of Sciences definition,
 which is reaching the same result given the same input, computational methods,
-and conditions (2019).
+and conditions [-@national2019reproducibility].
 For auditable or transparent analysis,
-we follow how it has been defined by Hilary Parker (2017) and Karthik Ram (2013),
+we follow how it has been defined by Hilary Parker [-@parker2017opinionated] 
+and Karthik Ram (2013),
 which is that there should be a readable record of the steps used to carryout the analysis
 (i.e., computer code)
 as well as a record of how the analysis methods evolved
@@ -194,11 +195,23 @@ In a classroom with such students,
 you can carryout think pair share exercises around these stories 
 and get the students to talk about their stories as well as hear yours.
 
-### Study cases of failures with real world consequences
+In addition to sharing some consequences of non-reproducible analysis 
+with students (without them having to experience this themselves 
+over a long and drawn out process of self-discovery),
+these stories come from people the students know 
+(their instructors and peers) and as such, 
+these stories highlight how common and easy it is for such mistakes to happen, 
+to anyone practising data analysis,
+if care is not taken to follow reproducible workflows and practices.
+This helps makes the practice of reproducibility seem more applicable 
+and relatable to their own data analysis 
+(which at this stage in their career, may not end up in a published paper).
+
+### Study cases of failures with significant real world consequences
 
 A second way to create motivation
 is through using case studies of irreproducible data analyses
-that have had real world negative consequences.
+that have had significant real world consequences.
 Such case studies can be used to illustrate the importance 
 and impact of reproducible data analyses.
 This is something that the authors
@@ -207,19 +220,15 @@ and yet have limited experience with,
 but think the idea has strong merit and wish to present it here.
 We believe that this strategy
 may be particularly important for teaching reproducibility,
-since the benefits of adhering to reproducible practices
-are not usually obvious to novices.
-This contrasts with the benefits of data science topics 
-related to gaining insight from data, 
-for example tuning a model to improve predictive performance, 
-which are more easily seen and understood by novices.
-
+since the impact and significance of the consequences 
+of not using reproducible practices are not obvious to novices.
 By presenting case studies
 where failure to adhering to reproducible practices
 have led to costly mistakes,
 we aim to give learners a chance to directly appreciate
 the connection between the lack of reproducible workflows
 and the downstream consequences.
+
 While there are many articles outlining recommendations
 on which reproducible practices to adhere to,
 case studies of failures are not as frequent in the literature.
@@ -231,26 +240,25 @@ Even so,
 there are several such examples are reported in the literature,
 one of the most striking leading to putting patients at risk
 in incorrectly administered clinical trials
-which we will outline in the next paragraph.
+which we will outline in the next paragraph [ADD REFS TO CLINICAL TRIALS HERE TOO].
 
 These clinical trials took place at Duke in 2006
 and involved 110 cancer patients
 hoping that using personalized gene signatures
-would identify which treatments were more effective for them.
+would identify which treatments were more effective for individuals.
 The series of scientific papers that formed the basis of these trials
-were all published in highly regarded "high-impact" journals,
-but they had also raised some concerns among researchers in the field.
+were all published in highly regarded "high-impact" journals [CITE THE PAPERS HERE],
+but they had also raised some concerns among researchers in the field [CITE THIS OR REMOVE THIS CLAIM].
 When put under a thorough independent review,
-these papers were found to contain multiple errors,
-many stemming from data mismanagement,
-poor documentation,
-and failure to adhere to reproducible analysis practices [ref baggerly/coombes].
-In the review analysis it was highlighted that most common problems are simple
-and include mistakes such as "off-by-one" errors
+these papers were found to contain multiple errors, 
+several related to the use of non-reproducible tools 
+and workflows [@baggerly2009deriving].
+In the review analysis it was highlighted that most common problems were simple
+and included mistakes such as "off-by-one" errors
 where a cell might have been inadvertently deleted in Excel
 leading to a shift of all remaining values,
 labelling mix-ups where the treated and not treated groups
-are assigned labels 0 and 1 instead of meaningful names
+were assigned labels 0 and 1 instead of meaningful names, 
 which can lead to confusion as to which is the treated and control group,
 and poor documentation practices leading to lack of transparency
 which makes it harder and more time-consuming to identify errors
@@ -266,10 +274,10 @@ Although our unwillingness to admit and investigate errors in our own work
 likely leads to an enormous number of undiscovered such errors,
 there are still many more case studies with similar malpractices as the one mentioned above.
 These include
-how limitations in Excel data formats lead to the loss of 16,000 COVID case records in the UK,
-how Excel's automatic formatting caused important gene names to be disregarded in scientific studies [ref Zeeberg/Weinstein]
-(which has been estimated to affect around 20% of all scientific publications in these areas [el-osta/ziemann]),
-how deletion of a cell caused rows to shift and treatment groups to be mixed up [ref Wallensteen/Lajic]
+how limitations in Excel data formats lead to the loss of 16,000 COVID case records in the UK [NEED TO CITE SOMETHING HERE],
+how Excel's automatic formatting caused important gene names to be disregarded in scientific studies [@zeeberg2004mistaken]
+(which has been estimated to affect around 20% of all scientific publications in these areas [@ziemann2016gene]),
+how deletion of a cell caused rows to shift and treatment groups to be mixed up [@wallensteen2018retraction]
 how using binary instead of explanatory labels lead to a mix up of the intervention with the control group [ref aboumatar/wise]
 how mixing up missing data and zero values lead to a paper retraction [turcing and whitehouse],
 and how incorrectly copying data in a spreadsheet lead to the delay in the opening a hospital
