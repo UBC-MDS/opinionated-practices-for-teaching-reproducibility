@@ -98,9 +98,7 @@ that are particularly effective for teaching reproducibility successfully:
 3. lots of practice
 
 In this paper, we will discuss why we believe each of these are important,
-provide high-level examples of how to incorporate these in your teaching,
-and walk through one detailed example of how we have implemented each of these
-in our courses on reproducibility at UBC.
+provide examples of how to incorporate these in your teaching.
 
 ## Placing extra emphasis on motivation
 
@@ -287,11 +285,6 @@ Table. 1: Case studies that illustrate the significant real world consequences o
 
 ### Letting them fail (in a controlled manner)
 
-Another example that we learned from Jenny Bryan's teaching of STAT 545 at UBC
-is to ask students to run someone else's analysis and let them fail. 
-We have taken this approach, but tweaked it so that they experience this in a
-more limited, controlled manner.
-
 Notably,
 many instructors (including the authors of this work)
 have themselves experienced failure in graduate school
@@ -305,14 +298,19 @@ we can set up controlled scenarios to expose them to these downsides
 in a controlled, accelerated manner
 while still embodying much of the same motivational benefits.
 
-Below we present a more detailed example of controlled failures,
-but in short we provide students an analysis that is not 
-reproducible, and thus will likely fail on someone else's machine, 
-and then ask them to run it.
-If they cannot run it, we ask them to fix it so they can,
-giving them hands on experience with this laborious task.
-Then we provide them the same analysis that has been made reproducible,
-and can directly be run on the students' machines without any tweaking.
+One way we have done this is providings students an analysis that is not 
+reproducible 
+(i.e., it depends on rare/obscure software pacakges 
+or specific package versions), 
+and thus will likely fail on someone else's machine. 
+We then ask them to try to run it, 
+and if they cannot run it, we ask them to fix the code 
+or install missing software so they can.
+Then we provide them the same analysis that has been made reproducible, 
+through the use of shareable compute environments (i.e., `renv`, `conda`, or Docker),
+instructions on how to use the shared compute environment.
+The students then experience running the same analysis on their machines 
+without any changing of code or software installation.
 Under these controlled circumstances
 failure and frustration can have a positive impact on students overall learning
 as they experience the many benefits of reproducibility first hand.
@@ -320,57 +318,15 @@ In a relatively short amount of time,
 this helps provide motivation
 to endure the steep learning curves of reproducibility concepts and tools.
 
-#### Detailed example lesson of letting them fail (in a controlled manner)
-
-The classroom that this has been used in is DSCI 522 - Data Science Workflows
-that is 2/3 of the way into a professional Master's of Data Science program at UBC. 
-This course is a project-based course where we teach them all the
-concepts and skills needed to conduct reproducible data analyses.
-Near the end of the course one of the things that we get them to do
-is to make their compute environments for their analysis reproducible 
-via containerization of the compute environment using a tool called Docker.
-
-Docker is not an easy thing to teach or learn. 
-There is a lot of layers of prerequisite knowledge related to Unix/Linux 
-that students need to know. 
-To be able to run Docker containers students need to be able to run commands
-in the terminal. 
-And to be able to build their own Docker images, 
-they need to know how to install software using Linux operating systems at the 
-command line 
-(as its these kinds of commands that need to be written in a text file 
-that specifies how to build a Docker image). 
-Most data science students do not come to the reproducibility classroom with 
-this prerequisite knowledge, 
-so there are additional barriers to teaching this subject,
-which further emphasizes the need to evoke sufficient internal motivation among students.
-
-The specific exercise that we use to provide this motivation in the classroom is to 
-give students a data analysis project pipeline that is available on github 
-(https://github.com/ttimbers/data_analysis_pipeline_eg/tree/v3.0).
-In class we ask them to go to that GitHub repository,
-read the instructions and try to replicate the analysis on their own computers.
-In this course, our students already have enough Git skills to clone the 
-repositories. 
-In the GitHub repository that we provide them, 
-we have not used any compute environment reproducibility tools 
-and we have intentionally included in a lot of obscure software packages 
-that we know they don't have installed. 
-In some cases, we add them cryptically in the middle of a script 
-so they have to do a little bit more work 
-than just look at the top of the script 
-to find out what packages they need to install.
-It takes students some time to accomplish this task that you set before them,
-but eventually they figure it. 
-However, we make it tricky enough that it's frustrating.
-
-After this, we give them the same analysis in a different GitHub repository 
-(https://github.com/ttimbers/data_analysis_pipeline_eg) that uses Docker as the compute environment reproducibility tool.
-There is a Docker image that lives on DockerHub (a container repository), 
-and project `README` gives clear instructions on how to run 
-and replicate the analysis using Docker. 
-Students experience that they are able to this in a few minutes 
-and with very little effort.
+The example discussed above was inspired by Jenny Bryan's teaching of STAT 545 at UBC.
+In her version of this task, she pairs students up and asks them to 
+run eachother's code projects that they have been working on in her course. 
+Most usually fail to be able to do this on the first try 
+for the same reasons discussed above.
+We adapted her teaching method so so that students experience this 
+in a more limited, controlled manner - 
+which has allowed us to scale this exercise to larger classes 
+with more homoegenous experiences.
 
 ## Guided instruction
 
