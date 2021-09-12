@@ -333,19 +333,20 @@ with more homoegenous experiences.
 We suggest that guided instruction is important in the classroom,
 specifically when teaching reproducibility.
 From our experience, reproducibility is not something that most people or
-students figure out through exploration- and inquiry-based learning, 
-or if they do it is not an efficient process. 
+students figure out on their own, 
+or if they do, it is not an efficient process. 
 We hypothesize the reason for this is that reproducibility 
-uses a lot of borrowed tools from software engineering that are
+uses a lot of borrowed knowledge, workflows 
+and tools from software engineering that are
 being repurposed for science and reproducibility.
 Thus, a lot of the getting up and getting started with reproducibility 
 has a lot of assumed knowledge behind it, 
-and there are not a lot of like clear and easy on roads for learners who
+and at present there are not a lot of clear and easy on roads for learners who
 do not have a software engineering background. 
 Part of this may stem from the field being still fairly new 
 and not-yet as widely embraced as we might hope.
 This means that there is not a lot of culture around using these in data science
-and statistics, this it is not yet as obvious where the on-ramps are.
+and statistics, and it is not yet as obvious where the on-ramps are.
 
 Furthermore, similar to why we need extra motivation, 
 the challenge of learning to use the tools due to their steep learning curves
@@ -353,7 +354,7 @@ suggests that having some guided instruction is beneficial to learners.
 These points are well stated in a 
 [blog post](https://simplystatistics.org/2018/12/11/the-role-of-theory-in-data-analysis/) 
 and [essay](https://leanpub.com/dataanalysisessays) 
-on *The Role of Theory in Data Analysis* by Roger Peng:
+on *The Role of Theory in Data Analysis* by Roger Peng [-@peng2020essays]:
 
 > *There is no need for a new data analyst to learn about reproducibility* 
 > *"from experience".* 
@@ -372,27 +373,33 @@ and think we owe it to our students to guide them
 to the best practices that the reproducibility community has
 arrived on to date and then show them how to use these tools explicitly.
 
-At MDS,
+At UBC,
 we primarily employ guided instructions through three pedagogical strategies:
 
 1. Live demonstration
-2. Pre-readings
+2. Pre-lecture activities
 3. Worksheets
 
 ### Live demonstration
 
 So how do we use guided instruction in the reproducibility classroom? 
-In data science programming classes it is common to use live demonstration 
+In data science programming classes it is becoming more common to use demonstration 
 to show how to code in R and Python. 
-A similar pedagogy of live demonstration works well for reproducibility tools, 
-including R Markdown or Jupyter notebooks for reproducible reports, 
+This is referred to in the data science literature as live coding 
+[@raj2018role; @nederbragt2020ten]. 
+We have observed that a similar pedagogy of live demonstration 
+works well for reproducibility tools, 
+including R Markdown [@xie2021dynamic] or Jupyter notebooks [@kluyver2016jupyter] for reproducible reports, 
 using version control with Git and GitHub, 
-and using Docker to create reproducible and shareable computational environments.
+and using tools like `renv` [@kusheyrenv], `conda` [@anaconda]
+and Docker [@merkel2014docker] to create reproducible and shareable computational environments.
 We believe that live demonstration makes it more obvious to the students 
 how to use these tools in practice,
 and facilitates lateral knowledge transfer
 where learners absorb additional material by observing *how* we work,
-which would not have been possible from seeing a slide deck.
+which would not have been possible from learning about these
+concepts and tools in a traditional lecture that uses a slide deck
+to present new knowledge and concepts.
 Additionally, when you make mistakes as an instructor in these live demonstrations,
 it humanizes the reality of working with these tools that are
 somewhat challenging, even for experts.
@@ -402,28 +409,33 @@ and how to fix it.
 <!--TODO Cite teaching tech for the above advatanges? -->
 
 A word of caution with live demonstration when teaching reproducibility;
-because we are teaching things that involve graphical user interfaces
-and/or that come from software engineering, the tech stack moves very fast. 
+because teaching these workflows and tools often involves
+the demonstrations of graphical user interfaces 
+and tools that come from software engineering, 
+the tech stack moves very fast. 
 This means that each semester we teach these tools,
 we need to test drive the materials before we share them with the students
-to see if something has changed.
-
+to see if something has changed - as often it has.
+This is something that happens less frequently when teaching 
+novice to intermediate programming for data science, 
+as that part of the data science software stack has now become fairly stable.
 A relatively recent example of this is from fall 2020, 
 when GitHub decided to change the name of their default branch 
-from master to main (rightfully so). 
-This change broke several of our teaching demos,
+from master to main (rightfully so) [CAN WE CITE SOMETHING HERE OR LINK TO THEIR CHANGELOG?]. 
+This change broke several of our teaching demonstrations,
 guided worksheets, and lab homework.
 It also caused all of our notes to have to be rewritten. 
-Eight months later, this problem is still not completely solved as we have
-several resources that are still using the master branch 
-that we have not been able to quickly change over.
 For the reasons argued above, we do believe that it is really important 
 to use guided instruction when teaching reproducibility, 
 however, this should be done with the awareness and the acceptance 
 that these kinds of changes are going to happen relatively frequently.
 Which means reproducibility instructors are going to have to 
-update or make a new live demos and guided worksheets each year.
+update or make a new live demonstrations, and other teaching resources, 
+each year.
 Without this, the course resources will quickly fall out of usefulness.
+There may be a time in the near future where these tools also stabilize,
+but the authors of this manuscript anticipate that is still 
+many years ahead in the future.
 
 ### Pre-lecture activities
 
