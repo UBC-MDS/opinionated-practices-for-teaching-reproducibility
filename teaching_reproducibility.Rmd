@@ -628,11 +628,10 @@ grade while completing assignments focused on other data science topics.
 This latter strategy parallels how they will employ reproducibility 
 habits later in their carers
 (a detailed example follow in the next section).
-We also intentionally choose to use authentic data science reproducibility tools
-to provide opportunities for practicing and gaining confidence with these tools
-in "sharp" authentic scenarios rather than just in constructed exercises.
+The tools we chose to teach are data science reproducibility software
+that students are likely to employ in workflows in their future work.
 This sustained practice not only enforces students' habits,
-but also increases their proficiency with these tools
+but also increases their proficiency authentic reproducibility software
 and they can run into problems in an environment
 where they can easily reach out for help without feeling intimidated to ask.
 
