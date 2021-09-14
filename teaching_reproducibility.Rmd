@@ -442,6 +442,8 @@ many years ahead in the future.
 Although live demonstration is important for the reasons outlined above,
 it is critical that it does not dominate the time spent in the classroom,
 so that student have ample time to engage in active learning activities.
+There is evidence that active learning can increase student performance,
+at least on summative assessments [@freeman2014active].
 To ensure that students have sufficient background knowledge
 to start we complement our live demonstration with assigned pre-lecture activities.
 These can consist of material that we have created ourselves or external resources
@@ -453,7 +455,7 @@ by spacing out their exposure to the course material.
 
 ### Worksheets
 
-After guiding students to foundational knowledge
+After guiding students through the fundamentals
 through live demonstration and pre-lecture activities,
 we challenge them to take a more active learning role
 by solving worksheet problems on their own in the classroom.
@@ -464,10 +466,13 @@ before working on the homework assignments on their own.
 Worksheets provide students with many low stakes assessments
 comprised of short problems that are graded for completion only.
 In data science,
-this works well in literate code documents
-that have automated tests in them to provide feedback.
+this works well in literate code documents 
+(either Jupyter notebooks or R Markdown)
+that have automated tests in them to provide feedback. 
+Two tools that we have used for this are nbgrader [@blank2019nbgrader] 
+and otter-grader [@otter].
 Compared to in-class exercises,
-worksheets give learners additional change to actively engage with the material
+worksheets give learners an additional chance to actively engage with the material
 while still providing a structured way of providing exercises 
 focused on key learning outcomes.
 Worksheets are also key for providing students with lots of practice,
@@ -477,28 +482,36 @@ a topic we discuss in the last section of this article.
 ### Example lesson using guided instruction
 
 Here we provide an example of how we use guided instruction to teach version
-control in our first year introduction to data science course. 
-In this course, we take a three-pronged approach for directed instruction.
+control in our first year introduction to data science course at UBC, DSCI 100. 
+In this course, we take a three-pronged approach for guided instruction.
 
-We provide them a 
-[textbook reading](https://ubc-dsci.github.io/introduction-to-datascience/version-control.html) 
-for them to review before class,
-then we do a [guided instruction](https://youtu.be/attPo4zEElU) in class, 
+First, we provide them an assigned textbook reading
+for them to review before class. 
+For this particular topic, it is an [introductory chapter 
+on collaboration with version control](https://ubc-dsci.github.io/introduction-to-datascience/version-control.html).
+When the students arrive in class, 
+we then do a live demonstration, 
 where they watch us use the GitHub website, 
 and the Jupyter Git graphical user interface to add, commit,
 push and pull changes.
-Then finally they work through a 
-[guided worksheet](https://github.com/UBC-DSCI/dsci-100/blob/master/materials/worksheet_05/worksheet_05.ipynb) 
-that asks them to do 
-the same thing that we just demonstrated.
-The guided worksheets also asks them questions along the way 
-to test that they really understand what is adding, what is committing,
-what is pulling, what is pushing and where is the work going.
+A recording of one of these live demonstrations is available on YouTube at this [link](https://youtu.be/attPo4zEElU).
+Finally we ask the students to work through a 
+guided worksheet, which is a Jupyter notebook with narration, questions and automated software tests to give automated feedback about their answers.
+The worksheet asks the students to do 
+the same thing that we just demonstrated,
+as well as asks them questions along the way 
+to test their understanding of the reproducibility concepts 
+related to the the skills and tools they are practicing.
+For example, in the version control worksheet, we ask questions to assess
+if they understand what the purpose of adding something to the Git staging area is, 
+how adding differs from committing in Git, 
+and where does the work go when it is pushed to a remote repository. 
+An version of this worksheet can be accessed [here](https://github.com/UBC-DSCI/dsci-100-assets/blob/master/2021-summer/materials/worksheet_05/worksheet_05.ipynb)
 
 The challenge or limitation with this lesson in particular, 
 is that we have chosen to teach using a Git graphical user interface,
 as opposed to the Git command line tool,
-due to the very novice level of the learners. 
+due to the very novice level of the learners in this course. 
 Using a graphical user interface, and a newer one,
 means that we need to more frequently update
 and fix our lesson as the tool changes. 
@@ -511,41 +524,29 @@ especially those who are also new to the command line in general.
 ## Lots of practice
 
 <!--TODO might need a subheading to break this up -->
-The third practice we argue for when teaching reproducibility is lots and lots of practice.
-To build lasting changes in behavior
-humans need to commit new information to long-term memory,
-which we can do in two fundamental ways:
-one trial learning and repetitive spaced practice.
-<!--TODO ref learning strategies-->
-One trial learning usually requires some sort of emotional impact, 
-such as a traumatic event, or a really positive emotional event (a great
-birthday or a wedding).
-Forming lasting memories from these emotional experiences, 
-doesn't require repetition.
-However, that is not how we learn most of the topics taught at school,
-which tend to be less emotionally salient. 
-Such topics are instead better learned through repetitive spaced practice,
-where information is committed to long-term memory
-by revisiting and repeating it multiple times 
-with break in between.
-
+The third pedagogy we argue for when teaching reproducibility is lots 
+and lots of practice.
+Mastery of a subject often involves consolidating ideas, concepts 
+and theories into long-term memory. 
+And consolidating most things into long-term memory 
+requires repetition [@ebbinghaus1913memory].
 When we teach reproducibility topics,
-we want students to do more than commit information to long term behavior.
-We actually want them to act on new information and induce a change in behavior
-by putting their knowledge into practice,
+we want students to do more than commit information to long-term memory.
+We want to go a step further, beyond knowledge of ideas, concepts and theories,
+and induce a change in their behavior,
 both in the classroom and in their own work.
+We might even say, that we want our students to form new 
+habits around how they perform data analyses, ones that are reproducible.
 Importantly and in contrast to many other data science topics,
-students often already have behavioral patterns in place for how they organize and name their files, or how they collaborate with their colleagues.
-Although these are not reproducible practices,
-they fill many of the same niches in a learner's workflow,
-e.g. we want students to replace naming documents `draft-final-version-3.md`
-with using git and GitHub for version control
-and substitute collaboration via forks and PR on GitHub
-for their current habits of using working together on Google docs.
-Therefore,
-teaching reproducibility ought to go one step beyond promoting effective retention of information
-and focus on habitual and behavioral changes,
-which introduces additional challenges and opportunities.
+students often already have behavioral patterns in place for how they organize 
+and name their files, or how they collaborate with their colleagues.
+However, most often these are not reproducible practices 
+and this prior knowledge 
+and practices can interfere with learning the new behaviours 
+we want our students to adopt. 
+Thus, for those two reasons stated above,
+we argue that reproducibility requires more practice compared to other
+data science topics. 
 
 Habit formation can be defined as the triggering of behavior from contextual cues.
 In the context of reproducible workflows these cues
@@ -573,7 +574,7 @@ and employ in a familiar, but irreproducible fashion workflow strategy.
 Habits are best learned through frequent, regular, and sustained cue exposure.
 To support the formation of reproducible workflow habits,
 we therefore complement guided instruction
-with plenty of embed practice in the classroom,
+with plenty of embedded practice in the classroom,
 where we intentionally pause during the demos
 and say "okay students your turn, do what i just did".
 This is a more controlled form of practice,
@@ -581,7 +582,7 @@ which sets students up for practicing these habits on their own.
 As mentioned above,
 we also provide students with worksheets
 that can be used both in the class room and at home,
-as students receive feedback through autograding.
+as students receive feedback through automated software tests.
 
 Importantly,
 habit formation is not a linear process.
@@ -602,11 +603,15 @@ where they would employ and benefit from these skills in real life.
 To give students adequate time and practice to cement their reproducible workflow habits,
 we have taken intentional choices of which learning technologies and platforms
 are used throughout the program.
-This ensures that students are practicing using reproducible tools
+For the UBC Master of Data Science program students, for example, 
+this ensures they are practicing using reproducible tools
 for the full 10 months as part of the course learning technology mechanics
-(homework submission, grading, etc)
-and interleaved with learning other topics,
-just as they will do later in their carers
+(homework submission, grading, etc).
+Additionally, we interleave these practices as 
+"mechanical assignemnt requirements" worth a small percentage of their 
+grade while completing assignments focused on other data science topics.
+This latter strategy parrallels how they will employ reproducibility 
+habits later in their carers
 (a detailed example follow in the next section).
 We also intentionally choose to use authentic data science reproducibility tools
 to provide opportunities for practicing and gaining confidence with these tools
@@ -621,28 +626,29 @@ where they can easily reach out for help without feeling intimidated to ask.
 
 A specific example of how we use lots of practice
 is used in almost all of the UBC Master of Data Science courses
-(20 one-credit courses taken over an eight-month period).
+(which has 20 one-credit courses taken over an eight-month period).
 In these courses we use version control,
 particularly Git and GitHub as our course management system. 
 In these courses, the homework instructions and assignments are distributed 
 to the students as GitHub repositories and the only way that they can submit
 their homework is by putting their homework in that GitHub repository.
-So they have to go through the cloning procedure,
+Thus, to complete and submit their assessments 
+on any data science topic students must go through the cloning procedure,
 or at least be able to somehow download their assignments from the
 GitHub website, as well as be able to 
 (hopefully through using Git) upload their work back to that GitHub 
-repository. 
+repository. The tool we use to administer GitHub repositories in this way
+is called `rhomboid` (https://github.com/mgelbart/rhomboid), 
+but there are other tools that can do this, 
+including GitHub Classroom (https://classroom.github.com/) 
+and Classy (https://github.com/ubccpsc/classy).
 
 To incentivize doing this using Git 
 (as opposed to the GitHub web user interface)
-we also assign some marks of each assignment to a mechanics grade. 
+we also assign some marks of each assignment (about 5%) to a mechanics grade. 
 For this we assess whether they have at least three
 commits associated with every single assignment
 and have written meaningful commit messages.
-We do this because we're trying to build these good habits and practices.
-There are good reasons why you use version control, not just to submit your
-homework but to active as a backup, for collaboration, or in case you
-want to go back in time and change things.
 By the end of this program the students have version controlled their
 work in over 80 different GitHub repositories.
 We hope this results in using version control becoming a habit, 
@@ -663,31 +669,29 @@ where students can explore and practice
 to learn how to use GitHub's code review feature for pull requests.
 To use it,
 students create their own copy of the repository on GitHub,
-create a branch named pr and then a pull request is automatically created for them by a bot.
-After this simple setup,
+create a branch named `pr` 
+and then a pull request is automatically created for them by a bot.
+After this quick and simple setup,
 the students can spend the rest of the exercise
 exploring how to perform code reviews on GitHub.
-
-<!--In the UBC Master of Data Science program, we use a homegrown tool --> 
-<!--([rhomboid](https://github.com/mgelbart/rhomboid)), -->
-<!--to do this, but there are many tools that one could use to do this, --> 
-<!--including [GitHub Classroom](https://classroom.github.com/) and --> 
-<!--[Classy](https://github.com/ubccpsc/classy). -->
 
 ## Conclusions
 
 We think over the past five years
-from teaching in the Master of Data
-Science and our Introduction to Data
-Science course that key things for teaching reproducibility
-in the data science classroom are providing extra emphasis on
-motivation, providing guided instruction so it's not
+from teaching in the UBC Master of Data
+Science and the UBC introductory data
+science course that key things for teaching reproducibility
+in the data science classroom are 
+*1)* providing extra emphasis on motivation 
+so that students understand why reproducibility is important and
+buy into learning about it and practicing it, 
+*2)* providing guided instruction so that it is not
 a mystery of how you get started and what you need to do,
-as well as lots and lots of practice so that we
-can not only teach them the material and the
-concepts but so that this actually
-changes their practices and their workflows and
-they will use it after leaving your classroom.
+as well as *3)* lots and lots of practice so that we
+can not only teach them the ideas and the
+concepts behind reproducibility, but so that our teaching actually
+changes their data analysis practices and their workflows in reproducible ones
+that they will use after leaving the classroom.
 <!--TODO Expand once we have settled  on the article content, include habits e.g. -->
 
 ## References
