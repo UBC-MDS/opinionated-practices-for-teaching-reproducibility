@@ -488,7 +488,7 @@ In this course, we take a three-pronged approach for guided instruction.
 First, we provide them an assigned textbook reading
 for them to review before class. 
 For this particular topic, it is an [introductory chapter 
-on collaboration with version control](https://ubc-dsci.github.io/introduction-to-datascience/version-control.html).
+on collaboration with version control](https://ubc-dsci.github.io/introduction-to-datascience/Getting-started-with-version-control.html).
 When the students arrive in class, 
 we then do a live demonstration, 
 where they watch us use the GitHub website, 
