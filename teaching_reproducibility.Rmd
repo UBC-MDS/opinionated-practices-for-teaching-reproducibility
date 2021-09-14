@@ -439,7 +439,7 @@ novice to intermediate programming for data science,
 as that part of the data science software stack has now become fairly stable.
 A relatively recent example of this is from fall 2020, 
 when GitHub decided to change the name of their default branch 
-from master to main (rightfully so) [CAN WE CITE SOMETHING HERE OR LINK TO THEIR CHANGELOG?]. 
+from master to main (rightfully so) [@__ak]. 
 This change broke several of our teaching demonstrations,
 guided worksheets, and lab homework.
 It also caused all of our notes to have to be rewritten. 
@@ -564,7 +564,7 @@ Thus, for those two reasons stated above,
 we argue that reproducibility requires more practice compared to other
 data science topics. 
 
-Habit formation can be defined as the triggering of behavior from contextual cues.
+Habit formation can be defined as the triggering of behavior from contextual cues [@rebar_gardner_2019].
 In the context of reproducible workflows these cues
 are the tasks that students desire to execute,
 such as saving a file after adding new content
@@ -577,11 +577,11 @@ but also learn a new one,
 studies has shown that behavioral change is in fact facilitated
 when substituting a desirable habit for an undesirable one existing
 rather than simply trying to unlearn the existing habit
-(Adriaanse, van Oosten, de Ridder, de Wit, & Evers, 2011).
+[@evers_adriaanse_2011].
 
 Habitual behavior has been proposed to protect individuals from motivational lapses,
 where a desired good behavior is not expressed
-due to a momentary lack of willpower (TODO ref Review paper habit formation).
+due to a momentary lack of willpower [@rebar_gardner_2019].
 By promoting the formation of habits in students,
 they opt for the reproducible workflow "by default",
 shielding them from relying on willpower to not "take the easy way out"
@@ -607,9 +607,9 @@ each successful action following a cue,
 adds to the formation of a new habit in an asymptotic fashion,
 where the initial events are the most important
 and the learning rate eventually plateaus as the habitual pattern solidifies.
-While popular literature often refers to ~30 days as the "all it takes",
-to develop new habits,
-studies have reported anything from and average of 60 to 100 days
+While popular literature often refers to ~30 days as "all it takes"
+to develop a new habit,
+studies have reported that the median is at least around 70 days [@wardle_lally_2010; @radel_fournier_2017]
 before reaching the plateau phase of habit development.
 We therefore believe it is paramount
 that learners have sustained frequent practice in reproducible workflows,
