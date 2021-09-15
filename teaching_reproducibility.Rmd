@@ -234,7 +234,7 @@ and impact of reproducible data analyses.
 This is something that the authors
 are currently trying to build into their courses
 and yet have limited experience with,
-but think the idea has strong merit and wish to present it here.
+but we think the idea has strong merit and wish to present it here.
 We believe that this strategy
 may be particularly important for teaching reproducibility,
 since the impact and significance of the consequences 
@@ -317,7 +317,7 @@ Then we provide them the same analysis that has been made reproducible,
 through the use of shareable compute environments (i.e., `renv`, `conda`, or Docker),
 instructions on how to use the shared compute environment.
 The students then experience running the same analysis on their machines 
-without any changing of code or software installation.
+without any change of code or software installation.
 Under these controlled circumstances
 failure and frustration can have a positive impact on students overall learning
 as they experience the many benefits of reproducibility first hand.
@@ -382,7 +382,7 @@ on *The Role of Theory in Data Analysis* by Roger Peng [-@peng2020essays]:
 The authors of this article agree with the statement above 
 and think we owe it to our students to guide them
 to the best practices that the reproducibility community has
-arrived on to date and then show them how to use these tools explicitly.
+arrived on to date and explicitly show them how to use these.
 
 At UBC,
 we primarily employ guided instructions through three pedagogical strategies:
@@ -451,7 +451,7 @@ many years ahead in the future.
 
 Although live demonstration is important for the reasons outlined above,
 it is critical that it does not dominate the time spent in the classroom,
-so that student have ample time to engage in active learning activities.
+so that students have ample time to engage in active learning activities.
 There is evidence that active learning can increase student performance,
 at least on summative assessments [@freeman2014active].
 To ensure that students have sufficient background knowledge
@@ -577,7 +577,7 @@ due to a momentary lack of willpower [@rebar_gardner_2019].
 By promoting the formation of habits in students,
 they opt for the reproducible workflow "by default",
 shielding them from relying on willpower to not "take the easy way out"
-and employ in a familiar, but irreproducible fashion workflow strategy.
+and employ a familiar, but irreproducible fashion workflow strategy.
 
 Habits are best learned through frequent, regular, and sustained cue exposure.
 To support the formation of reproducible workflow habits,
@@ -589,7 +589,7 @@ This is a more controlled form of practice,
 which sets students up for practicing these habits on their own.
 As mentioned above,
 we also provide students with worksheets
-that can be used both in the class room and at home,
+that can be used both in the classroom and at home,
 as students receive feedback through automated software tests.
 
 Importantly,
@@ -610,7 +610,7 @@ where they would employ and benefit from these skills in real life.
 
 To give students adequate time and practice to cement their reproducible workflow habits,
 we have made intentional choices of which learning technologies and platforms
-are used throughout UBC Master of Data Science program.
+are used throughout the UBC Master of Data Science program.
 This ensures that students are practicing using reproducible tools
 for the full 10 months as part of the course learning technology mechanics
 (homework submission, grading, etc).
@@ -619,7 +619,7 @@ Additionally, we interleave these practices as
 grade while completing assignments focused on other data science topics.
 This latter strategy parallels how they will employ reproducibility 
 habits later in their carers
-(a detailed example follow in the next section).
+(a detailed example follows in the next section).
 The tools we chose to teach are data science reproducibility software
 that students are likely to employ in workflows in their future work.
 This sustained practice not only enforces students' habits,
