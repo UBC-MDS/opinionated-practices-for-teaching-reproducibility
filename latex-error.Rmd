@@ -1,0 +1,10 @@
+---
+title: "R Notebook"
+output: pdf_document
+---
+
+Writing reserved LaTeX math words starting with a `\` outside equations
+will lead to an error.
+
+For example \gamma will prevent this R Markdown document from knitting to PDF,
+with the error shown below.
