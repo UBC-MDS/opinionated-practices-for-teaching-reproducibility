@@ -1,14 +1,9 @@
 ---
 title: "Opinionated practices for teaching reproducibility: motivation, guided instruction and practice"
-link-citations: true
-linkcolor: blue
-
-
 author: 
 - Joel Ostblom \small Department of Computer Science, University of British Columbia
 - Tiffany Timbers \small Department of Statistics, University of British Columbia
 - \footnotesize Corresponding author tiffany.timbers@stat.ubc.ca
-  
 abstract: |
     In the data science courses at UBC, we define data science as the study 
     and development of reproducible and auditable processes to obtain value 
@@ -27,6 +22,8 @@ abstract: |
     and provide ample practice opportunities data science students 
     to effectively engage them in learning about this topic. 
 
+link-citations: true
+linkcolor: blue
 fontsize: 12 pt
 bibliography: references.bib
 documentclass: paper
@@ -729,6 +726,8 @@ include_graphics("img/git_2x.png")
 ```{r latex-errors, out.width="100%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2, fig.align="center"}
 include_graphics("img/r-latex-error.png")
 ```
+
+\newpage
 
 ## Figure captions
 
