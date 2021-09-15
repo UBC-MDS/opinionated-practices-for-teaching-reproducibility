@@ -1,15 +1,40 @@
 ---
 title: "Opinionated practices for teaching reproducibility: motivation, guided instruction and practice"
-author:
-- Joel Ostblom
-- Tiffany A. Timbers
-date: "`r Sys.Date()`"
+author: 
+- Joel Ostblom \small Department of Computer Science, University of British Columbia
+- Tiffany Timbers \small Department of Statistics, University of British Columbia
+- \footnotesize Corresponding author tiffany.timbers@stat.ubc.ca
+abstract: |
+    In the data science courses at the University of British Columbia, 
+    we define data science as the study, development 
+    and practice of reproducible 
+    and auditable processes to obtain insight from data. 
+    While reproducibility is core to our definition, 
+    most data science learners enter the field with other aspects of data science in mind, 
+    for example predictive modelling, which is often one of the most interesting topic to novices. 
+    This fact, along with the highly technical nature 
+    of the industry standard reproducibility tools currently employed in data science, 
+    present out-of-the gate challenges in teaching reproducibility in the data science classroom. 
+    Put simply, students are not as intrinsically motivated to learn this topic, 
+    and it is not an easy one for them to learn. What can a data science educator do? 
+    Over several iterations of teaching courses focused on reproducible data science tools and workflows, 
+    we have found that providing extra motivation, guided instruction 
+    and lots of practice are key to effectively teaching this challenging, yet important subject. 
+    Here we present examples of how we deeply motivate, effectively guide
+    and provide ample practice opportunities to data science students 
+    to effectively engage them in learning about this topic. 
+
+link-citations: true
+linkcolor: blue
+fontsize: 12 pt
+bibliography: references.bib
 documentclass: paper
-bibliography: [references.bib]
 output:
   bookdown::pdf_document2:
     toc: false
     number_sections: false
+header-includes:
+  - \usepackage{setspace}
 ---
 
 ```{r setup, include=FALSE}
@@ -17,24 +42,10 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, ft.align = "left")
 library(knitr)
 ```
 
-## Abstract
+**Keywords:** Reproducibility, Data science, Education, Curriculum
 
-In the data science courses at UBC, we define data science as the study 
-and development of reproducible and auditable processes to obtain value 
-(*i.e.,* insight) from data. While reproducibility is core to our definition, 
-most data science learners enter the field with other aspects of data science in mind, 
-for example, predictive modelling being the most interesting topic to novices. 
-This fact, along with the highly technical nature 
-of the industry standard reproducibility tools currently employed in data science, 
-present out-of-the gate challenges in teaching reproducibility in the data science classroom. 
-Put simply, students are not as intrinsically motivated to learn this topic, 
-and it is not an easy one for them to learn. What can a data science educator do? 
-Over several iterations of teaching courses focused on reproducible data science tools and workflows, 
-we have found that motivation, guided instruction 
-and practice are key to effectively teach this challenging, yet important subject. 
-Here we present examples of how we deeply motivate, effectively guide
-and provide ample practice opportunities data science students 
-to effectively engage them in learning about this topic. 
+\newpage
+\doublespacing
 
 ## Introduction
 
@@ -49,8 +60,7 @@ we embrace the National Academy of Sciences definition,
 which is reaching the same result given the same input, computational methods,
 and conditions [-@national2019reproducibility].
 For auditable or transparent analysis,
-we follow how it has been defined by Hilary Parker [-@parker2017opinionated] 
-and Karthik Ram (2013),
+we follow how it has been defined by others [@parker2017opinionated; @ram2013git],
 which is that there should be a readable record of the steps used to carry out the analysis
 (i.e., computer code)
 as well as a record of how the analysis methods evolved
@@ -141,10 +151,6 @@ data scientists and data science educators, for example Jenny Bryan,
 recommend the practice of "burning it all down" and starting from scratch - 
 which really defeats many of the purposes of version control.
 
-```{r git-is-hard-xkcd, out.width="30%", fig.cap = "Infamous xkcd comic that highlights the difficulty of learning and using the version control software Git.", fig.retina=2}
-include_graphics("img/git_2x.png")
-```
-
 Another example is R Markdown, 
 which is an implementation of literate code documents [@knuth1984literate], 
 that are useful for generating reproducible reports.
@@ -154,15 +160,11 @@ If users make formatting errors that impact LaTeX's job in the rendering
 the resulting error messages can be cryptic
 and are often not clear to learners about where the error is coming from
 or how to resolve it.
-An example of an error from including a `\`` character with a reserved 
+An example of an error from including a "`\`" character with a reserved 
 LaTeX word outside of a mathematical equation,
 and the resultant error message is shown in Figure \@ref(fig:latex-errors).
 The error message here is interpretable by intermediate and experienced 
 R Markdown users, but not by novice learners.
-
-```{r latex-errors, out.width="100%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2}
-include_graphics("img/r-latex-error.png")
-```
 
 Yet another example of a popular reproducibility tool that is challenging to learn is
 Docker.
@@ -231,7 +233,7 @@ and impact of reproducible data analyses.
 This is something that the authors
 are currently trying to build into their courses
 and yet have limited experience with,
-but think the idea has strong merit and wish to present it here.
+but we think the idea has strong merit and wish to present it here.
 We believe that this strategy
 may be particularly important for teaching reproducibility,
 since the impact and significance of the consequences 
@@ -288,17 +290,6 @@ Other examples of case studies that could be used to illustrate the significant
 real world consequences of reproducibility failures in data analyses 
 are listed in table 1. 
 
-Table. 1: Case studies that illustrate the significant real world consequences of reproducibility failures in data analyses.
-
-| Reproducibility error                                    | Consequence                                          | Source(s)                                |
-|----------------------------------------------------------|------------------------------------------------------|------------------------------------------|
-| Limitations in Excel data formats                        | Loss of 16,000 COVID case records in the UK          | [@kelion_kelion_2020]                    |
-| Excel's automatic formatting                             | Important genes disregarded in scientific studies    | [@zeeberg2004mistaken; @ziemann2016gene] |
-| Deletion of a cell caused rows to shift                  | Mix-up of which patient group received the treatment | [@wallensteen2018retraction]             |
-| Using binary instead of explanatory labels               | Mix-up of the intervention with the control group    | [@wise_aboumatar_2019]                   |
-| Using the same notation for missing data and zero values | Paper retraction                                     | [@turchin_whitehouse_2021]               |
-| Incorrectly copying data in a spreadsheet                | Delay in the opening of a hospital                   | [@picken_picken_2020]                    |
-
 ### Letting them fail (in a controlled manner)
 
 Many instructors (including the authors of this work)
@@ -323,9 +314,9 @@ and if they cannot run it, we ask them to fix the code
 or install missing software so they can.
 Then we provide them the same analysis that has been made reproducible, 
 through the use of shareable compute environments (i.e., `renv`, `conda`, or Docker),
-instructions on how to use the shared compute environment.
+and instructions on how to use the shared compute environment.
 The students then experience running the same analysis on their machines 
-without any changing of code or software installation.
+without any change of code or software installation.
 Under these controlled circumstances
 failure and frustration can have a positive impact on students overall learning
 as they experience the many benefits of reproducibility first hand.
@@ -390,7 +381,7 @@ on *The Role of Theory in Data Analysis* by Roger Peng [-@peng2020essays]:
 The authors of this article agree with the statement above 
 and think we owe it to our students to guide them
 to the best practices that the reproducibility community has
-arrived on to date and then show them how to use these tools explicitly.
+arrived on to date and explicitly show them how to use these.
 
 At UBC,
 we primarily employ guided instructions through three pedagogical strategies:
@@ -442,7 +433,7 @@ when GitHub decided to change the name of their default branch
 from master to main (rightfully so) [@__ak]. 
 This change broke several of our teaching demonstrations,
 guided worksheets, and lab homework.
-It also caused all of our notes to have to be rewritten. 
+It also caused parts of our lecture notes on this topic to have to be rewritten. 
 For the reasons argued above, we do believe that it is really important 
 to use guided instruction when teaching reproducibility, 
 however, this should be done with the awareness and the acceptance 
@@ -459,11 +450,11 @@ many years ahead in the future.
 
 Although live demonstration is important for the reasons outlined above,
 it is critical that it does not dominate the time spent in the classroom,
-so that student have ample time to engage in active learning activities.
+so that students have ample time to engage in active learning activities.
 There is evidence that active learning can increase student performance,
 at least on summative assessments [@freeman2014active].
 To ensure that students have sufficient background knowledge
-to start we complement our live demonstration with assigned pre-lecture activities.
+to start, we complement our live demonstration with assigned pre-lecture activities.
 These can consist of material that we have created ourselves or external resources
 and is usually in the form of reading material or videos.
 Encouraging students to learn the basics before class
@@ -479,10 +470,11 @@ we challenge them to take a more active learning role
 by solving worksheet problems on their own in the classroom.
 This activity occupies most of the in-class time,
 so that students can engaging actively with the material
-in an environment where they can easily be supported,
+in an environment where they can easily be supported 
+by their peers and the teaching team,
 before working on the homework assignments on their own.
-Worksheets provide students with many low stakes assessments
-comprised of short problems that are graded for completion only.
+Worksheets are low stakes assessments that 
+provide students with many short problems on which to practice and receive feedback.
 In data science,
 this works well in literate code documents 
 (either Jupyter notebooks or R Markdown)
@@ -510,7 +502,7 @@ When the students arrive in class,
 we then do a live demonstration, 
 where they watch us use the GitHub website, 
 and the Jupyter Git graphical user interface to add, commit,
-push and pull changes.
+push and pull changes 
 A recording of one of these live demonstrations is available on YouTube at this [link](https://youtu.be/attPo4zEElU).
 Finally we ask the students to work through a 
 guided worksheet, which is a Jupyter notebook with narration, questions and automated software tests to give automated feedback about their answers.
@@ -523,7 +515,7 @@ For example, in the version control worksheet, we ask questions to assess
 if they understand what the purpose of adding something to the Git staging area is, 
 how adding differs from committing in Git, 
 and where does the work go when it is pushed to a remote repository. 
-An version of this worksheet can be accessed [here](https://github.com/UBC-DSCI/dsci-100-assets/blob/master/2021-summer/materials/worksheet_05/worksheet_05.ipynb)
+A version of this worksheet can be accessed [here](https://github.com/UBC-DSCI/dsci-100-assets/blob/master/2021-summer/materials/worksheet_05/worksheet_05.ipynb)
 
 The challenge or limitation with this lesson in particular, 
 is that we have chosen to teach using a Git graphical user interface,
@@ -552,7 +544,7 @@ We want to go a step further, beyond knowledge of ideas, concepts and theories,
 and induce a change in their behavior,
 both in the classroom and in their own work.
 We might even say, that we want our students to form new 
-habits around how they perform data analyses, ones that are reproducible.
+habits around how they perform data analyses - ones that are reproducible.
 Importantly and in contrast to many other data science topics,
 students often already have behavioral patterns in place for how they organize 
 and name their files, or how they collaborate with their colleagues.
@@ -585,7 +577,7 @@ due to a momentary lack of willpower [@rebar_gardner_2019].
 By promoting the formation of habits in students,
 they opt for the reproducible workflow "by default",
 shielding them from relying on willpower to not "take the easy way out"
-and employ in a familiar, but irreproducible fashion workflow strategy.
+and employ a familiar, but irreproducible fashion workflow strategy.
 
 Habits are best learned through frequent, regular, and sustained cue exposure.
 To support the formation of reproducible workflow habits,
@@ -597,7 +589,7 @@ This is a more controlled form of practice,
 which sets students up for practicing these habits on their own.
 As mentioned above,
 we also provide students with worksheets
-that can be used both in the class room and at home,
+that can be used both in the classroom and at home,
 as students receive feedback through automated software tests.
 
 Importantly,
@@ -618,7 +610,7 @@ where they would employ and benefit from these skills in real life.
 
 To give students adequate time and practice to cement their reproducible workflow habits,
 we have made intentional choices of which learning technologies and platforms
-are used throughout UBC Master of Data Science program.
+are used throughout the UBC Master of Data Science program.
 This ensures that students are practicing using reproducible tools
 for the full 10 months as part of the course learning technology mechanics
 (homework submission, grading, etc).
@@ -627,12 +619,12 @@ Additionally, we interleave these practices as
 grade while completing assignments focused on other data science topics.
 This latter strategy parallels how they will employ reproducibility 
 habits later in their carers
-(a detailed example follow in the next section).
-The tools we chose to teach are data science reproducibility software
+(a detailed example follows in the next section).
+The tools we chose to teach with are data science reproducibility software
 that students are likely to employ in workflows in their future work.
 This sustained practice not only enforces students' habits,
-but also increases their proficiency authentic reproducibility software
-and they can run into problems in an environment
+but also increases their proficiency using authentic reproducibility software
+and when they into problems, it is in an environment
 where they can easily reach out for help without feeling intimidated to ask.
 
 ### Example lesson(s) of lots of practice
@@ -641,20 +633,20 @@ A specific example of how we use lots of practice
 is used in almost all of the UBC Master of Data Science courses
 (which has 20 one-credit courses taken over an eight-month period).
 In these courses we use version control,
-particularly Git and GitHub as our course management system. 
+particularly Git and GitHub, as our course management system. 
 In these courses, the homework instructions and assignments are distributed 
 to the students as GitHub repositories and the only way that they can submit
 their homework is by putting their homework in that GitHub repository.
 Thus, to complete and submit their assessments 
-on any data science topic students must go through the cloning procedure,
+on any data science topic, students must go through the cloning procedure,
 or at least be able to somehow download their assignments from the
 GitHub website, as well as be able to 
 (hopefully through using Git) upload their work back to that GitHub 
 repository. The tool we use to administer GitHub repositories in this way
-is called `rhomboid` (https://github.com/mgelbart/rhomboid), 
+is called [`rhomboid`](https://github.com/mgelbart/rhomboid), 
 but there are other tools that can do this, 
-including GitHub Classroom (https://classroom.github.com/) 
-and Classy (https://github.com/ubccpsc/classy).
+including [GitHub Classroom](https://classroom.github.com/) 
+and [Classy](https://github.com/ubccpsc/classy).
 
 To incentivize doing this using Git 
 (as opposed to the GitHub web user interface)
@@ -675,8 +667,8 @@ in our teaching of reproducible workflows is GitHub actions.
 This tool has allowed us
 to automate the building of individual "playgrounds" of complex Git scenarios
 that would take much effort and typically fail to stage in a large classroom.
-One of the GitHub repositories that we created for these activities
-(https://github.com/ttimbers/review-my-pull-request)
+One of the GitHub repositories that we created for these activities, called
+[`review-my-pull-request`](https://github.com/ttimbers/review-my-pull-request),
 serves the purpose of providing a playground
 where students can explore and practice
 to learn how to use GitHub's code review feature for pull requests.
@@ -693,8 +685,8 @@ exploring how to perform code reviews on GitHub.
 We think over the past five years
 from teaching in the UBC Master of Data
 Science and the UBC introductory data
-science course that key things for teaching reproducibility
-in the data science classroom are 
+science course, DSCI 100, that the key things for teaching reproducibility
+in the data science classroom are: 
 *1)* providing extra emphasis on motivation 
 so that students understand why reproducibility is important and
 buy into learning about it and practicing it, 
@@ -705,5 +697,48 @@ can not only teach them the ideas and the
 concepts behind reproducibility, but so that students actually
 change their data analysis habits and workflows into reproducible ones
 that they will use after leaving the classroom.
+
+## Acknolwedgements
+
+We are grateful to the MDS and DSCI 100 teaching teams who helped shape
+these opinionated practices for teaching reproducibility. 
+
+## Declaration of interest statement
+
+The authors declare no conflict of interest.
+
+## Tables
+
+**Table. 1**: Case studies that illustrate the significant real world consequences of reproducibility failures in data analyses.
+
+| Reproducibility error                                    | Consequence                                          | Source(s)                                |
+|----------------------------------------------------------|------------------------------------------------------|------------------------------------------|
+| Limitations in Excel data formats                        | Loss of 16,000 COVID case records in the UK          | [@kelion_kelion_2020]                    |
+| Automatic formatting in Excel                            | Important genes disregarded in scientific studies    | [@zeeberg2004mistaken; @ziemann2016gene] |
+| Deletion of a cell caused rows to shift                  | Mix-up of which patient group received the treatment | [@wallensteen2018retraction]             |
+| Using binary instead of explanatory labels               | Mix-up of the intervention with the control group    | [@wise_aboumatar_2019]                   |
+| Using the same notation for missing data and zero values | Paper retraction                                     | [@turchin_whitehouse_2021]               |
+| Incorrectly copying data in a spreadsheet                | Delay in the opening of a hospital                   | [@picken_picken_2020]                    |
+
+## Figures
+
+```{r git-is-hard-xkcd, out.width="30%", fig.cap = "Infamous xkcd comic that highlights the difficulty of learning and using the version control software Git.", fig.retina=2, fig.align="center"}
+include_graphics("img/git_2x.png")
+```
+
+```{r latex-errors, out.width="100%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2, fig.align="center"}
+include_graphics("img/r-latex-error.png")
+```
+
+\newpage
+
+## Figure captions
+
+- **Fig 1:** Infamous xkcd comic that highlights the difficulty of learning and using the version control software Git.
+- **Fig 2:** Latex errors are often cryptic to new learners.
+
+\newpage
+\singlespace
+\footnotesize
 
 ## References
