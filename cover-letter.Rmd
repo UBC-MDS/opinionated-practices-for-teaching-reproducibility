@@ -1,0 +1,67 @@
+---
+geometry: margin=42mm
+---
+
+Dear editorial board,
+
+Thank you for considering our submission to your special issue
+"Teaching Reproducibility and Responsible Workflow".
+In our manuscript titled
+"Opinionated practices for teaching reproducibility: motivation, guided instruction and practice"
+we describe the pedagogical strategies we employ when teaching reproducibility 
+in the Master of Data Science program at the University of British Columbia (UBC).
+
+While reproducibility is core to our definition of data science,
+students are often not as intrinsically motivated to learn this topic
+as other data science skills such as predictive modelling or data visualization.
+The technical nature of the industry standard reproducibility tools
+and the fact that students also need to unlearn pre-existing current computational workflows,
+further impedes their ability to easily master reproducible workflows.
+At the same time,
+the need for proper reproducible practices in data science have never been greater,
+which we highlight in our program by showing students
+examples of how the lack of reproducible practices
+can lead to negative real-world consequences for a large number of people
+(detailed in our manuscript).
+
+The experiences we have gained
+from teaching reproducible workflows
+in the Master of Data Science at UBC
+have shaped the pedagogical strategies
+that we present in this manuscript.
+We have been able to incorporate
+feedback from diverse student and instructor groups
+over several iteration of the program,
+which we believe has been substantial in progressing our perspective
+on how to teach reproducibility effectively.
+This has been an educational experience for us
+and we believe that communicating our findings
+can provide valuable insights to our colleagues in the field
+from several years of field tested reproducibility teaching practices.
+We also contribute our perspective on new pedagogies
+that we are excited to implement in the near future
+and describe why we believe these hold benefits for the field.
+For these reasons,
+we believe that our manuscript is an ideal fit
+for your special issue on teaching reproducible and responsible workflows.
+
+There are several prominent data science educators
+who we believe would be suitable reviewers for our manuscript,
+including the following four:
+
+- [Roger Peng](https://rdpeng.org/)
+- [Jeff Leek](http://jtleek.com/)
+- [Fernando Perez](https://bids.berkeley.edu/people/fernando-p%C3%A9rez)
+- [Ben Marwick](http://faculty.washington.edu/bmarwick/)
+
+Thank you again for considering our submission and we look forward to hearing from you soon,
+
+\small
+
+Joel Ostblom  
+Department of Computer Science  
+University of British Columbia
+
+Tiffany Timbers  
+Department of Statistics  
+University of British Columbia
