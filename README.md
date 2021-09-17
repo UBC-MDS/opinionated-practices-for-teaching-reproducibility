@@ -68,12 +68,20 @@ To build the arXiv submission,
 we either run the `Makefile` in this repository:
 
 ```
-make arxiv
+cd manuscript
+make -C manuscript arxiv
 ```
 
 Or follow the steps below:
 
-First, we first knit the R Markdown document,
+First, we navigate 
+to the `manuscript` directory:
+
+```
+cd manuscript
+```
+
+Then we knit the R Markdown document,
 and then run the following four commands:
 
 ```bash
