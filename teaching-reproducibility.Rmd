@@ -730,7 +730,9 @@ The authors declare no conflict of interest.
 
 ## Figures
 
-```{r git-is-hard-xkcd, out.width="30%", fig.cap = "Infamous xkcd comic that highlights the difficulty of learning and using the version control software Git.", fig.retina=2, fig.align="center"}
+(ref:cap) [xkcd.com](https://xkcd.com)
+
+```{r git-is-hard-xkcd, out.width="30%", fig.cap = 'Infamous comic from (ref:cap) that highlights the difficulty of learning and using the version control software Git.', fig.retina=2, fig.align="center"}
 include_graphics("img/git_2x.png")
 ```
 
@@ -742,7 +744,7 @@ include_graphics("img/r-latex-error.png")
 
 ## Figure captions
 
-- **Fig 1:** Infamous xkcd comic that highlights the difficulty of learning and using the version control software Git.
+- **Fig 1:** Infamous comic from (ref:cap) that highlights the difficulty of learning and using the version control software Git.
 - **Fig 2:** Latex errors are often cryptic to new learners.
 
 \newpage
