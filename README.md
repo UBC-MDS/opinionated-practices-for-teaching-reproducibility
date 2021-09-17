@@ -65,7 +65,15 @@ output:
 ```
 
 To build the arXiv submission,
-we first knit the R Markdown document,
+we either run the `Makefile` in this repository:
+
+```
+make arxiv
+```
+
+Or follow the steps below:
+
+First, we first knit the R Markdown document,
 and then run the following four commands:
 
 ```bash
