@@ -27,12 +27,13 @@ abstract: |
 link-citations: true
 linkcolor: blue
 fontsize: 12 pt
-bibliography: references.bib
+bibliography: teaching_reproducibility.bib
 documentclass: paper
 output:
   bookdown::pdf_document2:
     toc: false
     number_sections: false
+    keep_tex: true
 header-includes:
   - \usepackage{setspace}
 ---
