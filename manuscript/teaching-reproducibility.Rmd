@@ -27,12 +27,16 @@ abstract: |
 link-citations: true
 linkcolor: blue
 fontsize: 12 pt
-bibliography: references.bib
+bibliography: teaching-reproducibility.bib
+biblio-style: authoryear
 documentclass: paper
 output:
   bookdown::pdf_document2:
     toc: false
     number_sections: false
+    keep_tex: true
+    citation_package: biblatex
+    biblatexoptions: backend=biber
 header-includes:
   - \usepackage{setspace}
 ---
@@ -45,7 +49,7 @@ library(knitr)
 **Keywords:** Reproducibility, Data science, Education, Curriculum
 
 \newpage
-\doublespacing
+<!-- \doublespacing -->
 
 ## Introduction
 
@@ -707,6 +711,8 @@ these opinionated practices for teaching reproducibility.
 
 The authors declare no conflict of interest.
 
+\newpage
+
 ## Tables
 
 **Table. 1**: Case studies that illustrate the significant real world consequences of reproducibility failures in data analyses.
@@ -720,9 +726,13 @@ The authors declare no conflict of interest.
 | Using the same notation for missing data and zero values | Paper retraction                                     | [@turchin_whitehouse_2021]               |
 | Incorrectly copying data in a spreadsheet                | Delay in the opening of a hospital                   | [@picken_picken_2020]                    |
 
+\newpage
+
 ## Figures
 
-```{r git-is-hard-xkcd, out.width="30%", fig.cap = "Infamous xkcd comic that highlights the difficulty of learning and using the version control software Git.", fig.retina=2, fig.align="center"}
+(ref:cap) [xkcd.com](https://xkcd.com)
+
+```{r git-is-hard-xkcd, out.width="30%", fig.cap = 'Infamous comic from (ref:cap) that highlights the difficulty of learning and using the version control software Git.', fig.retina=2, fig.align="center"}
 include_graphics("img/git_2x.png")
 ```
 
@@ -734,11 +744,11 @@ include_graphics("img/r-latex-error.png")
 
 ## Figure captions
 
-- **Fig 1:** Infamous xkcd comic that highlights the difficulty of learning and using the version control software Git.
+- **Fig 1:** Infamous comic from (ref:cap) that highlights the difficulty of learning and using the version control software Git.
 - **Fig 2:** Latex errors are often cryptic to new learners.
 
 \newpage
 \singlespace
 \footnotesize
 
-## References
+<!-- ## References -->

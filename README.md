@@ -21,3 +21,86 @@ and practice are key to effectively teach this challenging, yet important subjec
 Here we present examples of how we deeply motivate, effectively guide
 and provide ample practice opportunities data science students 
 to effectively engage them in learning about this topic. 
+
+## Preprint submission to the arXiv
+
+The arXiv requires single spaced submissions so I commented the double spacing LaTeX command
+(the journal we submitted to requires double spacing for the review process).
+
+The arXiv requires us to submit a `.tex` file rather than a rendered PDF
+and they reject PDF submissions when they detect that it is from a `.tex` file.
+To create the `.tex` file from our `.Rmd`
+we need to include the following in the preamble:
+
+```yaml
+output:
+  bookdown::pdf_document2:
+    keep_tex: true
+```
+
+The arXiv requires all the files necessary to build the PDF from the `.tex` file,
+which includes the references file and any figures.
+Unfortunately,
+their servers to not run `bibtex` so they don't accept submission of `.bib` files.
+Instead they require us to submit the built references in `.bbl` format.
+Since we ran into error trying to generate the `.bbl` file via the `bibtex` command,
+I switched our references to use `biblatex`,
+so that we can use the `biber` command instead.
+`biber` has issues with underscores in filename,
+so I renamed all files.
+`biber` requires specifying `biblio-style: authoryear` in the preamble,
+otherwise it default to just showing numbers for the inline citations.
+It also inserts the "References" heading automatically,
+so we don't need a markdown heading for this section.
+The preamble now looks like this:
+
+```yaml
+bibliography: teaching-reproducibility.bib
+biblio-style: authoryear
+output:
+  bookdown::pdf_document2:
+    keep_tex: true
+    citation_package: biblatex
+    biblatexoptions: backend=biber
+```
+
+To build the arXiv submission,
+we either run the `Makefile` in this repository:
+
+```
+cd manuscript
+make -C manuscript arxiv
+```
+
+Or follow the steps below:
+
+First, we navigate 
+to the `manuscript` directory:
+
+```
+cd manuscript
+```
+
+Then we knit the R Markdown document,
+and then run the following four commands:
+
+```bash
+pdflatex teaching-reproducibility
+biber teaching-reproducibility
+pdflatex teaching-reproducibility
+pdflatex teaching-reproducibility
+```
+
+This gives us the `.bbl` file and correctly includes the references in the `.tex` file.
+We can then create an archive
+containing the LaTeX, bibliography, and image folder to submit to the arXiv:
+
+```bash
+zip -r arxiv-ms.zip teaching-reproducibility.tex teaching-reproducibility.bbl img
+```
+
+Then we can clean up the intermediate LaTeX artifacts in the repo:
+
+```bash
+rm teaching-reproducibility.{blg,log,aux,run.xml,bcf}
+```
