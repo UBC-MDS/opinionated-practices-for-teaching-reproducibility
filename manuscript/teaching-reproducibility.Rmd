@@ -704,8 +704,8 @@ that they will use after leaving the classroom.
 
 ## Acknolwedgements
 
-We are grateful to the MDS and DSCI 100 teaching teams who helped shape
-these opinionated practices for teaching reproducibility. 
+We are grateful to the Master of Data Science and DSCI 100 teaching teams who helped shape
+these opinionated practices for teaching reproducibility.
 
 ## Declaration of interest statement
 

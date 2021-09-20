@@ -64,25 +64,19 @@ output:
     biblatexoptions: backend=biber
 ```
 
-To build the arXiv submission,
-we either run the `Makefile` in this repository:
+### Build process and brief description of build commands
+
+To facilitate the building of both the arXiv preprint
+and any journal submission,
+we collected both in a `Makefile`,
+which we can run from the root of this repository:
 
 ```
-cd manuscript
-make -C manuscript arxiv
+make -C manuscript
 ```
 
-Or follow the steps below:
-
-First, we navigate 
-to the `manuscript` directory:
-
-```
-cd manuscript
-```
-
-Then we knit the R Markdown document,
-and then run the following four commands:
+To generate the `.bbl` file and correctly include the references in the `.tex` file,
+the `Makefile` will run the following commands:
 
 ```bash
 pdflatex teaching-reproducibility
@@ -91,16 +85,22 @@ pdflatex teaching-reproducibility
 pdflatex teaching-reproducibility
 ```
 
-This gives us the `.bbl` file and correctly includes the references in the `.tex` file.
 We can then create an archive
 containing the LaTeX, bibliography, and image folder to submit to the arXiv:
 
 ```bash
-zip -r arxiv-ms.zip teaching-reproducibility.tex teaching-reproducibility.bbl img
+zip -r arxiv/teaching-reproducibility.pdf teaching-reproducibility.tex teaching-reproducibility.bbl img
 ```
 
-Then we can clean up the intermediate LaTeX artifacts in the repo:
+The `Makefile` also strip any identifying information using `sed`
+and save the blinded and preprint PDF to the journal submission directory.
 
 ```bash
-rm teaching-reproducibility.{blg,log,aux,run.xml,bcf}
+sed -i '/\\author{/d;/pdfauthor={/d;s/University of British Columbia/University of ABC/;s/ UBC/ ABC/;s/[(]UBC[)]/(ABC)/;s/ DSCI/ XYZ/' teaching-reproducibility.tex
+```
+
+Then it cleans up the intermediate LaTeX artifacts in the repo:
+
+```bash
+rm teaching-reproducibility.{blg,log,aux,run.xml,bcf,bbl,tex}
 ```
