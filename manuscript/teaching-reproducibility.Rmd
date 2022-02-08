@@ -214,6 +214,13 @@ and so they also have stories from the trenches.
 In a classroom with such students, 
 you can carry out think pair share exercises around these stories 
 and get the students to talk about their stories as well as hear yours.
+Think pair share exercises give students the opportunity to first reflect on their own
+then pair up to discuss with a few classmates,
+before optionally sharing with a larger group.
+This pedagogy could be particulary effective in this context
+since it would allow students to share their past mistakes in a smaller group
+and hearing their colleagues' similar stories,
+before choosing whether to share with the entire class.
 
 In addition to sharing some consequences of non-reproducible analysis 
 with students (without them having to experience this themselves 
