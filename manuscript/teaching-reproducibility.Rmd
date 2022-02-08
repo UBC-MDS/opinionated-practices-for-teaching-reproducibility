@@ -508,6 +508,11 @@ Encouraging students to learn the basics before class
 allows us to have more meaningful live demonstrations
 and sets students up for a more effective learning experience
 by spacing out their exposure to the course material.
+To assess whether students are understanding the material in the pre-readings
+(and what we are covering during class),
+we use in-class polls,
+which allow us to adjust and spend more time on concepts
+that had a lower percentage of correct answers.
 
 ### Worksheets
 
