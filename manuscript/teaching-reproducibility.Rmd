@@ -217,7 +217,7 @@ and get the students to talk about their stories as well as hear yours.
 Think pair share exercises give students the opportunity to first reflect on their own
 then pair up to discuss with a few classmates,
 before optionally sharing with a larger group.
-This pedagogy could be particulary effective in this context
+This pedagogy could be particularly effective in this context
 since it would allow students to share their past mistakes in a smaller group
 and hearing their colleagues' similar stories,
 before choosing whether to share with the entire class.
@@ -484,9 +484,9 @@ as that part of the data science software stack has now become fairly stable.
 However,
 even with these more established tools
 there can be significant upgrades
-where we decide that the changes are wortwhile
+where we decide that the changes are worthwhile
 to incorporate into our courses,
-such as when R introcuced the native pipe symbol `|>`
+such as when R introduced the native pipe symbol `|>`
 as a preferred alternative to the package-specific `magrittr` pipe symbol `%>%`.
 The changes in beginner courses are often on details
 such as new syntax as in the previous example,
@@ -494,7 +494,7 @@ whereas changes in more advanced topics
 can involve rewriting the entire coding component of a course
 because there has been a notable shift in that domain
 and there is now a more effective package to teach,
-e.g. switching to teaching a declrative visualization package in place of an imperative one.
+e.g. switching to teaching a declarative visualization package in place of an imperative one.
 
 For the reasons argued above, we do believe that it is really important 
 to use guided instruction when teaching reproducibility, 
@@ -771,7 +771,7 @@ concepts behind reproducibility, but so that students actually
 change their data analysis habits and workflows into reproducible ones
 that they will use after leaving the classroom.
 
-## Acknolwedgements
+## Acknowledgements
 
 We are grateful to the Master of Data Science and DSCI 100 teaching teams who helped shape
 these opinionated practices for teaching reproducibility.
