@@ -472,15 +472,30 @@ the tech stack moves very fast.
 This means that each semester we teach these tools,
 we need to test drive the materials before we share them with the students
 to see if something has changed - as often it has.
-This is something that happens less frequently when teaching 
-novice to intermediate programming for data science, 
-as that part of the data science software stack has now become fairly stable.
 A relatively recent example of this is from fall 2020, 
 when GitHub decided to change the name of their default branch 
 from master to main (rightfully so) [@__ak]. 
 This change broke several of our teaching demonstrations,
 guided worksheets, and lab homework.
 It also caused parts of our lecture notes on this topic to have to be rewritten. 
+These rewrites happens less frequently when teaching 
+novice to intermediate programming for data science, 
+as that part of the data science software stack has now become fairly stable.
+However,
+even with these more established tools
+there can be significant upgrades
+where we decide that the changes are wortwhile
+to incorporate into our courses,
+such as when R introcuced the native pipe symbol `|>`
+as a preferred alternative to the package-specific `magrittr` pipe symbol `%>%`.
+The changes in beginner courses are often on details
+such as new syntax as in the previous example,
+whereas changes in more advanced topics
+can involve rewriting the entire coding component of a course
+because there has been a notable shift in that domain
+and there is now a more effective package to teach,
+e.g. switching to teaching a declrative visualization package in place of an imperative one.
+
 For the reasons argued above, we do believe that it is really important 
 to use guided instruction when teaching reproducibility, 
 however, this should be done with the awareness and the acceptance 
