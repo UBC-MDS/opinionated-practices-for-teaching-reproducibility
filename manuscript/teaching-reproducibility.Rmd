@@ -790,7 +790,7 @@ The authors declare no conflict of interest.
 include_graphics("img/git_2x.png")
 ```
 
-```{r latex-errors, out.width="100%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2, fig.align="center"}
+```{r latex-errors, out.width="100%", fig.cap = "LaTeX errors are often cryptic to new learners.", fig.retina=2, fig.align="center"}
 include_graphics("img/r-latex-error.png")
 ```
 
