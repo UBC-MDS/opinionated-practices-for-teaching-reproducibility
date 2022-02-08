@@ -59,8 +59,8 @@ we define data science as the study, development, and practice of
 reproducible and auditable processes to extract insight from data.
 Using this definition requires that we also define
 what is meant by a reproducible and auditable analysis.
-To define reproducible analysis,
-we embrace the National Academy of Sciences definition,
+The specific definition of reproducibility varies between research domains [@committeeonreproducibilityandreplicabilityinscience_2019]
+and in our courses we embrace the National Academy of Sciences definition of reproducible analysis,
 which is reaching the same result given the same input, computational methods,
 and conditions [-@national2019reproducibility].
 For auditable or transparent analysis,
