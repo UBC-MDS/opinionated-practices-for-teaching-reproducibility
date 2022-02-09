@@ -164,7 +164,7 @@ If users make formatting errors that impact LaTeX's job in the rendering
 the resulting error messages can be cryptic
 and are often not clear to learners about where the error is coming from
 or how to resolve it.
-An example of an error from including a "`\`" character with a reserved 
+An example of an error from including a "\\" character with a reserved 
 LaTeX word outside of a mathematical equation,
 and the resultant error message is shown in Figure \@ref(fig:latex-errors).
 The error message here is interpretable by intermediate and experienced 
