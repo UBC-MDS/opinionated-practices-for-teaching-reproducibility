@@ -59,8 +59,8 @@ we define data science as the study, development, and practice of
 reproducible and auditable processes to extract insight from data.
 Using this definition requires that we also define
 what is meant by a reproducible and auditable analysis.
-To define reproducible analysis,
-we embrace the National Academy of Sciences definition,
+The specific definition of reproducibility varies between research domains [@committeeonreproducibilityandreplicabilityinscience_2019]
+and in our courses we embrace the National Academy of Sciences definition of reproducible analysis,
 which is reaching the same result given the same input, computational methods,
 and conditions [-@national2019reproducibility].
 For auditable or transparent analysis,
@@ -137,10 +137,10 @@ provide examples of how to incorporate these in your teaching.
 
 Why do we need extra motivation when teaching reproducibility, 
 compared to some other data science topics, such as machine learning? 
-We think this is because students do not have intrinsic excitement
+Our experience is that this stems from students' lack of intrinsic excitement
 or motivation for the topic of reproducibility,
-they have little prior knowledge on this topic, 
-and reproducibility concepts and in particular tools are challenging to learn. 
+that they have little prior knowledge on this topic, 
+and that reproducibility concepts and in particular tools are challenging to learn. 
 
 One example is that the most commonly used version control software, Git,
 is notorious for being difficult to learn (Figure \@ref(fig:git-is-hard-xkcd)). 
@@ -152,7 +152,7 @@ perplexing version control situations, with difficult to interpret outputs
 (e.g., "You are in 'detached HEAD' state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout").
 Sometimes these situations are so difficult to get out of, that even professional 
 data scientists and data science educators, for example Jenny Bryan,
-recommend the practice of "burning it all down" and starting from scratch - 
+recommend the practice of "burning it all down" and starting from scratch [@bryan_bryan_2021] - 
 which really defeats many of the purposes of version control.
 
 Another example is R Markdown, 
@@ -212,8 +212,16 @@ In the Master of Data Science program,
 many of the students have work experience involving data in the past,
 and so they also have stories from the trenches. 
 In a classroom with such students, 
-you can carry out think pair share exercises around these stories 
+you can carry out think-pair-share exercises around these stories 
 and get the students to talk about their stories as well as hear yours.
+Think-pair-share exercises is a cooperative discussion strategy
+where students first *think* about a prompt on their own,
+then *pair* up to discuss with a few classmates,
+and *share* their thinking with the rest of the class afterwards [@lyman_lyman_1981].
+This pedagogy could be particularly effective in this context
+since it would allow students to share their past mistakes in a smaller group
+and hearing their colleagues' similar stories,
+before choosing whether to share with the entire class.
 
 In addition to sharing some consequences of non-reproducible analysis 
 with students (without them having to experience this themselves 
@@ -322,8 +330,8 @@ when selecting the range of cells to be included in one of the Excel formulas,
 which exaggerated the conclusions in the paper
 [@pollin_herndon_2013; @borweinjon_bailey_2013].
 Other examples of case studies that could be used to illustrate the significant
-real world consequences of reproducibility failures in data analyses
-are listed in table 1.
+real world consequences of reproducibility failures in data analyses 
+are listed in Table 1. 
 
 ### Letting them fail (in a controlled manner)
 
@@ -465,15 +473,32 @@ the tech stack moves very fast.
 This means that each semester we teach these tools,
 we need to test drive the materials before we share them with the students
 to see if something has changed - as often it has.
-This is something that happens less frequently when teaching 
-novice to intermediate programming for data science, 
-as that part of the data science software stack has now become fairly stable.
 A relatively recent example of this is from fall 2020, 
 when GitHub decided to change the name of their default branch 
 from master to main (rightfully so) [@__ak]. 
 This change broke several of our teaching demonstrations,
 guided worksheets, and lab homework.
 It also caused parts of our lecture notes on this topic to have to be rewritten. 
+These rewrites happens less frequently when teaching 
+novice to intermediate programming for data science, 
+as that part of the data science software stack has now become fairly stable.
+For example,
+teaching dataframes as the structure for encoding data for analysis.
+However,
+even with more established tools
+there can be significant upgrades
+where we decide that the changes are worthwhile
+to incorporate into our courses,
+such as when R introduced the native pipe symbol `|>`
+as a preferred alternative to the package-specific `magrittr` pipe symbol `%>%`.
+The changes in beginner courses are often on details
+such as new syntax as in the previous example,
+whereas changes in more advanced topics
+can involve rewriting the entire coding component of a course
+because there has been a notable shift in that domain
+and there is now a more effective package to teach,
+e.g. switching to teaching a declarative visualization package in place of an imperative one.
+
 For the reasons argued above, we do believe that it is really important 
 to use guided instruction when teaching reproducibility, 
 however, this should be done with the awareness and the acceptance 
@@ -501,6 +526,11 @@ Encouraging students to learn the basics before class
 allows us to have more meaningful live demonstrations
 and sets students up for a more effective learning experience
 by spacing out their exposure to the course material.
+To assess whether students are understanding the material in the pre-readings
+(and what we are covering during class),
+we use in-class polls,
+which allow us to adjust and spend more time on concepts
+that had a lower percentage of correct answers.
 
 ### Worksheets
 
@@ -707,8 +737,11 @@ even when they leave the program
 and are no longer receiving grades for doing this.
 
 One exciting technology that we have recently started incorporating
-in our teaching of reproducible workflows is GitHub actions.
-This tool has allowed us
+in our teaching of reproducible workflows is GitHub actions,
+a tool for automating software workflows
+that can be configured to be triggered by many different version control tasks, 
+including pushing new code to a GitHub repository.
+This has allowed us
 to automate the building of individual "playgrounds" of complex Git scenarios
 that would take much effort and typically fail to stage in a large classroom.
 One of the GitHub repositories that we created for these activities, called
@@ -742,7 +775,7 @@ concepts behind reproducibility, but so that students actually
 change their data analysis habits and workflows into reproducible ones
 that they will use after leaving the classroom.
 
-## Acknolwedgements
+## Acknowledgements
 
 We are grateful to the Master of Data Science and DSCI 100 teaching teams who helped shape
 these opinionated practices for teaching reproducibility.
@@ -776,7 +809,7 @@ The authors declare no conflict of interest.
 include_graphics("img/git_2x.png")
 ```
 
-```{r latex-errors, out.width="100%", fig.cap = "Latex errors are often cryptic to new learners.", fig.retina=2, fig.align="center"}
+```{r latex-errors, out.width="100%", fig.cap = "LaTeX errors are often cryptic to new learners.", fig.retina=2, fig.align="center"}
 include_graphics("img/r-latex-error.png")
 ```
 
