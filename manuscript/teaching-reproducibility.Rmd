@@ -482,8 +482,10 @@ It also caused parts of our lecture notes on this topic to have to be rewritten.
 These rewrites happens less frequently when teaching 
 novice to intermediate programming for data science, 
 as that part of the data science software stack has now become fairly stable.
+For example,
+teaching dataframes as the structure for encoding data for analysis.
 However,
-even with these more established tools
+even with more established tools
 there can be significant upgrades
 where we decide that the changes are worthwhile
 to incorporate into our courses,
