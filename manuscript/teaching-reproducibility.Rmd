@@ -292,19 +292,19 @@ and having workflows that are opaque and hard to review.
 
 As illustrated in the case we have highlighted above,
 reproducibility errors are not isolated to novices performing data analyses.
-They are occurring at the highest level in both industry and academia
+They also occur in analyses performed by seasoned professionals 
 and can have substantial real-world consequences.
 When selecting failures to share with students,
 it can be beneficial to focus on
 those that students can easily identify with,
 those that have had a big impact,
-and those that come from prolific researchers/companies.
+and those that come from well-known researchers/companies.
 This is to illustrate that these errors can happen to anyone
-and emphasize that we are not sharing them cast blame,
+and emphasize that we are not sharing them to cast blame,
 but to highlight the importance of reproducible practices on all levels.
-Another example that illustrates the previous points
+Another example of an impactful reproducibility mistake in from a well-known research team 
 is the misreporting of the relationship between public depth and GDP growth,
-which was published in what was regarded as a seminal paper at the time.
+which was published in what was regarded as a seminal paper at the time [@pollin_herndon_2013; @borweinjon_bailey_2013].
 These findings came from prominent economists
 and were used as motivation for political decision making,
 until a few years later when it was discovered that an error had been made
