@@ -227,6 +227,22 @@ This helps makes the practice of reproducibility seem more applicable
 and relatable to their own data analysis 
 (which at this stage in their career, may not end up in a published paper).
 
+#### Examples of stories from the trenches
+
+> As a Masters student, I started to use R to do my statistical analysis. I obtained the results I needed from running my code in the R console and copying the results into the word document that was my manuscript. Six months later we were working on revisions requested by the reviewers and I could not remember which version of the code I ran to get my results. I eventually figured it out through much trial and error, but the process was inefficient and very stressful.
+>
+> -- Tiffany Timbers
+
+> As a Masters student, I spent many hours customizing the colors of a figure that had many points and lines on it using Adobe Illustrator. The next week in a meeting with my supervisor,
+she very correctly pointed out that the color scheme I chose would be problematic for color-blind people. I then had to spend many more hours repeating the same work
+to change the colors of all the lines and points to fix it. It was very frustrating to repeat such tedious and time consuming work, and I was not able to meet other deadlines on time because I had to redo this.
+>
+> -- Tiffany Timbers
+
+> I was involved in a project which I needed to return to after a long absence, but dreaded because I had not setup a way to track changes in the analyzed data with the changes in the code. This happened because the data was too big for a simple solution like GitHub, and I was under time pressure to produce results and didn't prioritize looking into an appropriate solution. So although we were using version control for the code in this project (and this was still helpful), we didn't keep track of which input/output was analyzed/produced with which version of the code. So when I returned to this project, I could not use the data I had analyzed previously and instead had to re-analyze all the data with the latest version of the code to reduce the chance for issues from using conflicting code bases, which was very time-consuming. As often is the case in projects where code is only seen as a means to an end and not part of the final product, there was also no time dedicated to write tests for the code in this project, so there was no guarantee that there were not unintended side effects introduced when new changes were made.
+>
+> -- Joel Ostblom
+
 ### Study cases of failures with significant real world consequences
 
 A second way to create motivation
