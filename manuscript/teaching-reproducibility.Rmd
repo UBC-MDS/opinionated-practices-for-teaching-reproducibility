@@ -291,7 +291,7 @@ associated with not adhering to reproducible practices
 and having workflows that are opaque and hard to review.
 
 As illustrated in the case we have highlighted above,
-reproducibility errors are not isolated to novices performing irrelevant data analyses.
+reproducibility errors are not isolated to novices performing data analyses.
 They are occurring at the highest level in both industry and academia
 and can have substantial real-world consequences.
 When selecting failures to share with students,
