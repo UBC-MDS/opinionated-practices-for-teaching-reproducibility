@@ -739,7 +739,8 @@ and are no longer receiving grades for doing this.
 One exciting technology that we have recently started incorporating
 in our teaching of reproducible workflows is GitHub actions,
 a tool for automating software workflows
-that are triggered when new code is pushed to a GitHub repository.
+that can be configured to be triggered by many different version control tasks, 
+including pushing new code to a GitHub repository.
 This has allowed us
 to automate the building of individual "playgrounds" of complex Git scenarios
 that would take much effort and typically fail to stage in a large classroom.
