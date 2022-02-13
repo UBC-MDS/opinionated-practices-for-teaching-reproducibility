@@ -329,8 +329,8 @@ when selecting the range of cells to be included in one of the Excel formulas,
 which exaggerated the conclusions in the paper
 [@pollin_herndon_2013; @borweinjon_bailey_2013].
 Other examples of case studies that could be used to illustrate the significant
-real world consequences of reproducibility failures in data analyses
-are listed in table 1.
+real world consequences of reproducibility failures in data analyses 
+are listed in Table 1. 
 
 ### Letting them fail (in a controlled manner)
 
