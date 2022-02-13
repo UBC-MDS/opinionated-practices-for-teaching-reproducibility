@@ -137,10 +137,10 @@ provide examples of how to incorporate these in your teaching.
 
 Why do we need extra motivation when teaching reproducibility, 
 compared to some other data science topics, such as machine learning? 
-We think this is because students do not have intrinsic excitement
+Our experience is that this stems from students' lack of intrinsic excitement
 or motivation for the topic of reproducibility,
-they have little prior knowledge on this topic, 
-and reproducibility concepts and in particular tools are challenging to learn. 
+that they have little prior knowledge on this topic, 
+and that reproducibility concepts and in particular tools are challenging to learn. 
 
 One example is that the most commonly used version control software, Git,
 is notorious for being difficult to learn (Figure \@ref(fig:git-is-hard-xkcd)). 
@@ -152,7 +152,7 @@ perplexing version control situations, with difficult to interpret outputs
 (e.g., "You are in 'detached HEAD' state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout").
 Sometimes these situations are so difficult to get out of, that even professional 
 data scientists and data science educators, for example Jenny Bryan,
-recommend the practice of "burning it all down" and starting from scratch - 
+recommend the practice of "burning it all down" and starting from scratch [@bryan_bryan_2021] - 
 which really defeats many of the purposes of version control.
 
 Another example is R Markdown, 
