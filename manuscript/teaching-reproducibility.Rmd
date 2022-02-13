@@ -348,11 +348,11 @@ to set students off on the right path as they take an active role in their own l
 particularly when teaching reproducibility.
 From our experience, reproducibility is not something that most people or
 students figure out on their own, 
-or if they do, it is not an efficient process. 
-We hypothesize the reason for this is that reproducibility 
-uses a lot of borrowed knowledge, workflows 
-and tools from software engineering that are
-being repurposed for science and reproducibility.
+or if they do, it is an inefficient time-consuming process.
+We hypothesize that this could be at least partially explained
+by the fact that reproducible workflows
+uses a lot of borrowed knowledge, workflows and tools from software engineering
+and repurpose them for science and reproducibility.
 Thus, much of the getting up and getting started with reproducibility 
 has a lot of assumed knowledge behind it, 
 and at present there are not many clear and easy on-ramps for learners who
@@ -360,7 +360,7 @@ do not have a software engineering background.
 Part of this may stem from the field being still fairly new 
 and not-yet as widely embraced as we might hope.
 This means that there is not a lot of culture around using reproducibility tools in data science
-and statistics, and it is not yet as obvious where the on-ramps are.
+and statistics, and it is not yet as obvious how to get started.
 
 Furthermore, similar to why we need extra motivation, 
 the challenge of learning to use the tools due to their steep learning curves
@@ -382,10 +382,15 @@ on *The Role of Theory in Data Analysis* by Roger Peng [-@peng2020essays]:
 > 
 > *Within that one statement, we can "compress" over 20 years of experience.*
 
-The authors of this article agree with the statement above 
-and think we owe it to our students to guide them
-to the best practices that the reproducibility community has
-arrived on to date and explicitly show them how to use these.
+While we believe that there are pedagogical advantages
+to letting students fail briefly in a controlled manner
+(as elaborated on in the previous section),
+we agree with the statement above in the sense that it is important
+for educators to present the best practices
+that the reproducibility community has arrived on to date
+and explicitly show learners how to use these.
+If we instead relied solely on students learning reproducibility through their own mistakes
+we would set them up for frustrating and time-consuming learning experience.
 
 At UBC,
 we primarily employ guided instructions through three pedagogical strategies:
