@@ -212,11 +212,12 @@ In the Master of Data Science program,
 many of the students have work experience involving data in the past,
 and so they also have stories from the trenches. 
 In a classroom with such students, 
-you can carry out think pair share exercises around these stories 
+you can carry out think-pair-share exercises around these stories 
 and get the students to talk about their stories as well as hear yours.
-Think pair share exercises give students the opportunity to first reflect on their own
-then pair up to discuss with a few classmates,
-before optionally sharing with a larger group.
+Think-pair-share exercises is a cooperative discussion strategy
+where students first *think* about a prompt on their own,
+then *pair* up to discuss with a few classmates,
+and *share* their thinking with the rest of the class afterwards [@lyman_lyman_1981].
 This pedagogy could be particularly effective in this context
 since it would allow students to share their past mistakes in a smaller group
 and hearing their colleagues' similar stories,
