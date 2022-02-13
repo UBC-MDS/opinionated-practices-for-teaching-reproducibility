@@ -569,30 +569,40 @@ and theories into long-term memory.
 And consolidating most things into long-term memory 
 requires repetition [@ebbinghaus1913memory].
 When we teach reproducibility topics,
-we want students to do more than commit information to long-term memory.
-We want to go a step further, beyond knowledge of ideas, concepts and theories,
-and induce a change in their behavior,
-both in the classroom and in their own work.
-We might even say, that we want our students to form new 
-habits around how they perform data analyses - ones that are reproducible.
-Importantly and in contrast to many other data science topics,
-students often already have behavioral patterns in place for how they organize 
-and name their files, or how they collaborate with their colleagues.
+we want students to do more than commit information to long-term memory,
+we want to go a step further,
+beyond knowledge of ideas, concepts and theories,
+and induce a change in their behavior.
+In other words
+we want our students to form new habits
+around how they perform data analyses - ones that are reproducible.
+
+Habit formation can be defined as
+the triggering of behavior from contextual cues [@rebar_gardner_2019].
+In the context of reproducible workflows
+these cues are the tasks that students desire to execute,
+such as saving a file after adding new content
+or wanting to share a document with a colleague.
+Importantly,
+habitual behavior has been proposed to protect individuals from motivational lapses,
+where a desired good behavior is not expressed
+due to a momentary lack of willpower [@rebar_gardner_2019].
+By promoting the formation of habits in students,
+we aim to change their behavior
+so that they opt for the reproducible workflow "by default",
+shielding them from relying on willpower to not "take the easy way out"
+and employ a familiar, but irreproducible fashion workflow strategy.
+
+In contrast to many other data science topics,
+students often already have behavioral patterns in place
+for how they organize and name their files,
+and for how they collaborate with their colleagues.
 However, most often these are not reproducible practices 
 and this prior knowledge 
 and practices can interfere with learning the new behaviours 
 we want our students to adopt. 
-Thus, for those two reasons stated above,
-we argue that reproducibility requires more practice compared to other
-data science topics. 
-
-Habit formation can be defined as the triggering of behavior from contextual cues [@rebar_gardner_2019].
-In the context of reproducible workflows these cues
-are the tasks that students desire to execute,
-such as saving a file after adding new content
-or wanting to share a document with a colleague.
 When teaching reproducible workflows
-we are aiming to replace the behavior with a more reproducible version
+we therefore need to replace the old behavior with a more reproducible version
 as a response to the same cue.
 Although it might sounds like a complex task to not just unlearn an old behavior,
 but also learn a new one,
@@ -601,15 +611,9 @@ when substituting a desirable habit for an undesirable one existing
 rather than simply trying to unlearn the existing habit
 [@evers_adriaanse_2011].
 
-Habitual behavior has been proposed to protect individuals from motivational lapses,
-where a desired good behavior is not expressed
-due to a momentary lack of willpower [@rebar_gardner_2019].
-By promoting the formation of habits in students,
-they opt for the reproducible workflow "by default",
-shielding them from relying on willpower to not "take the easy way out"
-and employ a familiar, but irreproducible fashion workflow strategy.
-
-Habits are best learned through frequent, regular, and sustained cue exposure.
+Since habits are best learned through frequent, regular, and sustained cue exposure,
+we argue that reproducibility requires more practice compared to other
+data science topics.
 To support the formation of reproducible workflow habits,
 we therefore complement guided instruction
 with plenty of embedded practice in the classroom,
@@ -622,7 +626,7 @@ we also provide students with worksheets
 that can be used both in the classroom and at home,
 as students receive feedback through automated software tests.
 
-Importantly,
+It is important to note that
 habit formation is not a linear process.
 Instead,
 each successful action following a cue,
