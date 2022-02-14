@@ -409,9 +409,14 @@ run each other's code projects that they have been working on in her course.
 Most usually fail to be able to do this on the first try 
 for the same reasons discussed above.
 We adapted her teaching method so that students experience this 
-in a more limited, controlled manner - 
-which has allowed us to scale this exercise to larger classes 
-with more homogeneous experiences.
+in a more limited, controlled manner
+by picking an obscure package (e.g., cowsay)
+that none of the students should have installed,
+so that they will all have trouble running the project without reproducibility tools.
+We then provide them with a project using reproducibility
+tools so that they can have success and contrast the two experiences.
+This has allowed us to scale this exercise to larger classes 
+with more homogeneous student experiences.
 
 ## Guided instruction
 
