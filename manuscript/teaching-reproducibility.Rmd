@@ -141,7 +141,7 @@ in classrooms of 10-200 learners from varying educational backgrounds,
 including undergraduate students taking their first data science course
 and graduate students looking to specialize in data science.
 We teach the plurality of our courses in the Master of Data Science program,
-which consists of 24 one-credit courses
+which consists of 24 one-credit courses over an eight month period
 culminating in a six-credit-capstone course.
 As a pre-requisite for this program
 students are generally required to have taken one course each
@@ -729,13 +729,20 @@ Additionally, we interleave these practices as
 grade while completing assignments focused on other data science topics.
 This latter strategy parallels how they will employ reproducibility 
 habits later in their carers
-(a detailed example follows in the next section).
-The tools we chose to teach with are data science reproducibility software
-that students are likely to employ in workflows in their future work.
-This sustained practice not only enforces students' habits,
-but also increases their proficiency using authentic reproducibility software
-and when they into problems, it is in an environment
-where they can easily reach out for help without feeling intimidated to ask.
+(a detailed example follows in the next section),
+and the skill bar is put at a level
+that we require all student to meet
+after introduced to version control topic
+during the first few weeks of class.
+To engage students at different levels of skill
+and interest in reproducibility,
+we have more difficult exercises
+in the courses specifically teaching these topics
+(including demanding optional exercises for bonus points).
+Students less experienced and interested in these topics
+have shared with us that they find the worksheets
+really helpful in preparing them
+to successfully complete the lab questions.
 
 The decision to give students plenty of opportunities to practice reproducible habits
 by adopting version control for student homework submission
@@ -755,7 +762,6 @@ and our frequent communication and collaboration at our weekly academic meetings
 
 A specific example of how we use lots of practice
 is used in almost all of the UBC Master of Data Science courses
-(which has 20 one-credit courses taken over an eight-month period).
 In these courses we use version control,
 particularly Git and GitHub, as our course management system. 
 In these courses, the homework instructions and assignments are distributed 
@@ -772,7 +778,7 @@ but there are other tools that can do this,
 including [GitHub Classroom](https://classroom.github.com/) 
 and [Classy](https://github.com/ubccpsc/classy).
 
-To incentivize doing this using Git 
+To incentivize doing students to submit their assignment by using Git 
 (as opposed to the GitHub web user interface)
 we also assign some marks of each assignment (about 5%) to a mechanics grade. 
 For this we assess whether they have at least three
@@ -785,6 +791,17 @@ to the point that if they're going to work on a project
 it's going to go under version control by default - 
 even when they leave the program
 and are no longer receiving grades for doing this.
+We choose tools such as Git and GitHub
+when teaching version control
+(and other data science reproducibility aspects)
+since students are likely to employ them
+in workflows in their future work.
+This sustained practice with real tools
+not only enforces students' habits,
+but also increases their proficiency using authentic reproducibility software
+and when they into problems,
+it is in an environment
+where they can easily reach out for help without feeling intimidated to ask.
 
 One exciting technology that we have recently started incorporating
 in our teaching of reproducible workflows is GitHub actions,
