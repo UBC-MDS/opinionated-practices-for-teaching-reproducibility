@@ -169,6 +169,51 @@ RStudio education [@__ap],
 Teaching Tech Together [@wilson_wilson_2018],
 and the Instructional Skills Workshop [@day_day_2005].
 
+Our teaching strategies have evolved
+over six year's lifespan
+of the Master's of Data science program.
+We have embraced student feedback on our teaching practices
+from mid-course meetings and surveys from student-elected student representatives,
+course evaluations,
+and alumni surveys.
+An example of a direct improvement in the program
+from the collection and implementation of student feedback
+is labs in the earlier years of the program
+were hard to get started on for students
+because there was a big perceived jump
+from what was learned in lecture
+and what was expected on lab assessments.
+To address this,
+we implemented lecture worksheets with simpler and often autograded questions,
+which led to a notable decrease in this feedback.
+
+One of the key reproducibility-related takeaways from our feedback collection
+is that practice matters and that more is better.
+In our early Capstone projects,
+we observed that students could do the things
+where we gave the lots of practice on
+(e.g., basic version control skills
+and working linearly on the main branch),
+but did not attempt or struggled with other reproducibility concepts/tasks
+where they were provided formal instructions
+but less practice
+(e.g., more advanced version control topics like branching, pull-requests, and
+intermediate/advanced features of reproducible reports and presentations).
+The importance of practice was also apparent in our project-based courses.
+In the early years of the program,
+we didn't have any practice in project-based course-work,
+and the capstone projects from that time had a higher level of technical debt
+and did not adhere to the same standards of reproducible practices
+as Capstone projects from more recent years.
+To address this,
+we implemented project-based courses for several reproducibility related topics
+and observed that the technical debt during Capstone was lower,
+and that the projects were more reproducible.
+Encouragingly,
+our capstone partners also noticed this improvement
+in the quality of the student projects,
+which was reflected in the feedback we collect from them.
+
 ## Placing extra emphasis on motivation
 
 Why do we need extra motivation when teaching reproducibility, 
