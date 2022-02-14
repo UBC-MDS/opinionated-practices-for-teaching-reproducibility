@@ -737,6 +737,20 @@ but also increases their proficiency using authentic reproducibility software
 and when they into problems, it is in an environment
 where they can easily reach out for help without feeling intimidated to ask.
 
+The decision to give students plenty of opportunities to practice reproducible habits
+by adopting version control for student homework submission
+was implemented across the Master of Data Science program from year one.
+To make this feasible,
+postdoctoral teaching and learning fellows were hired
+to help faculty implement this in their courses
+even if those faculty themselves were not familiar with version control.
+The teaching team model in the Master of Data Science program
+greatly facilitates us doing program-wide changes like this.
+This stems from our shared vision for the program
+(which was drafted collaboratively by the team),
+our once-per term academic retreats where we reflect on how things went,
+and our frequent communication and collaboration at our weekly academic meetings.
+
 ### Example lesson(s) of lots of practice
 
 A specific example of how we use lots of practice
