@@ -136,13 +136,16 @@ provide examples of how to incorporate these in your teaching.
 ## Academic setting and background
 
 The specific teaching pedagogies we present in this paper
-have been tested over 5 years, in classrooms of 10-200 learners from varying educational backgrounds,
+have been tested over five years,
+in classrooms of 10-200 learners from varying educational backgrounds,
 including undergraduate students taking their first data science course
 and graduate students looking to specialize in data science.
 We teach the plurality of our courses in the Master of Data Science program,
-where students are generally required to have taken one course each
-in programming, calculus, linear algebra and introductory statistics and probability
-before entering the program.
+which consists of 24 one-credit courses
+culminating in a six-credit-capstone course.
+As a pre-requisite for this program
+students are generally required to have taken one course each
+in programming, calculus, linear algebra, and introductory statistics and probability.
 Typically,
 students also have a few years of working experience (or equivalent),
 but our cohorts includes both recent graduates from Bachelor's degrees
@@ -157,10 +160,14 @@ We have a few core members of the program's teaching team that have been with th
 and the remainder of the team has been with the program for 1-3 years.
 Members of the teaching team developed their data science expertise
 through research graduate and postdoctoral studies in diverse set of topics,
-including machine learning, statistics, computational linguistics, learning analytics, neuroscience, stem cell engineering, ecotoxicology, and physics.
+including computational linguistics, ecotoxicology, learning analytics,
+machine learning, neuroscience, physics, statistics, and stem cell engineering.
 Our pedagogies are influenced not only by our formal training at UBC,
 but also by initiatives such as
-The Carpentries [@__aq], RStudio education [@__ap], and Teaching Tech Together [@wilson_wilson_2018].
+The Carpentries [@__aq],
+RStudio education [@__ap],
+Teaching Tech Together [@wilson_wilson_2018],
+and the Instructional Skills Workshop [@day_day_2005].
 
 ## Placing extra emphasis on motivation
 
