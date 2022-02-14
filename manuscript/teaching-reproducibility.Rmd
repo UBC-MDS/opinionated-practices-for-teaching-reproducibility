@@ -133,6 +133,35 @@ that are particularly effective for teaching reproducibility successfully:
 In this paper, we will discuss why we believe each of these are important,
 provide examples of how to incorporate these in your teaching.
 
+## Academic setting and background
+
+The specific teaching pedagogies we present in this paper
+have been tested in classrooms of 10-200 learners from varying educational backgrounds,
+including undergraduate students taking their only data science course
+and graduate students looking to specialize in data science.
+We teach the plurality of our courses in the Master of Data Science program,
+where students are generally required to have taken one course each
+in programming, calculus, linear algebra and introductory statistics and probability
+before entering the program.
+Typically,
+students also have a few years of working experience (or equivalent),
+but our cohorts includes both fresh undergrads
+as well as learners from senior company positions
+looking to bend their career trajectories towards data science.
+Learners rarely have experience working with reproducible workflows.
+
+The teaching team for our reproducibility courses
+include a mix of post-doctoral teaching fellows, lecturers, and assistant professors
+from the departments of Statistics and Computer Science.
+We have a few core members that have been with the program since its inception,
+and several members that stay with the program for 1-3 years.
+Members of the teaching team developed their data science expertise
+through graduate studies in diverse set of topics,
+including machine learning, statistics, computational linguistics, learning analytics, neuroscience, stem cell engineering, ecotoxicology, and physics.
+Our pedagogies are influenced not only by our formal training at UBC,
+but also by initiatives such as
+The Carpentries [@__aq], RStudio education [@__ap], and Teaching Tech Together [@wilson_wilson_2018].
+
 ## Placing extra emphasis on motivation
 
 Why do we need extra motivation when teaching reproducibility, 
