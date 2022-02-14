@@ -259,6 +259,21 @@ since it would allow students to share their past mistakes in a smaller group
 and hearing their colleagues' similar stories,
 before choosing whether to share with the entire class.
 
+A specific example of how we instruct students to run a think-pair-share exercise
+on the topic of reproducibility follows:
+
+1. Prompt students to think about a non-reproducible or non-auditable workflow
+   they have used before at work, on a personal project, or in course work,
+   and that negatively impacted their work somehow
+   (make sure to include this in the story).
+2. The instructor shares a their own example to get the students started.
+3. With the person beside them,
+   share their story and how it negatively impacted their workflow.
+4. Students were then asked to share their story
+   in a course forum or collaborative notetaking document
+   that other students could read
+   (in smaller classes all groups could share one of their stories aloud with the class).
+
 In addition to sharing some consequences of non-reproducible analysis 
 with students (without them having to experience this themselves 
 over a long and drawn out process of self-discovery),
