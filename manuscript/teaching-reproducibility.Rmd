@@ -410,7 +410,7 @@ Most usually fail to be able to do this on the first try
 for the same reasons discussed above.
 We adapted her teaching method so that students experience this 
 in a more limited, controlled manner
-by picking an obscure package (e.g., cowsay)
+by picking an obscure package (e.g., the R-package cowsay [@cowsay_2020])
 that none of the students should have installed,
 so that they will all have trouble running the project without reproducibility tools.
 We then provide them with a project using reproducibility
