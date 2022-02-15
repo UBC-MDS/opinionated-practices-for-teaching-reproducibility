@@ -286,15 +286,23 @@ and relatable to their own data analysis
 A second way to create motivation
 is through using case studies of irreproducible data analyses
 that have had significant real world consequences.
-Such case studies can be used to illustrate the importance 
+Such case studies can be used to illustrate the importance
 and impact of reproducible data analyses.
-This is something that the authors
-are currently trying to build into their courses
-and yet have limited experience with,
-but we think the idea has strong merit and wish to present it here.
-We believe that this strategy
+Although we are currently in the process of building case-based teaching
+into our reproducibility courses
+and currently only have limited experience with this pedagogy,
+we think the idea has strong merit
+and wish to present it here.
+Notably,
+case-based teaching has been widely used
+in business, law, and medical education for many years [@carlson1995beyond; @garvin_garvin_2003; @bonney_bonney_2015],
+where it has been shown to motivate students
+to participate in class activities to a higher extent,
+which boosts student assessment performance [@flynn2001influence; @yadav2007teaching].
+The benefits of case studies have also been reported on in STEM fields [@yadav2007teaching; @bonney_bonney_2015]
+and we believe that this pedagogical strategy
 may be particularly important for teaching reproducibility,
-since the impact and significance of the consequences 
+since the impact and significance of the consequences
 of not using reproducible practices are not obvious to novices.
 By presenting case studies
 where failure to adhering to reproducible practices
