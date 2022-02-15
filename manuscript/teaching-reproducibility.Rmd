@@ -774,7 +774,7 @@ By promoting the formation of habits in students,
 we aim to change their behavior
 so that they opt for the reproducible workflow "by default",
 shielding them from relying on willpower to not "take the easy way out"
-and employ a familiar, but irreproducible fashion workflow strategy.
+and employ a familiar, but irreproducible workflow strategy.
 
 In contrast to many other data science topics,
 students often already have behavioral patterns in place
@@ -789,11 +789,11 @@ we want our students to adopt.
 When teaching reproducible workflows
 we therefore need to replace the old behavior with a more reproducible version
 as a response to the same cue.
-Although it might sounds like a complex task to not just unlearn an old behavior,
-but also learn a new one,
+Although it might sound like a complex task to unlearn an old behavior,
+as well as learn a new one,
 studies has shown that behavioral change is in fact facilitated
-when substituting a desirable habit for an undesirable one existing
-rather than simply trying to unlearn the existing habit
+when substituting a desirable habit for an existing, undesirable one 
+rather than simply trying to unlearn the existing, undesirable habit
 [@evers_adriaanse_2011].
 
 Since habits are best learned through frequent, regular, and sustained cue exposure,
@@ -820,8 +820,8 @@ where the initial events are the most important
 and the learning rate eventually plateaus as the habitual pattern solidifies.
 While popular literature often refers to ~30 days as "all it takes"
 to develop a new habit,
-studies have reported that the median is at least around 70 days [@wardle_lally_2010; @radel_fournier_2017]
-before reaching the plateau phase of habit development.
+studies have reported that the median is at least around 70 days 
+before reaching the plateau phase of habit development [@wardle_lally_2010; @radel_fournier_2017].
 We therefore believe it is paramount
 that learners have sustained frequent practice in reproducible workflows,
 which is interleaved with other topics
@@ -901,15 +901,15 @@ and have written meaningful commit messages.
 By the end of this program the students have version controlled their
 work in over 80 different GitHub repositories.
 We hope this results in version control becoming a habit,
-to the point that if they're going to work on a project
-it's going to go under version control by default -
+to the point that when they go to work on a project in the future
+they will put the project under version control by default -
 even when they leave the program
 and are no longer receiving grades for doing this.
 We choose tools such as Git and GitHub
 when teaching version control
 (and other data science reproducibility aspects)
-since students are likely to employ them
-in workflows in their future work.
+since they are very popular in academia and industry - 
+meaning that students are likely to encounter them in their future work.
 This sustained practice with real tools
 not only enforces students' habits,
 but also increases their proficiency using authentic reproducibility software
