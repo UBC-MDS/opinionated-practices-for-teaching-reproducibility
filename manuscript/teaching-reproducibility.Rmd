@@ -402,11 +402,13 @@ as they experience the many benefits of reproducibility first hand.
 This exercise usually only takes around 20 min
 and helps provide motivation
 to endure the steep learning curves of reproducibility concepts and tools.
-We teach this in our workflows course
-in the first third of the Master of Data Science program,
-and it is not part of the graded course work,
-but student activity is tracked via polls
-to see how the class is progressing.
+We teach this in our data science workflows course,
+which occurs in the first third of the Master of Data Science program.
+When we have implemented this activity
+we have ran it as an in-class activity that is not counted toward the course grades.
+We do however use polls to assess where the students are at 
+in regards to completing the activity,
+so that we can allot an appropriate amount of time for each group of learners.
 
 The example discussed above was inspired by Jenny Bryan's teaching of STAT 545 at UBC.
 In her version of this task, she pairs students up and asks them to 
