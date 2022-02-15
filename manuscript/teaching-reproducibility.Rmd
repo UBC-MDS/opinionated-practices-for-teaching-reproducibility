@@ -1,28 +1,28 @@
 ---
 title: "Opinionated practices for teaching reproducibility: motivation, guided instruction and practice"
-author: 
+author:
 - Joel Ostblom \small Department of Computer Science, University of British Columbia
 - Tiffany Timbers \small Department of Statistics, University of British Columbia
 - \footnotesize Corresponding author tiffany.timbers@stat.ubc.ca
 abstract: |
-    In the data science courses at the University of British Columbia, 
-    we define data science as the study, development 
-    and practice of reproducible 
-    and auditable processes to obtain insight from data. 
-    While reproducibility is core to our definition, 
-    most data science learners enter the field with other aspects of data science in mind, 
-    for example predictive modelling, which is often one of the most interesting topic to novices. 
-    This fact, along with the highly technical nature 
-    of the industry standard reproducibility tools currently employed in data science, 
-    present out-of-the gate challenges in teaching reproducibility in the data science classroom. 
-    Put simply, students are not as intrinsically motivated to learn this topic, 
-    and it is not an easy one for them to learn. What can a data science educator do? 
-    Over several iterations of teaching courses focused on reproducible data science tools and workflows, 
-    we have found that providing extra motivation, guided instruction 
-    and lots of practice are key to effectively teaching this challenging, yet important subject. 
+    In the data science courses at the University of British Columbia,
+    we define data science as the study, development
+    and practice of reproducible
+    and auditable processes to obtain insight from data.
+    While reproducibility is core to our definition,
+    most data science learners enter the field with other aspects of data science in mind,
+    for example predictive modelling, which is often one of the most interesting topic to novices.
+    This fact, along with the highly technical nature
+    of the industry standard reproducibility tools currently employed in data science,
+    present out-of-the gate challenges in teaching reproducibility in the data science classroom.
+    Put simply, students are not as intrinsically motivated to learn this topic,
+    and it is not an easy one for them to learn. What can a data science educator do?
+    Over several iterations of teaching courses focused on reproducible data science tools and workflows,
+    we have found that providing extra motivation, guided instruction
+    and lots of practice are key to effectively teaching this challenging, yet important subject.
     Here we present examples of how we deeply motivate, effectively guide
-    and provide ample practice opportunities to data science students 
-    to effectively engage them in learning about this topic. 
+    and provide ample practice opportunities to data science students
+    to effectively engage them in learning about this topic.
 
 link-citations: true
 linkcolor: blue
@@ -54,7 +54,7 @@ library(knitr)
 ## Introduction
 
 In the graduate and undergraduate data science courses that we teach
-at the University of British Columbia (UBC), 
+at the University of British Columbia (UBC),
 we define data science as the study, development, and practice of
 reproducible and auditable processes to extract insight from data.
 Using this definition requires that we also define
@@ -186,12 +186,12 @@ and alumni surveys.
 An example of a direct improvement in the program
 from the collection and implementation of student feedback
 was the addition of lecture worksheets with simpler and often autograded questions.
-This was done to address common feedback that we received across the program's curriculum 
-that what was expected on the lab homework assessments were perceived by students 
+This was done to address common feedback that we received across the program's curriculum
+that what was expected on the lab homework assessments were perceived by students
 as too large of a jump in difficulty from what was learned in the lecture.
 The change of implementing these lecture worksheets in several of our courses
 decreased the feedback we have received about this jump in difficulty in those courses
-and thus, we have been incorporating these worksheets 
+and thus, we have been incorporating these worksheets
 across more and more courses in the program to continue to address this.
 
 One of the key reproducibility-related takeaways from our feedback collection
@@ -223,39 +223,39 @@ which was reflected in the feedback we collected from them.
 
 ## Placing extra emphasis on motivation
 
-Why do we need extra motivation when teaching reproducibility, 
-compared to some other data science topics, such as machine learning? 
+Why do we need extra motivation when teaching reproducibility,
+compared to some other data science topics, such as machine learning?
 Our experience is that this stems from students' lack of intrinsic excitement
 or motivation for the topic of reproducibility,
-that they have little prior knowledge on this topic, 
-and that reproducibility concepts and in particular tools are challenging to learn. 
+that they have little prior knowledge on this topic,
+and that reproducibility concepts and in particular tools are challenging to learn.
 
 One example is that the most commonly used version control software, Git,
-is notorious for being difficult to learn (Figure \@ref(fig:git-is-hard-xkcd)). 
-Furthermore, there are many anecdotes that most people 
+is notorious for being difficult to learn (Figure \@ref(fig:git-is-hard-xkcd)).
+Furthermore, there are many anecdotes that most people
 do not learn it deeply
 and instead work by trying a variety of commands until they find some
-that work. This can lead to learners getting themselves into challenging or 
+that work. This can lead to learners getting themselves into challenging or
 perplexing version control situations, with difficult to interpret outputs
 (e.g., "You are in 'detached HEAD' state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout").
-Sometimes these situations are so difficult to get out of, that even professional 
+Sometimes these situations are so difficult to get out of, that even professional
 data scientists and data science educators, for example Jenny Bryan,
-recommend the practice of "burning it all down" and starting from scratch [@bryan_bryan_2021] - 
+recommend the practice of "burning it all down" and starting from scratch [@bryan_bryan_2021] -
 which really defeats many of the purposes of version control.
 
-Another example is R Markdown, 
-which is an implementation of literate code documents [@knuth1984literate], 
+Another example is R Markdown,
+which is an implementation of literate code documents [@knuth1984literate],
 that are useful for generating reproducible reports.
-Many aspects of R Markdown are quite user friendly, 
-however rendering the source R Markdown document to PDF depends on LaTeX. 
+Many aspects of R Markdown are quite user friendly,
+however rendering the source R Markdown document to PDF depends on LaTeX.
 If users make formatting errors that impact LaTeX's job in the rendering
 the resulting error messages can be cryptic
 and are often not clear to learners about where the error is coming from
 or how to resolve it.
-An example of an error from including a "\\" character with a reserved 
+An example of an error from including a "\\" character with a reserved
 LaTeX word outside of a mathematical equation,
 and the resultant error message is shown in Figure \@ref(fig:latex-errors).
-The error message here is interpretable by intermediate and experienced 
+The error message here is interpretable by intermediate and experienced
 R Markdown users, but not by novice learners.
 
 Yet another example of a popular reproducibility tool that is challenging to learn is
@@ -264,18 +264,18 @@ Docker is a containerization tool that extends beyond
 just including the package dependencies of your analysis workflow,
 and instead creates a versioned copy of your entire computational environment
 including the programming language and any operating system dependencies.
-This means that you can share an exact copy of your computational environment 
+This means that you can share an exact copy of your computational environment
 with your collaborators, even if you work on different operating systems.
 Docker is an especially challenging one to
 teach and motivate students to learn
 because it is so different from writing code for analysis.
 This is because software installation is time consuming,
 which leads to writing and debugging code to automate installation
-being a slow and painstaking process. 
+being a slow and painstaking process.
 This is especially true if certain workflows are not followed.
-It is also not an exciting part of a data analysis, 
-as things already work on the student's own computer. 
-This makes it difficult to convince students why they should put effort into learning 
+It is also not an exciting part of a data analysis,
+as things already work on the student's own computer.
+This makes it difficult to convince students why they should put effort into learning
 and using this.
 
 So what do we do to motivate learning reproducibility concepts and tools in our
@@ -288,19 +288,19 @@ classrooms? We have found the following three strategies helpful:
 ### Telling stories from the trenches
 
 One successful strategy that we have used is telling stories from the trenches.
-The instructors who teach these courses at UBC usually have had some experience 
-performing data analyses in their Ph.D.'s or Postdoctoral studies, 
+The instructors who teach these courses at UBC usually have had some experience
+performing data analyses in their Ph.D.'s or Postdoctoral studies,
 or are still currently engaged in research where they do this.
-Through these lived experiences 
-of learning reproducibility tools 
+Through these lived experiences
+of learning reproducibility tools
 and applying it to our own analyses, we have made mistakes,
-our collaborators have made mistakes, 
+our collaborators have made mistakes,
 and thus we can share these experiences with our students.
-In the Master of Data Science program, 
+In the Master of Data Science program,
 many of the students have work experience involving data in the past,
-and so they also have stories from the trenches. 
-In a classroom with such students, 
-you can carry out think-pair-share exercises around these stories 
+and so they also have stories from the trenches.
+In a classroom with such students,
+you can carry out think-pair-share exercises around these stories
 and get the students to talk about their stories as well as hear yours.
 Think-pair-share exercises is a cooperative discussion strategy
 where students first *think* about a prompt on their own,
@@ -326,16 +326,16 @@ on the topic of reproducibility follows:
    that other students could read
    (in smaller classes all groups could share one of their stories aloud with the class).
 
-In addition to sharing some consequences of non-reproducible analysis 
-with students (without them having to experience this themselves 
+In addition to sharing some consequences of non-reproducible analysis
+with students (without them having to experience this themselves
 over a long and drawn out process of self-discovery),
-these stories come from people the students know 
-(their instructors and peers) and as such, 
-these stories highlight how common and easy it is for such mistakes to happen, 
+these stories come from people the students know
+(their instructors and peers) and as such,
+these stories highlight how common and easy it is for such mistakes to happen,
 to anyone practicing data analysis,
 if care is not taken to follow reproducible workflows and practices.
-This helps make the practice of reproducibility seem more applicable 
-and relatable to their own data analysis 
+This helps make the practice of reproducibility seem more applicable
+and relatable to their own data analysis
 (which at this stage in their career, may not end up in a published paper).
 
 #### Examples of stories from the trenches
@@ -399,8 +399,8 @@ The series of scientific papers that formed the basis of these trials
 were all published in highly regarded "high-impact" journals,
 but they had also raised some concerns among researchers in the field [@carlson_carlson_2012].
 When put under a thorough independent review,
-these papers were found to contain multiple errors, 
-several related to the use of non-reproducible tools 
+these papers were found to contain multiple errors,
+several related to the use of non-reproducible tools
 and workflows [@baggerly2009deriving].
 In the review analysis it was highlighted that most common problems were simple
 and included mistakes such as "off-by-one" errors
@@ -421,7 +421,7 @@ and having workflows that are opaque and hard to review.
 
 As illustrated in the case we have highlighted above,
 reproducibility errors are not isolated to novices performing data analyses.
-They also occur in analyses performed by seasoned professionals 
+They also occur in analyses performed by seasoned professionals
 and can have substantial real-world consequences.
 When selecting failures to share with students,
 it can be beneficial to focus on
@@ -431,7 +431,7 @@ and those that come from well-known researchers/companies.
 This is to illustrate that these errors can happen to anyone
 and emphasize that we are not sharing them to cast blame,
 but to highlight the importance of reproducible practices on all levels.
-Another example of an impactful reproducibility mistake in from a well-known research team 
+Another example of an impactful reproducibility mistake in from a well-known research team
 is the misreporting of the relationship between public debt and GDP growth,
 which was published in what was regarded as a seminal paper at the time [@pollin_herndon_2013; @borweinjon_bailey_2013].
 These findings came from prominent economists
@@ -441,8 +441,8 @@ when selecting the range of cells to be included in one of the Excel formulas,
 which exaggerated the conclusions in the paper
 [@pollin_herndon_2013; @borweinjon_bailey_2013].
 Other examples of case studies that could be used to illustrate the significant
-real world consequences of reproducibility failures in data analyses 
-are listed in Table 1. 
+real world consequences of reproducibility failures in data analyses
+are listed in Table 1.
 
 ### Letting them fail (in a controlled manner)
 
@@ -458,18 +458,18 @@ we can set up controlled scenarios to expose them to these downsides
 in a controlled, accelerated manner
 while still embodying much of the same motivational benefits.
 
-One way we have done this is providing students an analysis that is not 
-reproducible 
-(i.e., it depends on rare/obscure software packages 
-or specific package versions), 
-and thus will likely fail on someone else's machine. 
-We then ask them to try to run it, 
-and if they cannot run it, we ask them to fix the code 
+One way we have done this is providing students an analysis that is not
+reproducible
+(i.e., it depends on rare/obscure software packages
+or specific package versions),
+and thus will likely fail on someone else's machine.
+We then ask them to try to run it,
+and if they cannot run it, we ask them to fix the code
 or install missing software so they can.
-Then we provide them the same analysis that has been made reproducible, 
+Then we provide them the same analysis that has been made reproducible,
 through the use of shareable compute environments (i.e., `renv`, `conda`, or `Docker`),
 and instructions on how to use the shared compute environment.
-The students then experience running the same analysis on their machines 
+The students then experience running the same analysis on their machines
 without any change of code or software installation.
 Under these controlled circumstances
 failure and frustration can have a positive impact on students overall learning
@@ -482,23 +482,23 @@ which occurs in the first third of the Master of Data Science program.
 When we have implemented this activity
 we have run it as an in-class exercise
 that is not counted toward the course grades.
-We do however use polls to assess where the students are at 
+We do however use polls to assess where the students are at
 in regards to completing the activity,
 so that we can allot an appropriate amount of time for each group of learners.
 
 The example discussed above was inspired by Jenny Bryan's teaching of STAT 545 at UBC.
-In her version of this task, she pairs students up and asks them to 
-run each other's code projects that they have been working on in her course. 
-Most usually fail to be able to do this on the first try 
+In her version of this task, she pairs students up and asks them to
+run each other's code projects that they have been working on in her course.
+Most usually fail to be able to do this on the first try
 for the same reasons discussed above.
-We adapted her teaching method so that students experience this 
+We adapted her teaching method so that students experience this
 in a more limited, controlled manner
 by picking an obscure package (e.g., the R-package cowsay [@cowsay_2020])
 that none of the students should have installed,
 so that they will all have trouble running the project without reproducibility tools.
 We then provide them with a project using reproducibility
 tools so that they can have success and contrast the two experiences.
-This has allowed us to scale this exercise to larger classes 
+This has allowed us to scale this exercise to larger classes
 with more homogeneous student experiences.
 
 ## Guided instruction
@@ -510,39 +510,39 @@ Here, we suggest that guided instruction is helpful
 to set students off on the right path as they take an active role in their own learning,
 particularly when teaching reproducibility.
 From our experience, reproducibility is not something that most people or
-students figure out on their own, 
+students figure out on their own,
 or if they do, it is an inefficient time-consuming process.
 We hypothesize that this could be at least partially explained
 by the fact that reproducible workflows
 use a lot of borrowed knowledge, workflows and tools from software engineering
 and repurpose them for science and reproducibility.
-Thus, much of the getting up and getting started with reproducibility 
-has a lot of assumed knowledge behind it, 
+Thus, much of the getting up and getting started with reproducibility
+has a lot of assumed knowledge behind it,
 and at present there are not many clear and easy on-ramps for learners who
-do not have a software engineering background. 
-Part of this may stem from the field being still fairly new 
+do not have a software engineering background.
+Part of this may stem from the field being still fairly new
 and not-yet as widely embraced as we might hope.
 This means that there is not a lot of culture around using reproducibility tools in data science
 and statistics, and it is not yet as obvious how to get started.
 
-Furthermore, similar to why we need extra motivation, 
+Furthermore, similar to why we need extra motivation,
 the challenge of learning to use the tools due to their steep learning curves
-suggests that having some guided instruction is beneficial to learners. 
-These points are well stated in a 
-[blog post](https://simplystatistics.org/2018/12/11/the-role-of-theory-in-data-analysis/) 
-and [essay](https://leanpub.com/dataanalysisessays) 
+suggests that having some guided instruction is beneficial to learners.
+These points are well stated in a
+[blog post](https://simplystatistics.org/2018/12/11/the-role-of-theory-in-data-analysis/)
+and [essay](https://leanpub.com/dataanalysisessays)
 on *The Role of Theory in Data Analysis* by Roger Peng [-@peng2020essays]:
 
-> *There is no need for a new data analyst to learn about reproducibility* 
-> *"from experience".* 
+> *There is no need for a new data analyst to learn about reproducibility*
+> *"from experience".*
 > *We don't need to lead a junior data analysis down a months-long*
-> *winding path of non-reproducible analysis until they are finally bitten* 
-> *by the non-reproducibility bug (and "therefore learn their lesson").* 
+> *winding path of non-reproducible analysis until they are finally bitten*
+> *by the non-reproducibility bug (and "therefore learn their lesson").*
 > *We can just tell them*
 >
 > *"In the past, we've found it useful to make our data analysis reproducible*
 > *Here's a workflow to guide you in your own analysis."*
-> 
+>
 > *Within that one statement, we can "compress" over 20 years of experience.*
 
 While we believe that there are pedagogical advantages
@@ -564,18 +564,18 @@ we primarily employ guided instructions through three pedagogical strategies:
 
 ### Live demonstration
 
-So how do we use guided instruction in the reproducibility classroom? 
-In data science programming classes it is becoming more common to use demonstration 
-to show how to code in R and Python. 
-This is referred to in the data science literature as live coding 
-[@raj2018role; @nederbragt2020ten]. 
-We have observed that a similar pedagogy of live demonstration 
-works well for reproducibility tools, 
-including R Markdown [@xie2021dynamic] or Jupyter notebooks [@kluyver2016jupyter] for reproducible reports, 
-using version control with Git and GitHub, 
+So how do we use guided instruction in the reproducibility classroom?
+In data science programming classes it is becoming more common to use demonstration
+to show how to code in R and Python.
+This is referred to in the data science literature as live coding
+[@raj2018role; @nederbragt2020ten].
+We have observed that a similar pedagogy of live demonstration
+works well for reproducibility tools,
+including R Markdown [@xie2021dynamic] or Jupyter notebooks [@kluyver2016jupyter] for reproducible reports,
+using version control with Git and GitHub,
 and using tools like `renv` [@kusheyrenv], `conda` [@anaconda]
 and Docker [@merkel2014docker] to create reproducible and shareable computational environments.
-We believe that live demonstration makes it more obvious to the students 
+We believe that live demonstration makes it more obvious to the students
 how to use these tools in practice,
 and facilitates lateral knowledge transfer
 where learners absorb additional material by observing *how* we work,
@@ -591,20 +591,20 @@ and how to fix it [@wilson_wilson_2018].
 
 A word of caution with live demonstration when teaching reproducibility;
 because teaching these workflows and tools often involves
-the demonstrations of graphical user interfaces 
-and tools that come from software engineering, 
-the tech stack moves very fast. 
+the demonstrations of graphical user interfaces
+and tools that come from software engineering,
+the tech stack moves very fast.
 This means that each semester we teach these tools,
 we need to test drive the materials before we share them with the students
 to see if something has changed - as often it has.
-A relatively recent example of this is from fall 2020, 
-when GitHub decided to change the name of their default branch 
-from master to main (rightfully so) [@__ak]. 
+A relatively recent example of this is from fall 2020,
+when GitHub decided to change the name of their default branch
+from master to main (rightfully so) [@__ak].
 This change broke several of our teaching demonstrations,
 guided worksheets, and lab homework.
-It also caused parts of our lecture notes on this topic to have to be rewritten. 
-These rewrites happen less frequently when teaching 
-novice to intermediate programming for data science, 
+It also caused parts of our lecture notes on this topic to have to be rewritten.
+These rewrites happen less frequently when teaching
+novice to intermediate programming for data science,
 as that part of the data science software stack has now become fairly stable.
 For example,
 teaching dataframes as the structure for encoding data for analysis.
@@ -623,16 +623,16 @@ because there has been a notable shift in that domain
 and there is now a more effective package to teach,
 e.g. switching to teaching a declarative visualization package in place of an imperative one.
 
-For the reasons argued above, we do believe that it is really important 
-to use guided instruction when teaching reproducibility, 
-however, this should be done with the awareness and the acceptance 
+For the reasons argued above, we do believe that it is really important
+to use guided instruction when teaching reproducibility,
+however, this should be done with the awareness and the acceptance
 that these kinds of changes are going to happen relatively frequently.
-Which means reproducibility instructors are going to have to 
-update or make new live demonstrations, and other teaching resources, 
+Which means reproducibility instructors are going to have to
+update or make new live demonstrations, and other teaching resources,
 each year.
 Without this, the course resources will quickly fall out of usefulness.
 There may be a time in the near future where these tools also stabilize,
-but the authors of this manuscript anticipate that is still 
+but the authors of this manuscript anticipate that is still
 many years ahead in the future.
 
 ### Pre-lecture activities
@@ -664,20 +664,20 @@ we challenge them to take a more active learning role
 by solving worksheet problems on their own in the classroom.
 This activity occupies most of the in-class time,
 so that students can engage actively with the material
-in an environment where they can easily be supported 
+in an environment where they can easily be supported
 by their peers and the teaching team,
 before working on the homework assignments on their own.
-Worksheets are low stakes assessments that 
+Worksheets are low stakes assessments that
 provide students with many short problems on which to practice and receive feedback.
 In data science,
-this works well in literate code documents 
+this works well in literate code documents
 (either Jupyter notebooks or R Markdown)
-that have automated tests in them to provide feedback. 
-Two tools that we have used for this are nbgrader [@blank2019nbgrader] 
+that have automated tests in them to provide feedback.
+Two tools that we have used for this are nbgrader [@blank2019nbgrader]
 and otter-grader [@otter].
 Compared to in-class exercises,
 worksheets give learners an additional chance to actively engage with the material
-while still providing a structured way of providing exercises 
+while still providing a structured way of providing exercises
 focused on key learning outcomes.
 Worksheets are also key for providing students with lots of practice,
 a topic we discuss in the last section of this article.
@@ -685,53 +685,53 @@ a topic we discuss in the last section of this article.
 ### Example lesson using guided instruction
 
 Here we provide an example of how we use guided instruction to teach version
-control in our first year introduction to data science course at UBC, DSCI 100. 
+control in our first year introduction to data science course at UBC, DSCI 100.
 In this course, we take a three-pronged approach for guided instruction.
 
 First, we provide them an assigned textbook reading
-for them to review before class. 
-For this particular topic, it is an [introductory chapter 
+for them to review before class.
+For this particular topic, it is an [introductory chapter
 on collaboration with version control](https://ubc-dsci.github.io/introduction-to-datascience/Getting-started-with-version-control.html).
-When the students arrive in class, 
-we then do a live demonstration, 
-where they watch us use the GitHub website, 
+When the students arrive in class,
+we then do a live demonstration,
+where they watch us use the GitHub website,
 and the Jupyter Git graphical user interface to add, commit,
 push and pull changes.
 A recording of one of these live demonstrations
 is available on YouTube at this [link](https://youtu.be/attPo4zEElU).
-Finally we ask the students to work through a 
+Finally we ask the students to work through a
 guided worksheet, which is a Jupyter notebook with narration, questions and automated software tests to give automated feedback about their answers.
-The worksheet asks the students to do 
+The worksheet asks the students to do
 the same thing that we just demonstrated,
-as well as asks them questions along the way 
-to test their understanding of the reproducibility concepts 
+as well as asks them questions along the way
+to test their understanding of the reproducibility concepts
 related to the skills and tools they are practicing.
 For example, in the version control worksheet, we ask questions to assess
-if they understand what the purpose of adding something to the Git staging area is, 
-how adding differs from committing in Git, 
-and where does the work go when it is pushed to a remote repository. 
+if they understand what the purpose of adding something to the Git staging area is,
+how adding differs from committing in Git,
+and where does the work go when it is pushed to a remote repository.
 A version of this worksheet can be accessed [here](https://github.com/UBC-DSCI/dsci-100-assets/blob/master/2021-summer/materials/worksheet_05/worksheet_05.ipynb)
 
-The challenge or limitation with this lesson in particular, 
+The challenge or limitation with this lesson in particular,
 is that we have chosen to teach using a Git graphical user interface,
 as opposed to the Git command line tool,
-due to the very novice level of the learners in this course. 
+due to the very novice level of the learners in this course.
 Using a graphical user interface, and a newer one,
 means that we need to more frequently update
-and fix our lesson as the tool changes. 
+and fix our lesson as the tool changes.
 The Git command line tool is more stable, and command line tools have less
-room to change generally, compared to graphical user interfaces, 
-and thus would be a more stable tool to build a lesson around. 
+room to change generally, compared to graphical user interfaces,
+and thus would be a more stable tool to build a lesson around.
 However, the trade-off would be that this is a bit less intuitive for new learners,
 especially those who are also new to the command line in general.
 
 ## Lots of practice
 
-The third pedagogy we argue for when teaching reproducibility is lots 
+The third pedagogy we argue for when teaching reproducibility is lots
 and lots of practice.
-Mastery of a subject often involves consolidating ideas, concepts 
-and theories into long-term memory. 
-And consolidating most things into long-term memory 
+Mastery of a subject often involves consolidating ideas, concepts
+and theories into long-term memory.
+And consolidating most things into long-term memory
 requires repetition [@ebbinghaus1913memory].
 When we teach reproducibility topics,
 we want students to do more than commit information to long-term memory,
@@ -762,10 +762,10 @@ In contrast to many other data science topics,
 students often already have behavioral patterns in place
 for how they organize and name their files,
 and for how they collaborate with their colleagues.
-However, most often these are not reproducible practices 
-and this prior knowledge 
-and practices can interfere with learning the new behaviours 
-we want our students to adopt. 
+However, most often these are not reproducible practices
+and this prior knowledge
+and practices can interfere with learning the new behaviours
+we want our students to adopt.
 When teaching reproducible workflows
 we therefore need to replace the old behavior with a more reproducible version
 as a response to the same cue.
@@ -820,7 +820,7 @@ in the first few weeks of class
 and we interleave them as "mechanical assignment requirements"
 worth a small percentage of their grade
 while completing assignments focused on other data science topics.
-This strategy parallels how they will employ reproducibility 
+This strategy parallels how they will employ reproducibility
 habits later in their careers
 (a detailed example follows in the next section).
 To challenge students who have more interest, experience, or skills in the area of reproducibility,
@@ -855,32 +855,32 @@ at our weekly academic meetings.
 A specific example of how we use lots of practice
 is used in almost all of the UBC Master of Data Science courses.
 In these courses we use version control,
-particularly Git and GitHub, as our course management system. 
-In these courses, the homework instructions and assignments are distributed 
+particularly Git and GitHub, as our course management system.
+In these courses, the homework instructions and assignments are distributed
 to the students as GitHub repositories and the only way that they can submit
 their homework is by putting their homework in that GitHub repository.
-Thus, to complete and submit their assessments 
+Thus, to complete and submit their assessments
 on any data science topic, students must go through the cloning procedure,
 or at least be able to somehow download their assignments from the
-GitHub website, as well as be able to 
-(hopefully through using Git) upload their work back to that GitHub 
+GitHub website, as well as be able to
+(hopefully through using Git) upload their work back to that GitHub
 repository. The tool we use to administer GitHub repositories in this way
-is called [`rhomboid`](https://github.com/mgelbart/rhomboid), 
-but there are other tools that can do this, 
-including [GitHub Classroom](https://classroom.github.com/) 
+is called [`rhomboid`](https://github.com/mgelbart/rhomboid),
+but there are other tools that can do this,
+including [GitHub Classroom](https://classroom.github.com/)
 and [Classy](https://github.com/ubccpsc/classy).
 
-To incentivize students to submit their assignment using Git 
+To incentivize students to submit their assignment using Git
 (as opposed to the GitHub web user interface)
-we also assign some marks of each assignment (about 5%) to a mechanics grade. 
+we also assign some marks of each assignment (about 5%) to a mechanics grade.
 For this we assess whether they have at least three
 commits associated with every single assignment
 and have written meaningful commit messages.
 By the end of this program the students have version controlled their
 work in over 80 different GitHub repositories.
-We hope this results in using version control becoming a habit, 
+We hope this results in using version control becoming a habit,
 to the point that if they're going to work on a project
-it's going to go under version control by default - 
+it's going to go under version control by default -
 even when they leave the program
 and are no longer receiving grades for doing this.
 We choose tools such as Git and GitHub
@@ -898,7 +898,7 @@ where they can easily reach out for help without feeling intimidated to ask.
 One exciting technology that we have recently started incorporating
 in our teaching of reproducible workflows is GitHub actions,
 a tool for automating software workflows
-that can be configured to be triggered by many different version control tasks, 
+that can be configured to be triggered by many different version control tasks,
 including pushing new code to a GitHub repository.
 This has allowed us
 to automate the building of individual "playgrounds" of complex Git scenarios
@@ -910,7 +910,7 @@ where students can explore and practice
 to learn how to use GitHub's code review feature for pull requests.
 To use it,
 students create their own copy of the repository on GitHub,
-create a branch named `pr` 
+create a branch named `pr`
 and then a pull request is automatically created for them by a bot.
 After this quick and simple setup,
 the students can spend the rest of the exercise
@@ -922,10 +922,10 @@ We think over the past five years
 from teaching in the UBC Master of Data
 Science and the UBC introductory data
 science course, DSCI 100, that the key things for teaching reproducibility
-in the data science classroom are: 
-*1)* providing extra emphasis on motivation 
+in the data science classroom are:
+*1)* providing extra emphasis on motivation
 so that students understand why reproducibility is important and
-buy into learning about it and practicing it, 
+buy into learning about it and practicing it,
 *2)* providing guided instruction so that it is not
 a mystery of how you get started and what you need to do,
 as well as *3)* lots and lots of practice so that we
