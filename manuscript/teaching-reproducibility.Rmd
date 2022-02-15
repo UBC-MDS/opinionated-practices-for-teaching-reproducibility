@@ -186,12 +186,16 @@ and alumni surveys.
 An example of a direct improvement in the program
 from the collection and implementation of student feedback
 was the addition of lecture worksheets with simpler and often autograded questions.
-This was done to address common feedback that we received across the program's curriculum
-that what was expected on the lab homework assessments were perceived by students
-as too large of a jump in difficulty from what was learned in the lecture.
+This was done to address common feedback
+that we received across the program's curriculum
+that what was expected on the lab homework assessments
+were perceived by students as too large of a jump in difficulty
+from what was learned in the lecture.
 The change of implementing these lecture worksheets in several of our courses
-decreased the feedback we have received about this jump in difficulty in those courses
-and thus, we have been incorporating these worksheets
+decreased the feedback we have received about this jump in difficulty in those courses.
+We hypothesize this is particularly true for students' who
+have less interest, experience, or skills in the area of reproducibility,
+and we have been incorporating these worksheets
 across more and more courses in the program to continue to address this.
 
 One of the key reproducibility-related takeaways from our feedback collection
@@ -710,7 +714,8 @@ For example, in the version control worksheet, we ask questions to assess
 if they understand what the purpose of adding something to the Git staging area is,
 how adding differs from committing in Git,
 and where does the work go when it is pushed to a remote repository.
-A version of this worksheet can be accessed [here](https://github.com/UBC-DSCI/dsci-100-assets/blob/master/2021-summer/materials/worksheet_05/worksheet_05.ipynb)
+A version of [this worksheet can be accessed here](https://github.com/UBC-DSCI/data-science-a-first-intro-worksheets/blob/main/worksheet_version_control/worksheet_version_control.ipynb)
+as part of the actively maintained text book "Data Science: A First Introduction" [@lee_timbers_2022].
 
 The challenge or limitation with this lesson in particular,
 is that we have chosen to teach using a Git graphical user interface,
