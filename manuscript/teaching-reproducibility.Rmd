@@ -626,10 +626,10 @@ and is unlikely to change any time soon.
 However,
 even with more established tools
 there can be significant upgrades
-where we decide that the changes are worthwhile
+when we decide that the changes are worthwhile
 to incorporate into our courses,
-such as when R introduced the native pipe symbol `|>`
-as a preferred alternative to the package-specific `magrittr` pipe symbol `%>%`.
+such as when R introduced the native pipe operator `|>`
+as a preferred alternative to the package-specific `magrittr` pipe operator `%>%`.
 The changes in beginner courses are often on details
 such as new syntax as in the previous example,
 whereas changes in more advanced topics
@@ -703,10 +703,10 @@ Here we provide an example of how we use guided instruction to teach version
 control in our first year introduction to data science course at UBC, DSCI 100.
 In this course, we take a three-pronged approach for guided instruction.
 
-First, we provide them an assigned textbook reading
+First, we provide students an assigned textbook reading
 for them to review before class.
 For this particular topic, it is an [introductory chapter
-on collaboration with version control](https://ubc-dsci.github.io/introduction-to-datascience/Getting-started-with-version-control.html).
+on collaboration with version control](https://datasciencebook.ca/Getting-started-with-version-control.html).
 When the students arrive in class,
 we then do a live demonstration,
 where they watch us use the GitHub website,
@@ -726,19 +726,23 @@ if they understand what the purpose of adding something to the Git staging area 
 how adding differs from committing in Git,
 and where the work goes when it is pushed to a remote repository.
 A version of [this worksheet can be accessed here](https://github.com/UBC-DSCI/data-science-a-first-intro-worksheets/blob/main/worksheet_version_control/worksheet_version_control.ipynb)
-as part of the actively maintained text book "Data Science: A First Introduction" [@lee_timbers_2022].
+as part of the actively maintained repository of worksheets that act as a companion to the 
+text book we use for DSCI 100: *Data Science: A First Introduction* [@lee_timbers_2022].
 
-The challenge or limitation with this lesson in particular,
-is that we have chosen to teach using a Git graphical user interface,
-as opposed to the Git command line tool,
-due to the very novice level of the learners in this course.
+The challenge or limitation with this lesson in particular
+is that due to the very novice level of the learners in this course
+we have chosen to teach Git using a graphical user interface, 
+specifically the JupyterLab Git Extension [@jl_git_ext],
+as opposed to the Git command line tool.
 Using a graphical user interface, and a newer one,
 means that we need to more frequently update
 and fix our lesson as the tool changes.
-The Git command line tool is more stable, and command line tools have less
-room to change generally, compared to graphical user interfaces,
-and thus would be a more stable tool to build a lesson around.
-However, the trade-off would be that this is a bit less intuitive for new learners,
+Command line tools in general tend to be more stable 
+(i.e., change less frequently)
+compared to graphical user interfaces,
+and are thus generally a more stable tool to build a lesson around.
+However, the trade-off in this situation would be that 
+the Git command line tool is less intuitive for new learners,
 especially those who are also new to the command line in general.
 
 ## Lots of practice
