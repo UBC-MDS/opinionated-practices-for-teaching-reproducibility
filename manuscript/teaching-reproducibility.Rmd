@@ -59,8 +59,11 @@ we define data science as the study, development, and practice of
 reproducible and auditable processes to extract insight from data.
 Using this definition requires that we also define
 what is meant by a reproducible and auditable analysis.
-The specific definition of reproducibility varies between research domains [@committeeonreproducibilityandreplicabilityinscience_2019]
-and in our courses we embrace the National Academy of Sciences definition of reproducible analysis,
+Although the specific definition of reproducibility 
+varies between research domains 
+[@committeeonreproducibilityandreplicabilityinscience_2019],
+in our data science courses 
+we have chosen to embrace the National Academy of Sciences definition of reproducible analysis,
 which is reaching the same result given the same input, computational methods,
 and conditions [-@national2019reproducibility].
 For auditable or transparent analysis,
@@ -74,7 +77,7 @@ decisions to use one method or another were made,
 among other things.
 
 The reason we embrace this definition of data science,
-is that we believe that data science work should both bring insight
+is that we believe data science work should both bring insight
 (e.g., answer an important research question)
 and employ reproducible and auditable methods
 so that trustworthy results and data products can be created.
@@ -85,7 +88,7 @@ when they are built this way there is less confidence
 in how the results or products were created.
 We believe this stems from non-reproducible and non-auditable analyses:
 
-1. lacking evidence that the results or product could be regenerated given the same input computational methods, and conditions
+1. lacking evidence that the results or product could be regenerated given the same input, computational methods, and conditions
 2. lacking evidence of the steps taken during creation
 3. having an incomplete record of how and why analysis decisions were made
 
@@ -99,14 +102,13 @@ greatly facilitates the act of collaborating in many contexts,
 further emphasizing the importance of learning this skill well.
 
 Although the many benefits of reproducible and auditable analyses discussed above
-may make them seem like an exciting topic for incoming students,
+may make this seem like an exciting topic for incoming students,
 the experience when entering a classroom of curious data scientists in training
-is quite the opposite.
+is quite often the opposite.
 Students are usually keen to learn about data science
-but what they're most excited about is the second part of
+but what they are most often excited about is the second part of
 its definition: extracting insights from the data.
-
-Students are often not even aware of the reproducible
+Commonly, students are not even aware of the reproducible
 and auditable processes of data science,
 and when they first hear about them,
 they tend to regard them as an inconvenient means to an end
@@ -124,7 +126,7 @@ is that the tools that we use for reproducibility
 are not necessarily smooth and easy to learn,
 but often have a steep learning curve.
 Over our five years of teaching these topics at UBC
-we've found three pedagogical strategies
+we have found three pedagogical strategies
 that are particularly effective for teaching reproducibility successfully:
 
 1. placing extra emphasis on motivation
@@ -139,20 +141,21 @@ and provide examples of how to incorporate these in your teaching.
 
 The specific teaching pedagogies we present in this paper
 have been tested over five years,
-in classrooms of 10-200 learners from varying educational backgrounds,
+in classrooms of 20-200 learners from varying educational backgrounds,
 including undergraduate students taking their first data science course
 and graduate students looking to specialize in data science.
-We teach the plurality of our courses in the Master of Data Science program,
-which consists of 24 one-credit courses
-taught over an eight month period
-and culminating in a six-credit-capstone course.
+Most of the courses where we teach reproducibility 
+are part of UBC's professional Master of Data Science program. 
+This course-based program consists of 24 one-credit courses
+taught over an eight month period,
+which culminate in a six-credit-capstone course.
 As a prerequisite for this program
 students are generally required to have taken at least one course in each of
-programming, calculus, linear algebra, and introductory statistics or probability.
+calculus or linear algebra, computer programming, and introductory statistics or probability.
 Most of these graduate students
 have several years of professional work experience (or equivalent),
 however our cohorts also include both recent graduates from Bachelor's degrees
-as well as learners from senior company positions
+as well as learners from senior positions in industry who are
 looking to bend their career trajectories towards data science.
 From in-class polls,
 we have learned that these graduate students
@@ -162,8 +165,8 @@ The teaching team for our reproducibility courses
 include a mix of postdoctoral teaching and learning fellows,
 lecturers, and assistant professors of teaching
 from the departments of Statistics and Computer Science.
-We have a few core members of the program's teaching team
-that have been with the program since its inception in 2016,
+A handful of the core members of the program's teaching team
+have been with the program since its inception in 2016,
 and the remainder of the team has been with the program for 1-3 years.
 Members of the teaching team developed their data science expertise
 through graduate and postdoctoral studies in a diverse set of research domains,
@@ -176,50 +179,50 @@ RStudio education [@__ap],
 Teaching Tech Together [@wilson_wilson_2018],
 and the Instructional Skills Workshop [@day_day_2005].
 
-Our teaching strategies have evolved
-over the six years' lifespan
-of the Master's of Data science program.
-We have embraced student feedback on our teaching practices
-from mid-course meetings and surveys from student-elected student representatives,
-course evaluations,
-and alumni surveys.
+Since the launch of the program six years ago,
+our teaching strategies have evolved
+in response to student feedback on our teaching practices
+obtained through: 
+*1)* student-led surveys and face-to-face meetings,
+*2)* instructor-led course surveys, 
+*3)* formal university course evaluations,
+and *4)* surveys of alumni of the program.
 An example of a direct improvement in the program
 from the collection and implementation of student feedback
 was the addition of lecture worksheets with simpler and often autograded questions.
 This was done to address common feedback
 we received across the program's curriculum
-that what was expected on the lab homework assessments
-were perceived by students as too large of a jump in difficulty
-from what was learned in the lecture.
+about the difficulty-level of lab homework assessments.
+Specifically, students reported that they perceived 
+too large of a jump in difficulty
+from what was learned in the lecture 
+to what was expected from them on the lab homework assessments.
 The change of implementing these lecture worksheets in several of our courses
-decreased the feedback we have received about this jump in difficulty in those courses.
+decreased the amount of feedback we received 
+about too large of a jump in difficulty 
+between the lectures and assessments in those courses.
 We hypothesize this is particularly true for students' who
 have less interest, experience, or skills in the area of reproducibility,
 and we have been incorporating these worksheets
 across more and more courses in the program to continue to address this.
 
-One of the key reproducibility-related takeaways from our feedback collection
+One of the key reproducibility-related takeaways from our student feedback
 is that practice matters and that more is better.
-In our early Capstone projects,
-we observed that students could do the things
+In the capstone projects from the first year of the program,
+instructors observed that students could easily do the things
 we gave them lots of practice on
 (e.g., basic version control
-and working linearly on the main branch),
-but did not attempt or struggled with other reproducibility concepts
-where they were provided formal instructions
+and working linearly on the default branch),
+but did not attempt or struggled with other reproducibility concepts,
+skills and workflows where they were provided formal instructions
 but less practice
-(e.g., more advanced version control topics like branching, pull-requests, and
-intermediate/advanced features of reproducible reports and presentations).
-The importance of practice was also apparent in our project-based courses.
-In the early years of the program,
-we didn't have any practice in project-based course-work,
-and the capstone projects from that time had a higher level of technical debt
-and did not adhere to the same standards of reproducible practices
-as Capstone projects from more recent years.
-To address this,
-we implemented project-based courses for several reproducibility related topics
-and observed that the technical debt of Capstone projects decreased,
-and that they were more reproducible.
+(e.g., more advanced version control topics such as branching, pull-requests, and
+advanced usage of reproducible reports and presentations).
+In response to this, 
+we implemented project-based course-work for several reproducibility related topics
+across the program so that students had more opportunity to practice these.
+The instructors observed that the capstone projects in the years following this change
+had less technical debt and included more, and higher quality reproducible practices.
 Encouragingly,
 our capstone partners also noticed this improvement
 in the quality of the student projects,
