@@ -137,7 +137,7 @@ In this paper,
 we will discuss why we believe each of these are important,
 and provide examples of how to incorporate these in your teaching.
 
-## Academic setting and background
+### Academic setting and background
 
 The specific teaching pedagogies we present in this paper
 have been tested over five years,
@@ -263,25 +263,24 @@ An example is the error message from including a "\\" character with a reserved
 LaTeX word outside of a mathematical equation,
 which is shown in Figure \@ref(fig:latex-errors).
 This error message is interpretable by intermediate and experienced
-R Markdown users, but not by novice learners.
+R Markdown users, but is challenging for novice learners to parse.
 
 Yet another example of a popular reproducibility tool that is challenging to learn is
 Docker.
-Docker is a containerization tool that extends beyond
-just including the package dependencies of your analysis workflow,
+Docker is a containerization tool that extends computational environment management beyond
+the programming language and package dependencies of your analysis workflow,
 and instead creates a versioned copy of your entire computational environment
-including the programming language and any operating system dependencies.
+including any additional software and operating system dependencies that your analysis may depend on.
 This means that you can share an exact copy of your computational environment
 with your collaborators, even if you work on different operating systems.
 Docker is an especially challenging tool to
 teach and motivate students to learn
 because it is so different from writing code for analysis.
-This largely stems from that software installation is time consuming,
+This largely stems from software installation being a time consuming process,
 which means that writing and debugging code to automate installation
 is a slow and painstaking process.
 This issue is further exacerbated
-if the appropriate workflows are not followed
-and it is not an exciting part of a data analysis,
+by the fact that this is not an exciting part of a data analysis,
 as things already work on the student's own computer.
 Together,
 these issues make it difficult to convince students
@@ -312,14 +311,16 @@ so they also have stories from the trenches.
 In a classroom with such students,
 you can carry out think-pair-share exercises around these stories
 and get the students to talk about their stories as well as hear yours.
-Think-pair-share exercises is a cooperative discussion strategy
+Think-pair-share is a cooperative discussion exercise
 where students first *think* about a prompt on their own,
-then *pair* up to discuss with a few classmates,
-and *share* their thinking with the rest of the class afterwards [@lyman_lyman_1981].
-This pedagogy could be particularly effective in this context
-since it would allow students to share their past mistakes in a smaller group
-and hearing their colleagues' similar stories,
-which can support them in feeling more confident and secure
+then *pair* up to discuss their response with a few classmates,
+and finally *share* their thinking with the rest of the class afterwards [@lyman_lyman_1981].
+We think this pedagogy is particularly effective in this context
+as it allows students to share their past mistakes in a smaller group first.
+There they can hear their peers' similar stories,
+and they will observe that reproducibility challenges are widespread 
+and virtually everyone who has previously worked with data has experienced these.
+This can support them in feeling more confident and secure
 before choosing whether to share their story with the entire class.
 
 A specific example of how we instruct students to run a think-pair-share exercise
@@ -397,10 +398,10 @@ case studies of failures are not as frequent in the literature.
 We think this partly stems from the fact
 that such errors are often only discovered internally and never reported,
 and that there are few incentives for people
-to spend their time performing proper forensic informatics analysis on other's work.
+to spend their time performing proper forensic informatic analysis on the work of others.
 Even so,
 there are several such examples reported in the literature,
-one of the most striking leading to putting patients at risk
+one of the most striking lead to putting patients at risk
 in incorrectly administered clinical trials
 which we will outline in the next paragraph [@carlson_carlson_2012].
 
@@ -410,19 +411,19 @@ hoping that using personalized gene signatures
 would identify which treatments were more effective for individuals [@carlson_carlson_2012].
 The series of scientific papers that formed the basis of these trials
 were all published in highly regarded "high-impact" journals,
-but they had also raised some concerns among researchers in the field [@carlson_carlson_2012].
+however they also raised some concerns among researchers in the field [@carlson_carlson_2012].
 When put under a thorough independent review,
 these papers were found to contain multiple errors,
 several related to the use of non-reproducible tools
 and workflows [@baggerly2009deriving].
-In the review analysis it was highlighted that most common problems were simple
-and included mistakes such as "off-by-one" errors
-where a cell might have been inadvertently deleted in Excel
+In the review analysis it was highlighted that the most common problems were simple
+and included mistakes such as: *1)* "off-by-one" errors
+where a cell might have been inadvertently deleted in a spreadsheet
 leading to a shift of all remaining values,
-labelling mix-ups where the treated and not treated groups
+*2)* labelling mix-ups where the treated and not treated groups
 were assigned labels 0 and 1 instead of meaningful names
 which can lead to confusion as to which is the treated and control group,
-and poor documentation practices leading to lack of transparency
+and *3)* poor documentation practices leading to lack of transparency
 which makes it harder and more time-consuming to identify errors
 (both for the original authors and the reviewers).
 These clinical trials were eventually terminated about four years after they started,
@@ -444,8 +445,8 @@ and those that come from well-known researchers/companies.
 This is to illustrate that these errors can happen to anyone
 and emphasize that we are not sharing them to cast blame,
 but to highlight the importance of reproducible practices on all levels.
-Another example of an impactful reproducibility mistake in from a well-known research team
-is the misreporting of the relationship between public debt and GDP growth,
+Another example of an impactful reproducibility mistake from a well-known research team
+is the misreporting of the relationship between public debt and gross domestic product (GDP) growth,
 which was published in what was regarded as a seminal paper at the time [@pollin_herndon_2013; @borweinjon_bailey_2013].
 These findings came from prominent economists
 and were used as motivation for political decision making,
