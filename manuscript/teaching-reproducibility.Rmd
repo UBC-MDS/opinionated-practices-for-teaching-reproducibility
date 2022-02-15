@@ -399,7 +399,7 @@ without any change of code or software installation.
 Under these controlled circumstances
 failure and frustration can have a positive impact on students overall learning
 as they experience the many benefits of reproducibility first hand.
-This exercise usually only takes around 20 min
+This exercise usually only takes around 20-30 min
 and helps provide motivation
 to endure the steep learning curves of reproducibility concepts and tools.
 We teach this in our data science workflows course,
