@@ -1,5 +1,5 @@
 # Opinionated practices for teaching reproducibility: motivation, guided instruction and practice
-Manuscript submitted to the Journal of Statistisc and Data Science Education
+Manuscript submitted to the Journal of Statistics and Data Science Education
 
 Authors: Joel Ostblom, Tiffany A. Timbers
 
