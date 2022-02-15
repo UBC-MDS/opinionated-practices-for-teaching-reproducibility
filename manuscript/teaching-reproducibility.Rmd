@@ -178,14 +178,14 @@ course evaluations,
 and alumni surveys.
 An example of a direct improvement in the program
 from the collection and implementation of student feedback
-is labs in the earlier years of the program
-were hard to get started on for students
-because there was a big perceived jump
-from what was learned in lecture
-and what was expected on lab assessments.
-To address this,
-we implemented lecture worksheets with simpler and often autograded questions,
-which led to a notable decrease in this feedback.
+was the addition of lecture worksheets with simpler and often autograded questions.
+This was done to address common feedback that we received across the program's curriculum 
+that the what was expected on the lab homework assessments were perceived by students 
+as too large of a jump in difficulty from what was learned in the lecture.
+The change of implementing these lecture worksheets in several of our courses
+decreased the feedback we have received about this jump in difficulty in those courses
+and thus, we have been incorporating these worksheets 
+across more and more courses in the program to continue to address this.
 
 One of the key reproducibility-related takeaways from our feedback collection
 is that practice matters and that more is better.
