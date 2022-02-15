@@ -141,22 +141,27 @@ in classrooms of 10-200 learners from varying educational backgrounds,
 including undergraduate students taking their first data science course
 and graduate students looking to specialize in data science.
 We teach the plurality of our courses in the Master of Data Science program,
-which consists of 24 one-credit courses
+which consists of 24 one-credit courses over an eight month period
 culminating in a six-credit-capstone course.
 As a pre-requisite for this program
 students are generally required to have taken one course each
-in programming, calculus, linear algebra, and introductory statistics and probability.
-Typically,
-students also have a few years of working experience (or equivalent),
-but our cohorts includes both recent graduates from Bachelor's degrees
+in programming, calculus, linear algebra, and introductory statistics or probability.
+
+Most of these graduate students
+have several years of professional work experience (or equivalent),
+however our cohorts also include both recent graduates from Bachelor's degrees
 as well as learners from senior company positions
 looking to bend their career trajectories towards data science.
-From in-class polls, we have learned that these graduate students rarely have any prior experience with reproducible workflows.
+From in-class polls,
+we have learned that these graduate students
+rarely have any prior experience with reproducible workflows.
 
 The teaching team for our reproducibility courses
-include a mix of postdoctoral teaching and learning fellows, lecturers, and assistant professors of teaching
+include a mix of postdoctoral teaching and learning fellows,
+lecturers, and assistant professors of teaching
 from the departments of Statistics and Computer Science.
-We have a few core members of the program's teaching team that have been with the program since its inception in 2016,
+We have a few core members of the program's teaching team
+that have been with the program since its inception in 2016,
 and the remainder of the team has been with the program for 1-3 years.
 Members of the teaching team developed their data science expertise
 through research graduate and postdoctoral studies in diverse set of topics,
@@ -740,28 +745,51 @@ where they would employ and benefit from these skills in real life.
 
 To give students adequate time and practice to cement their reproducible workflow habits,
 we have made intentional choices of which learning technologies and platforms
-are used throughout the UBC Master of Data Science program.
+are used throughout the UBC Master of Data Science program
+and when they are taught.
 This ensures that students are practicing using reproducible tools
-for the full 10 months as part of the course learning technology mechanics
+for the full ten months
+as part of the course learning technology mechanics
 (homework submission, grading, etc).
-Additionally, we interleave these practices as 
-"mechanical assignment requirements" worth a small percentage of their 
-grade while completing assignments focused on other data science topics.
-This latter strategy parallels how they will employ reproducibility 
-habits later in their carers
+Students learn these basic reproducibility practices
+in the first few weeks of class
+and we interleave them as "mechanical assignment requirements"
+worth a small percentage of their grade
+while completing assignments focused on other data science topics.
+This strategy parallels how they will employ reproducibility 
+habits later in their careers
 (a detailed example follows in the next section).
-The tools we chose to teach with are data science reproducibility software
-that students are likely to employ in workflows in their future work.
-This sustained practice not only enforces students' habits,
-but also increases their proficiency using authentic reproducibility software
-and when they into problems, it is in an environment
-where they can easily reach out for help without feeling intimidated to ask.
+To challenge students who have more interest, experience, or skills in the area of reproducibility,
+we routinely include demanding optional questions
+in our homework assignments in the reproducibility courses
+that allow these students to engage more deeply
+with the material for a small amount of bonus points.
+The feedback we have received
+indicate that these strategies help to engage students
+across the wide range of interest, experience
+and skills in the area of reproducibility
+that we see in our classrooms.
+
+The decision to give students plenty of opportunities to practice reproducible habits
+by adopting version control for student homework submission
+was implemented across the Master of Data Science program from year one.
+To make this feasible,
+postdoctoral teaching and learning fellows were hired
+to help faculty implement this in their courses
+even if those faculty themselves were not familiar with version control.
+The teaching team model in the Master of Data Science program
+greatly facilitates us doing program-wide changes like this.
+This stems from our shared vision for the program
+(which was drafted collaboratively by the team),
+our once-per term academic retreats
+where we reflect on how things went in each course,
+and our frequent communication and collaboration
+at our weekly academic meetings.
 
 ### Example lesson(s) of lots of practice
 
 A specific example of how we use lots of practice
 is used in almost all of the UBC Master of Data Science courses
-(which has 20 one-credit courses taken over an eight-month period).
 In these courses we use version control,
 particularly Git and GitHub, as our course management system. 
 In these courses, the homework instructions and assignments are distributed 
@@ -778,7 +806,7 @@ but there are other tools that can do this,
 including [GitHub Classroom](https://classroom.github.com/) 
 and [Classy](https://github.com/ubccpsc/classy).
 
-To incentivize doing this using Git 
+To incentivize students to submit their assignment using Git 
 (as opposed to the GitHub web user interface)
 we also assign some marks of each assignment (about 5%) to a mechanics grade. 
 For this we assess whether they have at least three
@@ -791,6 +819,17 @@ to the point that if they're going to work on a project
 it's going to go under version control by default - 
 even when they leave the program
 and are no longer receiving grades for doing this.
+We choose tools such as Git and GitHub
+when teaching version control
+(and other data science reproducibility aspects)
+since students are likely to employ them
+in workflows in their future work.
+This sustained practice with real tools
+not only enforces students' habits,
+but also increases their proficiency using authentic reproducibility software
+and when they into problems,
+it is in an environment
+where they can easily reach out for help without feeling intimidated to ask.
 
 One exciting technology that we have recently started incorporating
 in our teaching of reproducible workflows is GitHub actions,
