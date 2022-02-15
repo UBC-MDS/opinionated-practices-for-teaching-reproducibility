@@ -412,16 +412,23 @@ We then ask them to try to run it,
 and if they cannot run it, we ask them to fix the code 
 or install missing software so they can.
 Then we provide them the same analysis that has been made reproducible, 
-through the use of shareable compute environments (i.e., `renv`, `conda`, or Docker),
+through the use of shareable compute environments (i.e., `renv`, `conda`, or `Docker`),
 and instructions on how to use the shared compute environment.
 The students then experience running the same analysis on their machines 
 without any change of code or software installation.
 Under these controlled circumstances
 failure and frustration can have a positive impact on students overall learning
 as they experience the many benefits of reproducibility first hand.
-In a relatively short amount of time,
-this helps provide motivation
+This exercise usually only takes around 20-30 min
+and helps provide motivation
 to endure the steep learning curves of reproducibility concepts and tools.
+We teach this in our data science workflows course,
+which occurs in the first third of the Master of Data Science program.
+When we have implemented this activity
+we have ran it as an in-class activity that is not counted toward the course grades.
+We do however use polls to assess where the students are at 
+in regards to completing the activity,
+so that we can allot an appropriate amount of time for each group of learners.
 
 The example discussed above was inspired by Jenny Bryan's teaching of STAT 545 at UBC.
 In her version of this task, she pairs students up and asks them to 
