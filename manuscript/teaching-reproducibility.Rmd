@@ -617,26 +617,19 @@ This change broke several of our teaching demonstrations,
 guided worksheets, and lab homework.
 It also caused parts of our lecture notes on this topic to have to be rewritten.
 These rewrites happen less frequently when teaching
-novice to intermediate programming for data science,
+fundamental data science concepts,
 as that part of the data science software stack has now become fairly stable.
 For example,
 teaching dataframes as the basic structure for encoding data for analysis
 has remained constant since the inception of the program
 and is unlikely to change any time soon.
-However,
-even with more established tools
-there can be significant upgrades
-when we decide that the changes are worthwhile
-to incorporate into our courses,
-such as when R introduced the native pipe operator `|>`
-as a preferred alternative to the package-specific `magrittr` pipe operator `%>%`.
-The changes in beginner courses are often on details
-such as new syntax as in the previous example,
+In general,
+changes in novice courses are often on details
+such as new syntax or new naming conventions,
 whereas changes in more advanced topics
 can involve rewriting the entire coding component of a course
 because there has been a notable shift in that domain
-and there is now a more effective package to teach,
-e.g. switching to teaching a declarative visualization package in place of an imperative one.
+and there is now a more effective package or approach to teach.
 
 For the reasons argued above, we believe that it is integral
 to use guided instruction when teaching reproducibility,
