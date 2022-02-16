@@ -148,7 +148,7 @@ Most of the courses where we teach reproducibility
 are part of UBC's professional Master of Data Science program. 
 This course-based program consists of 24 one-credit courses
 taught over an eight month period,
-which culminate in a six-credit-capstone course.
+which culminates in a six-credit-capstone course.
 As a prerequisite for this program
 students are generally required to have taken at least one course in each of
 calculus or linear algebra, computer programming, and introductory statistics or probability.
@@ -194,12 +194,12 @@ This was done to address common feedback
 we received across the program's curriculum
 about the difficulty-level of lab homework assessments.
 Specifically, students reported that they perceived 
-too large of a jump in difficulty
+there to be too large of a jump in difficulty
 from what was learned in the lecture 
 to what was expected from them on the lab homework assessments.
-The change of implementing these lecture worksheets in several of our courses
+Implementing lecture worksheets in several of our courses
 decreased the amount of feedback we received 
-about too large of a jump in difficulty 
+about the difference in difficulty 
 between the lectures and assessments in those courses.
 We hypothesize this is particularly true for students' who
 have less interest, experience, or skills in the area of reproducibility,
@@ -401,7 +401,7 @@ and that there are few incentives for people
 to spend their time performing proper forensic informatic analysis on the work of others.
 Even so,
 there are several such examples reported in the literature,
-one of the most striking lead to putting patients at risk
+one of the most striking led to putting patients at risk
 in incorrectly administered clinical trials
 which we will outline in the next paragraph [@carlson_carlson_2012].
 
@@ -727,7 +727,7 @@ how adding differs from committing in Git,
 and where the work goes when it is pushed to a remote repository.
 A version of [this worksheet can be accessed here](https://github.com/UBC-DSCI/data-science-a-first-intro-worksheets/blob/main/worksheet_version_control/worksheet_version_control.ipynb)
 as part of the actively maintained repository of worksheets that act as a companion to the 
-text book we use for DSCI 100: *Data Science: A First Introduction* [@lee_timbers_2022].
+textbook we use for DSCI 100: *Data Science: A First Introduction* [@lee_timbers_2022].
 
 The challenge or limitation with this lesson in particular
 is that due to the very novice level of the learners in this course
@@ -874,7 +874,7 @@ at our weekly academic meetings.
 
 A specific example of how lots of practice
 is used in almost all of the UBC Master of Data Science courses,
-includes the use version control,
+includes the use of version control,
 particularly Git and GitHub,
 as our course management system.
 In these courses,
