@@ -4,7 +4,7 @@
 
 .PHONY: all clean
 # Use bash instead of sh. Required for brace filename expansion
-SHELL=/usr/bin/bash
+SHELL=/usr/bin/env bash
 
 all: teaching-reproducibility.tex\
      arxiv/teaching-reproducibility.zip\
