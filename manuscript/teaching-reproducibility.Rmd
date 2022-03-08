@@ -29,6 +29,7 @@ linkcolor: blue
 fontsize: 12 pt
 bibliography: teaching-reproducibility.bib
 biblio-style: authoryear
+csl: american-statistical-association.csl
 documentclass: paper
 output:
   bookdown::pdf_document2:
