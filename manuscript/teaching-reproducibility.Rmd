@@ -403,7 +403,7 @@ the connection between the lack of reproducible workflows
 and the downstream consequences.
 
 While there are many articles outlining recommendations
-on which reproducible practices to adhere to,
+on which reproducible practices to adhere to [@hovig_sandve_2013; @teal_wilson_2017; @halpern_lowndes_2017],
 case studies of failures are not as frequent in the literature.
 We think this partly stems from the fact
 that such errors are often only discovered internally and never reported,
