@@ -248,8 +248,13 @@ perplexing version control situations, with difficult to interpret outputs
 (e.g., "You are in 'detached HEAD' state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout").
 Sometimes these situations are so difficult to get out of, that even professional
 data scientists and data science educators
-recommend the practice of "burning it all down" and starting from scratch [@bryan_bryan_2021] -
-which really defeats many of the purposes of version control.
+recommend the practice of "burning it all down",
+i.e. deleting the local copy of the repository
+and starting over from the latest uploaded version from GitHub [@bryan_bryan_2021].
+While this guarantees to reset the state of the git repository locally,
+it may cause the version control workflow to be perceived as unnecessarily clunky
+and serve as barrier to learning more sophisticated version control strategies
+that would be advantageous in the long run.
 
 Another example is R Markdown,
 which is an implementation of literate code documents [@knuth1984literate],
