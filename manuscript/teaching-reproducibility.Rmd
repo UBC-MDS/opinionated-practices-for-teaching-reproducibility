@@ -286,10 +286,10 @@ an analysis will be reproducible.
 It is also widely used in industry for deploying software.
 Thus for several reasons, it is a highly beneficial technology for students to learn.
 Unfortunately,
-Docker, as well as other implementations of containerization, 
-is an especially challenging tool to
+containerization tools such as Docker
+are especially challenging to
 teach and motivate students to learn
-because it is so different from writing code for analysis.
+because they are so different from writing code for analysis.
 This largely stems from software installation being a time consuming process,
 which means that writing and debugging code to automate installation
 is a slow and painstaking process.
