@@ -11,7 +11,7 @@ abstract: |
     and auditable processes to obtain insight from data.
     While reproducibility is core to our definition,
     most data science learners enter the field with other aspects of data science in mind,
-    for example predictive modelling, which is often one of the most interesting topic to novices.
+    for example predictive modelling, which is often one of the most interesting topics to novices.
     This fact, along with the highly technical nature
     of the industry standard reproducibility tools currently employed in data science,
     present out-of-the gate challenges in teaching reproducibility in the data science classroom.
@@ -20,7 +20,7 @@ abstract: |
     Over several iterations of teaching courses focused on reproducible data science tools and workflows,
     we have found that providing extra motivation, guided instruction
     and lots of practice are key to effectively teaching this challenging, yet important subject.
-    Here we present examples of how we deeply motivate, effectively guide
+    Here we present examples of how we motivate, guide,
     and provide ample practice opportunities to data science students
     to effectively engage them in learning about this topic.
 
@@ -76,7 +76,7 @@ This history is important for recording how and why
 decisions to use one method or another were made,
 among other things.
 
-The reason we embrace this definition of data science,
+The reason we embrace this definition of data science
 is that we believe data science work should both bring insight
 (e.g., answer an important research question)
 and employ reproducible and auditable methods
@@ -167,7 +167,7 @@ lecturers, and assistant professors of teaching
 from the departments of Statistics and Computer Science.
 A handful of the core members of the program's teaching team
 have been with the program since its inception in 2016,
-and the remainder of the team has been with the program for 1-3 years.
+and the remainder of the team has been with the program for one to three years.
 Members of the teaching team developed their data science expertise
 through graduate and postdoctoral studies in a diverse set of research domains,
 including computational linguistics, ecotoxicology, learning analytics,
@@ -358,7 +358,7 @@ seem more relatable and applicable to the students' own data analysis
 >
 > -- Tiffany Timbers
 
-> I was involved in a project where we used version control for the code, but didn't keep track of which input/output was analyzed/produced with which version of the code base. This happened because the data was too big for a simple solution like GitHub, and I was under time pressure to produce results so I didn't prioritize looking into an appropriate solution. When I returned to this project after a long absence, I could not easily combine the outputs from my earlier analysis with the newly generated ones, and instead had to re-analyze all the data with the latest version of the code to reduce the chance for issues from using conflicting code bases. This was *very* time-consuming. As often is the case in projects where code is only seen as a means to an end and not part of the final product, there was also no time dedicated to write tests for the code in this project, so there was no guarantee that there were not unintended side effects introduced when new changes were made.
+> I was involved in a project where we used version control for the code, but didn't keep track of which input/output was analyzed/produced with which version of the code base. This happened because the data was too big for a simple solution like GitHub/GitLab, and I was under time pressure to produce results so I didn't prioritize looking into an appropriate solution. When I returned to this project after a long absence, I could not easily combine the outputs from my earlier analysis with the newly generated ones, and instead had to re-analyze all the data with the latest version of the code to reduce the chance for issues from using conflicting code bases. This was *very* time-consuming. As often is the case in projects where code is only seen as a means to an end and not part of the final product, there was also no time dedicated to write tests for the code in this project, so there was no guarantee that there were not unintended side effects introduced when new changes were made.
 >
 > -- Joel Ostblom
 
@@ -386,8 +386,8 @@ may be particularly important for teaching reproducibility,
 since the impact and significance of the consequences
 of not using reproducible practices are not obvious to novices.
 By presenting case studies
-where failure to adhering to reproducible practices
-have led to costly mistakes,
+where failure to adhere to reproducible practices
+has led to costly mistakes,
 we aim to give learners a chance to directly appreciate
 the connection between the lack of reproducible workflows
 and the downstream consequences.
@@ -400,10 +400,9 @@ that such errors are often only discovered internally and never reported,
 and that there are few incentives for people
 to spend their time performing proper forensic informatic analysis on the work of others.
 Even so,
-there are several such examples reported in the literature,
+there are several such examples reported in the literature;
 one of the most striking led to putting patients at risk
-in incorrectly administered clinical trials
-which we will outline in the next paragraph [@carlson_carlson_2012].
+in incorrectly administered clinical trials [@carlson_carlson_2012].
 
 These clinical trials took place at Duke in 2006
 and involved 110 cancer patients
@@ -554,7 +553,7 @@ on *The Role of Theory in Data Analysis* by Roger Peng [-@peng2020essays]:
 > by the non-reproducibility bug (and "therefore learn their lesson").
 > We can just tell them
 >
-> "In the past, we've found it useful to make our data analysis reproducible
+> "In the past, we've found it useful to make our data analysis reproducible.
 > Here's a workflow to guide you in your own analysis."
 >
 > Within that one statement, we can "compress" over 20 years of experience.
@@ -796,7 +795,7 @@ To support the formation of reproducible workflow habits,
 we therefore complement guided instruction
 with plenty of embedded practice in the classroom,
 where we intentionally pause during the demos
-and say "okay students your turn, do what i just did".
+and say "okay students your turn, do what I just did".
 This is a more controlled form of practice,
 which sets students up for practicing these habits on their own.
 As mentioned above,
@@ -811,7 +810,7 @@ each successful action following a cue
 adds to the formation of a new habit in an asymptotic fashion,
 where the initial events are the most important
 and the learning rate eventually plateaus as the habitual pattern solidifies.
-While popular literature often refers to ~30 days as "all it takes"
+While popular literature often refers to around 30 days as "all it takes"
 to develop a new habit,
 studies have reported that the median is at least around 70 days 
 before reaching the plateau phase of habit development [@wardle_lally_2010; @radel_fournier_2017].
@@ -905,8 +904,8 @@ since they are very popular in academia and industry -
 meaning that students are likely to encounter them in their future work.
 This sustained practice with real tools
 not only enforces students' habits,
-but also increases their proficiency using authentic reproducibility software
-and when they run into problems,
+but also increases their proficiency using authentic reproducibility software.
+When they run into problems,
 it is in an environment
 where they can easily reach out for help without feeling intimidated to ask.
 
@@ -992,7 +991,7 @@ include_graphics("img/r-latex-error.png")
 ## Figure captions
 
 - **Fig 1:** Infamous comic from (ref:cap) that highlights the difficulty of learning and using the version control software Git.
-- **Fig 2:** Latex errors are often cryptic to new learners.
+- **Fig 2:** Latex errors are often cryptic to new learners. Here the reference to the gamma symbol needs to be surrounded by dollar signs to move into mathematics mode.
 
 \newpage
 \singlespace
