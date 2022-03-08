@@ -273,12 +273,16 @@ R Markdown users, but is challenging for novice learners to parse.
 
 Yet another example of a popular reproducibility tool that is challenging to learn is
 Docker.
-Docker is a containerization tool that extends computational environment management beyond
+Docker is a containerization software that extends computational environment management beyond
 the programming language and package dependencies of your analysis workflow,
 and instead creates a versioned copy of your entire computational environment
 including any additional software and operating system dependencies that your analysis may depend on.
 This means that you can share an exact copy of your computational environment
-with your collaborators, even if you work on different operating systems.
+with your collaborators, even if you work on different operating systems,
+which is the most robust strategy for ensuring
+that your analysis will be reproducible
+and thus highly beneficial for students to master.
+Unfortunately,
 Docker is an especially challenging tool to
 teach and motivate students to learn
 because it is so different from writing code for analysis.
