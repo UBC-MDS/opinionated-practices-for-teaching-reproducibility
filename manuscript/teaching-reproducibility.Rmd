@@ -250,7 +250,7 @@ Sometimes these situations are so difficult to get out of, that even professiona
 data scientists and data science educators
 recommend the practice of "burning it all down",
 i.e. deleting the local copy of the repository
-and starting over from the latest uploaded version from GitHub [@bryan_bryan_2021].
+and starting over from the latest uploaded version from GitHub [@hester_bryan_].
 While this guarantees to reset the state of the git repository locally,
 it may cause the version control workflow to be perceived as unnecessarily clunky
 and serve as barrier to learning more sophisticated version control strategies
