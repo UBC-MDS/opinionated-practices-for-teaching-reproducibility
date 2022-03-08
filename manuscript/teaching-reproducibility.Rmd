@@ -580,7 +580,7 @@ we primarily employ guided instructions through three pedagogical strategies:
 In data science programming classes it is becoming more common to use demonstration
 to show how to code in R and Python.
 This is referred to in the data science literature as live coding
-[@raj2018role; @nederbragt2020ten].
+[@raj2018role; @wilson_nederbragt_2020].
 We have observed that a similar pedagogy of live demonstration
 works well for reproducibility tools,
 including R Markdown [@xie2021dynamic] or Jupyter notebooks [@kluyver2016jupyter] for reproducible reports,
@@ -680,7 +680,7 @@ In data science,
 this works well in literate code documents
 (either Jupyter notebooks or R Markdown)
 that have automated tests in them to provide feedback.
-Two tools that we have used for this are nbgrader [@blank2019nbgrader]
+Two tools that we have used for this are nbgrader [@willing_jupyter_2019]
 and otter-grader [@otter].
 Compared to in-class exercises,
 worksheets give learners an additional chance to actively engage with the material
@@ -966,7 +966,7 @@ The authors declare no conflict of interest.
 | Reproducibility error                                    | Consequence                                          | Source(s)                                |
 |----------------------------------------------------------|------------------------------------------------------|------------------------------------------|
 | Limitations in Excel data formats                        | Loss of 16,000 COVID case records in the UK          | [@kelion_kelion_2020]                    |
-| Automatic formatting in Excel                            | Important genes disregarded in scientific studies    | [@zeeberg2004mistaken; @ziemann2016gene] |
+| Automatic formatting in Excel                            | Important genes disregarded in scientific studies    | [@weinstein_zeeberg_2004; @ziemann2016gene] |
 | Deletion of a cell caused rows to shift                  | Mix-up of which patient group received the treatment | [@wallensteen2018retraction]             |
 | Using binary instead of explanatory labels               | Mix-up of the intervention with the control group    | [@wise_aboumatar_2019]                   |
 | Using the same notation for missing data and zero values | Paper retraction                                     | [@turchin_whitehouse_2021]               |
