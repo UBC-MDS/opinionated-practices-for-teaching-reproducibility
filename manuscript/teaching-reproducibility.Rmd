@@ -11,7 +11,7 @@ abstract: |
     and auditable processes to obtain insight from data.
     While reproducibility is core to our definition,
     most data science learners enter the field with other aspects of data science in mind,
-    for example predictive modelling, which is often one of the most interesting topic to novices.
+    for example predictive modelling, which is often one of the most interesting topics to novices.
     This fact, along with the highly technical nature
     of the industry standard reproducibility tools currently employed in data science,
     present out-of-the gate challenges in teaching reproducibility in the data science classroom.
@@ -20,7 +20,7 @@ abstract: |
     Over several iterations of teaching courses focused on reproducible data science tools and workflows,
     we have found that providing extra motivation, guided instruction
     and lots of practice are key to effectively teaching this challenging, yet important subject.
-    Here we present examples of how we deeply motivate, effectively guide
+    Here we present examples of how we motivate, guide,
     and provide ample practice opportunities to data science students
     to effectively engage them in learning about this topic.
 
@@ -29,6 +29,7 @@ linkcolor: blue
 fontsize: 12 pt
 bibliography: teaching-reproducibility.bib
 biblio-style: authoryear
+csl: american-statistical-association.csl
 documentclass: paper
 output:
   bookdown::pdf_document2:
@@ -76,7 +77,7 @@ This history is important for recording how and why
 decisions to use one method or another were made,
 among other things.
 
-The reason we embrace this definition of data science,
+The reason we embrace this definition of data science
 is that we believe data science work should both bring insight
 (e.g., answer an important research question)
 and employ reproducible and auditable methods
@@ -167,7 +168,7 @@ lecturers, and assistant professors of teaching
 from the departments of Statistics and Computer Science.
 A handful of the core members of the program's teaching team
 have been with the program since its inception in 2016,
-and the remainder of the team has been with the program for 1-3 years.
+and the remainder of the team has been with the program for one to three years.
 Members of the teaching team developed their data science expertise
 through graduate and postdoctoral studies in a diverse set of research domains,
 including computational linguistics, ecotoxicology, learning analytics,
@@ -247,8 +248,13 @@ perplexing version control situations, with difficult to interpret outputs
 (e.g., "You are in 'detached HEAD' state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout").
 Sometimes these situations are so difficult to get out of, that even professional
 data scientists and data science educators
-recommend the practice of "burning it all down" and starting from scratch [@bryan_bryan_2021] -
-which really defeats many of the purposes of version control.
+recommend the practice of "burning it all down",
+which is deleting the local copy of the repository
+and starting over from the latest uploaded version from GitHub [@hester_bryan_].
+While this guarantees to reset the state of the git repository locally,
+it may cause the version control workflow to be perceived as unnecessarily clunky
+and serve as barrier to learning more sophisticated version control strategies
+that would be advantageous in the long run.
 
 Another example is R Markdown,
 which is an implementation of literate code documents [@knuth1984literate],
@@ -267,13 +273,21 @@ R Markdown users, but is challenging for novice learners to parse.
 
 Yet another example of a popular reproducibility tool that is challenging to learn is
 Docker.
-Docker is a containerization tool that extends computational environment management beyond
+Docker is a containerization software that extends computational environment management beyond
 the programming language and package dependencies of your analysis workflow,
 and instead creates a versioned copy of your entire computational environment
 including any additional software and operating system dependencies that your analysis may depend on.
 This means that you can share an exact copy of your computational environment
 with your collaborators, even if you work on different operating systems.
-Docker is an especially challenging tool to
+Recording and sharing computational environments 
+via containerization is currently viewed as the most 
+robust, yet also light-weight strategy, for ensuring
+an analysis will be reproducible.
+It is also widely used in industry for deploying software.
+Thus for several reasons, it is a highly beneficial technology for students to learn.
+Unfortunately,
+Docker, as well as other implementations of containerization, 
+is an especially challenging tool to
 teach and motivate students to learn
 because it is so different from writing code for analysis.
 This largely stems from software installation being a time consuming process,
@@ -358,7 +372,7 @@ seem more relatable and applicable to the students' own data analysis
 >
 > -- Tiffany Timbers
 
-> I was involved in a project where we used version control for the code, but didn't keep track of which input/output was analyzed/produced with which version of the code base. This happened because the data was too big for a simple solution like GitHub, and I was under time pressure to produce results so I didn't prioritize looking into an appropriate solution. When I returned to this project after a long absence, I could not easily combine the outputs from my earlier analysis with the newly generated ones, and instead had to re-analyze all the data with the latest version of the code to reduce the chance for issues from using conflicting code bases. This was *very* time-consuming. As often is the case in projects where code is only seen as a means to an end and not part of the final product, there was also no time dedicated to write tests for the code in this project, so there was no guarantee that there were not unintended side effects introduced when new changes were made.
+> I was involved in a project where we used version control for the code, but didn't keep track of which input/output was analyzed/produced with which version of the code base. This happened because the data was too big for a simple solution like GitHub/GitLab, and I was under time pressure to produce results so I didn't prioritize looking into an appropriate solution. When I returned to this project after a long absence, I could not easily combine the outputs from my earlier analysis with the newly generated ones, and instead had to re-analyze all the data with the latest version of the code to reduce the chance for issues from using conflicting code bases. This was *very* time-consuming. As often is the case in projects where code is only seen as a means to an end and not part of the final product, there was also no time dedicated to write tests for the code in this project, so there was no guarantee that there were not unintended side effects introduced when new changes were made.
 >
 > -- Joel Ostblom
 
@@ -386,24 +400,23 @@ may be particularly important for teaching reproducibility,
 since the impact and significance of the consequences
 of not using reproducible practices are not obvious to novices.
 By presenting case studies
-where failure to adhering to reproducible practices
-have led to costly mistakes,
+where failure to adhere to reproducible practices
+has led to costly mistakes,
 we aim to give learners a chance to directly appreciate
 the connection between the lack of reproducible workflows
 and the downstream consequences.
 
 While there are many articles outlining recommendations
-on which reproducible practices to adhere to,
+on which reproducible practices to adhere to [@hovig_sandve_2013; @teal_wilson_2017; @halpern_lowndes_2017],
 case studies of failures are not as frequent in the literature.
 We think this partly stems from the fact
 that such errors are often only discovered internally and never reported,
 and that there are few incentives for people
 to spend their time performing proper forensic informatic analysis on the work of others.
 Even so,
-there are several such examples reported in the literature,
+there are several such examples reported in the literature;
 one of the most striking led to putting patients at risk
-in incorrectly administered clinical trials
-which we will outline in the next paragraph [@carlson_carlson_2012].
+in incorrectly administered clinical trials [@carlson_carlson_2012].
 
 These clinical trials took place at Duke in 2006
 and involved 110 cancer patients
@@ -554,7 +567,7 @@ on *The Role of Theory in Data Analysis* by Roger Peng [-@peng2020essays]:
 > by the non-reproducibility bug (and "therefore learn their lesson").
 > We can just tell them
 >
-> "In the past, we've found it useful to make our data analysis reproducible
+> "In the past, we've found it useful to make our data analysis reproducible.
 > Here's a workflow to guide you in your own analysis."
 >
 > Within that one statement, we can "compress" over 20 years of experience.
@@ -581,7 +594,7 @@ we primarily employ guided instructions through three pedagogical strategies:
 In data science programming classes it is becoming more common to use demonstration
 to show how to code in R and Python.
 This is referred to in the data science literature as live coding
-[@raj2018role; @nederbragt2020ten].
+[@raj2018role; @wilson_nederbragt_2020].
 We have observed that a similar pedagogy of live demonstration
 works well for reproducibility tools,
 including R Markdown [@xie2021dynamic] or Jupyter notebooks [@kluyver2016jupyter] for reproducible reports,
@@ -681,7 +694,7 @@ In data science,
 this works well in literate code documents
 (either Jupyter notebooks or R Markdown)
 that have automated tests in them to provide feedback.
-Two tools that we have used for this are nbgrader [@blank2019nbgrader]
+Two tools that we have used for this are nbgrader [@willing_jupyter_2019]
 and otter-grader [@otter].
 Compared to in-class exercises,
 worksheets give learners an additional chance to actively engage with the material
@@ -796,7 +809,7 @@ To support the formation of reproducible workflow habits,
 we therefore complement guided instruction
 with plenty of embedded practice in the classroom,
 where we intentionally pause during the demos
-and say "okay students your turn, do what i just did".
+and say "okay students your turn, do what I just did".
 This is a more controlled form of practice,
 which sets students up for practicing these habits on their own.
 As mentioned above,
@@ -811,7 +824,7 @@ each successful action following a cue
 adds to the formation of a new habit in an asymptotic fashion,
 where the initial events are the most important
 and the learning rate eventually plateaus as the habitual pattern solidifies.
-While popular literature often refers to ~30 days as "all it takes"
+While popular literature often refers to around 30 days as "all it takes"
 to develop a new habit,
 studies have reported that the median is at least around 70 days 
 before reaching the plateau phase of habit development [@wardle_lally_2010; @radel_fournier_2017].
@@ -905,8 +918,8 @@ since they are very popular in academia and industry -
 meaning that students are likely to encounter them in their future work.
 This sustained practice with real tools
 not only enforces students' habits,
-but also increases their proficiency using authentic reproducibility software
-and when they run into problems,
+but also increases their proficiency using authentic reproducibility software.
+When they run into problems,
 it is in an environment
 where they can easily reach out for help without feeling intimidated to ask.
 
@@ -967,7 +980,7 @@ The authors declare no conflict of interest.
 | Reproducibility error                                    | Consequence                                          | Source(s)                                |
 |----------------------------------------------------------|------------------------------------------------------|------------------------------------------|
 | Limitations in Excel data formats                        | Loss of 16,000 COVID case records in the UK          | [@kelion_kelion_2020]                    |
-| Automatic formatting in Excel                            | Important genes disregarded in scientific studies    | [@zeeberg2004mistaken; @ziemann2016gene] |
+| Automatic formatting in Excel                            | Important genes disregarded in scientific studies    | [@weinstein_zeeberg_2004; @ziemann2016gene] |
 | Deletion of a cell caused rows to shift                  | Mix-up of which patient group received the treatment | [@wallensteen2018retraction]             |
 | Using binary instead of explanatory labels               | Mix-up of the intervention with the control group    | [@wise_aboumatar_2019]                   |
 | Using the same notation for missing data and zero values | Paper retraction                                     | [@turchin_whitehouse_2021]               |
@@ -992,7 +1005,7 @@ include_graphics("img/r-latex-error.png")
 ## Figure captions
 
 - **Fig 1:** Infamous comic from (ref:cap) that highlights the difficulty of learning and using the version control software Git.
-- **Fig 2:** Latex errors are often cryptic to new learners.
+- **Fig 2:** Latex errors are often cryptic to new learners. Here the reference to the gamma symbol needs to be surrounded by dollar signs to move into mathematics mode.
 
 \newpage
 \singlespace
