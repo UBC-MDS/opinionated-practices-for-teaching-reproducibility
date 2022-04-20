@@ -249,7 +249,7 @@ perplexing version control situations, with difficult to interpret outputs
 Sometimes these situations are so difficult to get out of, that even professional
 data scientists and data science educators
 recommend the practice of "burning it all down",
-i.e. deleting the local copy of the repository
+which is deleting the local copy of the repository
 and starting over from the latest uploaded version from GitHub [@hester_bryan_].
 While this guarantees to reset the state of the git repository locally,
 it may cause the version control workflow to be perceived as unnecessarily clunky
@@ -278,12 +278,16 @@ the programming language and package dependencies of your analysis workflow,
 and instead creates a versioned copy of your entire computational environment
 including any additional software and operating system dependencies that your analysis may depend on.
 This means that you can share an exact copy of your computational environment
-with your collaborators, even if you work on different operating systems,
-which is the most robust strategy for ensuring
-that your analysis will be reproducible
-and thus highly beneficial for students to master.
+with your collaborators, even if you work on different operating systems.
+Recording and sharing computational environments 
+via containerization is currently viewed as the most 
+robust, yet also light-weight strategy, for ensuring
+an analysis will be reproducible.
+It is also widely used in industry for deploying software.
+Thus for several reasons, it is a highly beneficial technology for students to learn.
 Unfortunately,
-Docker is an especially challenging tool to
+Docker, as well as other implementations of containerization, 
+is an especially challenging tool to
 teach and motivate students to learn
 because it is so different from writing code for analysis.
 This largely stems from software installation being a time consuming process,
